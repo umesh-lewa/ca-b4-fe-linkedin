@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {HttpClientModule} from '@angular/common/http'
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './pages/landing/landing.component';
@@ -16,6 +18,9 @@ import { NotificationComponent } from './pages/notification/notification.compone
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { HomeComponent } from './pages/home/home.component';
+import { SuggestionCardComponent } from './components/suggestion-card/suggestion-card.component';
+import { ConnectedUserComponent } from './components/connected-user/connected-user.component';
+import { ReactiveFormsModule} from '@angular/forms';
 
 
 //components
@@ -26,6 +31,17 @@ import { VisibiltyComponent } from './components/visibilty/visibilty.component';
 import { CommunicationComponent } from './components/communication/communication.component';
 import { DataprivacyComponent } from './components/dataprivacy/dataprivacy.component';
 import { AdvertisingDataComponent } from './components/advertising-data/advertising-data.component';
+import { DateDifferencePipe } from './pipes/date-difference.pipe';
+import { UserFilterComponent } from './components/user-filter/user-filter.component';
+import { NoNetworkComponent } from './pages/no-network/no-network.component';
+import { SearchPillComponent } from './components/search-pill/search-pill.component';
+import { FooterOptionsComponent } from './components/footer-options/footer-options.component';
+import { CopyrightComponent } from './components/copyright/copyright.component';
+import { JobListCardComponent } from './components/job-list-card/job-list-card.component';
+import { JobComponent } from './components/job/job.component';
+import { HrComponent } from './components/hr/hr.component';
+import { RecentSearchComponent } from './components/recent-search/recent-search.component';
+import { JobExplanationComponent } from './components/job-explanation/job-explanation.component';
 
 @NgModule({
   declarations: [
@@ -49,11 +65,27 @@ import { AdvertisingDataComponent } from './components/advertising-data/advertis
     VisibiltyComponent,
     CommunicationComponent,
     DataprivacyComponent,
-    AdvertisingDataComponent
+    AdvertisingDataComponent,
+    SuggestionCardComponent,
+    ConnectedUserComponent,
+    DateDifferencePipe,
+    UserFilterComponent,
+    NoNetworkComponent,
+    SearchPillComponent,
+    FooterOptionsComponent,
+    CopyrightComponent,
+    JobListCardComponent,
+    JobComponent,
+    HrComponent,
+    RecentSearchComponent,
+    JobExplanationComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,30 @@
+<div class="suggestion-title">
+    <div class="title">
+        <div class="title-left">
+            {{suggestion.topic}}
+        </div>
+        <div class="title-right">
+            See all
+        </div>
+    </div>
+    <div class="card-wrapper">
+        <div class="card" *ngFor="let user of suggestion.profiles">
+            <div class="card-header">
+                <div class="header-img-wrapper">
+                    <img class="user-icon" alt="usericon">
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-title">{{user.name}}</div>
+                <div class="card-data">{{user.role}}</div>
+            </div>
+            <div class="card-footer">
+                <div class="foot-wrapper">
+                    <div class="suggested-from">{{user.meta}}</div>
+                    <button>{{user.type}}</button>
+                </div>
+            </div>
+            <span class="iconify" data-inline="false" data-icon="carbon:close"></span>
+        </div>
+    </div>
+</div>
