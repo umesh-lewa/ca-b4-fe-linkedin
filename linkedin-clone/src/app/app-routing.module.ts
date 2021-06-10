@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommunicationComponent } from './components/communication/communication.component';
+import { DataprivacyComponent } from './components/dataprivacy/dataprivacy.component';
 import { ProfileinfoComponent } from './components/profileinfo/profileinfo.component';
 import { SecurityComponent } from './components/security/security.component';
 import { VisibiltyComponent } from './components/visibilty/visibilty.component';
@@ -59,6 +60,7 @@ const routes: Routes = [{
         {path:"security",component:SecurityComponent},
         {path:"visibility",component:VisibiltyComponent},
         {path:"communication",component:CommunicationComponent},
+        {path:"privacy",component:DataprivacyComponent},
       ]
     } 
   ]

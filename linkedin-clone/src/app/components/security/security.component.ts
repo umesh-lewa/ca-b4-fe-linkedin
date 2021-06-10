@@ -33,7 +33,7 @@ export class SecurityComponent implements OnInit {
     document.getElementById("sitediv").scrollIntoView();
   }
 
-  scrolltosync() {
-    document.getElementById("sync-optns").scrollIntoView();
+  scrolltoothers() {
+    document.getElementById("others").scrollIntoView();
   }
 }

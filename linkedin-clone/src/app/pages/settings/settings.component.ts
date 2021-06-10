@@ -85,4 +85,11 @@ export class SettingsComponent implements OnInit {
     document.getElementById("sync-optns").scrollIntoView();
   }
   
+  scrolltoothers() {
+    document.getElementById("others").scrollIntoView();
+  }
+
+  scrolltomsgs() {
+    document.getElementById("msgs").scrollIntoView();
+  }
 }

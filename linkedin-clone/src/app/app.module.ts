@@ -24,6 +24,7 @@ import { ProfileinfoComponent } from './components/profileinfo/profileinfo.compo
 import { SecurityComponent } from './components/security/security.component';
 import { VisibiltyComponent } from './components/visibilty/visibilty.component';
 import { CommunicationComponent } from './components/communication/communication.component';
+import { DataprivacyComponent } from './components/dataprivacy/dataprivacy.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { CommunicationComponent } from './components/communication/communication
     ProfileinfoComponent,
     SecurityComponent,
     VisibiltyComponent,
-    CommunicationComponent
+    CommunicationComponent,
+    DataprivacyComponent
   ],
   imports: [
     BrowserModule,
