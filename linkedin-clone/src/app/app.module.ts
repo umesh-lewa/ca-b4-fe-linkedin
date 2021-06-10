@@ -18,10 +18,15 @@ import { NotificationComponent } from './pages/notification/notification.compone
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { HomeComponent } from './pages/home/home.component';
+import { SuggestionCardComponent } from './components/suggestion-card/suggestion-card.component';
+import { ConnectedUserComponent } from './components/connected-user/connected-user.component';
 
 
 //components
 import {NavbarComponent} from './components/navbar/navbar.component';
+import { DateDifferencePipe } from './pipes/date-difference.pipe';
+import { UserFilterComponent } from './components/user-filter/user-filter.component';
+import { NoNetworkComponent } from './pages/no-network/no-network.component';
 import { SearchPillComponent } from './components/search-pill/search-pill.component';
 import { FooterOptionsComponent } from './components/footer-options/footer-options.component';
 import { CopyrightComponent } from './components/copyright/copyright.component';
@@ -48,6 +53,11 @@ import { JobExplanationComponent } from './components/job-explanation/job-explan
     SettingsComponent,
     HomeComponent,
     NavbarComponent,
+    SuggestionCardComponent,
+    ConnectedUserComponent,
+    DateDifferencePipe,
+    UserFilterComponent,
+    NoNetworkComponent,
     SearchPillComponent,
     FooterOptionsComponent,
     CopyrightComponent,
