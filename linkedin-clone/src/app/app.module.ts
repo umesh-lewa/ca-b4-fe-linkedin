@@ -25,6 +25,12 @@ import { ReactiveFormsModule} from '@angular/forms';
 
 //components
 import {NavbarComponent} from './components/navbar/navbar.component';
+import { ProfileinfoComponent } from './components/profileinfo/profileinfo.component';
+import { SecurityComponent } from './components/security/security.component';
+import { VisibiltyComponent } from './components/visibilty/visibilty.component';
+import { CommunicationComponent } from './components/communication/communication.component';
+import { DataprivacyComponent } from './components/dataprivacy/dataprivacy.component';
+import { AdvertisingDataComponent } from './components/advertising-data/advertising-data.component';
 import { DateDifferencePipe } from './pipes/date-difference.pipe';
 import { UserFilterComponent } from './components/user-filter/user-filter.component';
 import { NoNetworkComponent } from './pages/no-network/no-network.component';
@@ -54,6 +60,12 @@ import { JobExplanationComponent } from './components/job-explanation/job-explan
     SettingsComponent,
     HomeComponent,
     NavbarComponent,
+    ProfileinfoComponent,
+    SecurityComponent,
+    VisibiltyComponent,
+    CommunicationComponent,
+    DataprivacyComponent,
+    AdvertisingDataComponent,
     SuggestionCardComponent,
     ConnectedUserComponent,
     DateDifferencePipe,
