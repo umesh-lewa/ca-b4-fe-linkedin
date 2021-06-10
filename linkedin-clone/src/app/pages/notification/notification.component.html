@@ -1,1 +1,59 @@
-<p>notification works!</p>
+<div class="flex-container">
+    <div class="flex-items">
+        <div class="card">
+            <br>
+            <p><b>Notifications</b></p>
+            <br>
+            <p>You're all caught up!</p>
+            <p>Check back later for new </p>
+            <p>notifications</p>
+            <br>
+            <hr>
+            <br>
+            <div class="container" style="">
+                <p style="font-size: 90%;">Improve you're notifications</p>
+                <h4><a href="">View Settings</a></h4>
+                <br>
+            </div>
+            <br>
+        </div>
+    </div>
+    <div class="flex-items">
+        <div *ngFor="let eachNotification of notificationsList;" class="card">
+            <div class="notification-card-body">
+                <div class="notification-icon">
+                    <span class="iconify" data-inline="false" data-icon="gridicons:briefcase"
+                        style="color: #666666; font-size: 30px;"></span>
+                </div>
+                <div class="notification-body">
+                    <p>
+                    <span>Rohan Arya <b>Viewed your profile</b></span>
+                    <span style="float: right;"> 7h</span>
+                    </p>
+                    
+                    <p>
+                    <button style="margin-left: 5%;"><b>{{eachNotification.buttonContent}}</b></button>
+                    <span style="float: right;font-size: 150%;"><a href="">...</a></span>
+                    </p>
+                    <div class="container">
+                    </div>
+                </div>
+
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="flex-items">
+        <br>
+        <p><a href="">About </a> &nbsp;&nbsp;<a href="">Accessibility</a> &nbsp;&nbsp;<a href="">Help Center</a></p>
+        <br>
+        <p><a href="">Privacy and Terms</a>&nbsp;&nbsp;<a href="">Ad Choices</a></p>
+        <br>
+        <p><a href="">Advertising</a> &nbsp;&nbsp;&nbsp;<a href="">Buissness Services</a> </p>
+        <br>
+        <p><a href="">Get the LinkedIn app</a> &nbsp;&nbsp;&nbsp;<a href="">more</a></p>
+        <br>
+        <p><span class="iconify" data-icon="logos:linkedin" data-inline="false" style="font-size: 130%;"></span>
+            &nbsp;&nbsp;&nbsp; LinkedIn Coprporation <span class="iconify" data-icon="ant-design:copyright-circle-outlined" data-inline="false"></span> 2021</p>
+    </div>
+</div>
