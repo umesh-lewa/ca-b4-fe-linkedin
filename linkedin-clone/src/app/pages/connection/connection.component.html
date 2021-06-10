@@ -1,1 +1,8 @@
-<p>connection works!</p>
+<div class="connection">
+    <div class="connection-wrapper">
+        <user-filter [title]="title"></user-filter>
+        <div class="filter-results" *ngFor="let user of profile ">
+            <connected-user [user]=user [icon]=userIcon></connected-user>
+        </div>
+    </div>
+</div>

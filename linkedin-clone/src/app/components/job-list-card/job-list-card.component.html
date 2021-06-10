@@ -1,0 +1,14 @@
+<div class="recomendedJobs card">
+    <p class="category">{{title}}</p>
+    <p>{{description}}</p>
+    <div class="jobList">
+        <ng-container *ngFor="let job of jobList">
+            <app-job (viewJobId)="viewJob($event)" [job]="job"></app-job>
+            <app-hr></app-hr>
+        </ng-container>
+    </div>
+    <app-hr></app-hr>
+    <div class="seemore" (click)="viewJob(jobList[0].id)">
+        <p>See more jobs</p>
+    </div>
+</div>

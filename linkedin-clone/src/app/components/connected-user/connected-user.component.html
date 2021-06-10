@@ -1,0 +1,29 @@
+<div class="connected-user-wrapper">
+    <div class="user-card">
+        <div class="user-img">
+            <img class="user-icon" src='{{user.icon}}' alt="usericon">
+        </div>
+        <div class="user-data">
+            <div class="user-name">
+            {{user.firstName}}
+            {{user.lastName}}
+            </div>
+            <div class="user-role">{{user.role}}</div>
+            <div class="connected-time">
+                <span *ngIf="contact">Created : {{user.connected | date}}</span> 
+                <span *ngIf="!contact">Connected : {{user.connected | dateDifference}} ago</span> 
+
+
+            </div>
+        </div>
+        <div class="user-card-footer">
+            <button *ngIf="contact">Invite</button>
+            <button *ngIf="!contact">Message</button>
+            <div *ngIf="!contact" class="loader">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+        </div>
+    </div>
+</div>
