@@ -233,12 +233,6 @@ nav{
                             }
                         }
                     }
-                    .workIcon{
-                        border-left: 1px solid rgb(224, 224, 224);
-                        p{
-                            width: 40%;
-                         }
-                    }
                     .active{
                         color: #000;
                         border-bottom: 2px solid #000;
@@ -271,7 +265,12 @@ nav{
 .inactiveIcon{
     color: #666666 ; 
 }
-
+.workIcon{
+    border-left: 1px solid rgb(224, 224, 224);
+    p{
+        width: 40% !important;
+     }
+}
 // .activeIcon{
 //     color: #000 ;
 // }
