@@ -20,7 +20,7 @@
                     </div>
                 </li>
                 <li class="divider">
-                    <div class="expand" (click)="div3Function()">Visibilty</div>
+                    <div class="expand" (click)="div3Function()" [routerLink]="['./visibility']">Visibilty</div>
                     <div *ngIf="div3">
                         <a class="subcategory active">profile & network</a>
                         <a class="subcategory active">LinkedIn activity</a>

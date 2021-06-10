@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProfileinfoComponent } from './components/profileinfo/profileinfo.component';
 import { SecurityComponent } from './components/security/security.component';
+import { VisibiltyComponent } from './components/visibilty/visibilty.component';
 import { ConnectionComponent } from './pages/connection/connection.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FeedComponent } from './pages/feed/feed.component';
@@ -55,6 +56,7 @@ const routes: Routes = [{
       children:[
         {path:"profileinfo",component:ProfileinfoComponent},
         {path:"security",component:SecurityComponent},
+        {path:"visibility",component:VisibiltyComponent},
       ]
     } 
   ]
