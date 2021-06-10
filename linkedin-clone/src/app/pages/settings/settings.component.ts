@@ -19,6 +19,7 @@ export class SettingsComponent implements OnInit {
   div5:boolean=false;
   lang:boolean=false;
   pro:boolean=false;
+  profilecomp:boolean=true;
 
   div1Function(){
       this.div1=true;
@@ -62,6 +63,9 @@ export class SettingsComponent implements OnInit {
     this.div5=true;
   }
 
+  profilevisited(){
+    this.profilecomp=false;
+  }
   langFunction(){
     if(this.lang==true){this.lang=false;}
     else{this.lang=true;}
