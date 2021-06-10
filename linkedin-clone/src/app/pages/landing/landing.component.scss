@@ -1,0 +1,172 @@
+body {
+    width: 100%;
+    font-family: sans-serif;
+    margin:0;
+}
+
+.nav {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav div {
+    display: flex;
+    align-items: center;
+
+}
+
+.spano {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+}
+
+.spano > div {
+    margin-right: 20px;
+}
+
+.spano div span {
+
+    color: #495450;
+}
+
+.signin {
+
+    border: 1px solid #2977c9;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    height: 80vh;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.container > div {
+
+    width: 50%;
+}
+
+.sub {
+    color: #2977c9;
+    font-weight: 600;
+    font-size: 42px;
+}
+
+.ctabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 8px;
+
+}
+
+.options {
+    padding: 20px;
+}
+
+.options > span {
+    padding: 10px;
+    cursor: pointer;
+    color: #495450;
+}
+
+.options > span:hover {
+
+    background-color: #eee;
+
+}
+
+.sbtn {
+    padding: 18px;
+    background-color: #2977c9;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.inputa {
+
+    border: 1px solid #FDFDFD;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+box-shadow:  rgba(0, 0, 0, 0.08) 0px -1px 1px 0px, rgba(0, 0, 0, 0.08) 1px 0px 1px 0px, rgba(0, 0, 0, 0.08) -1px 0px 1px 0px, rgba(0, 0, 0, 0.08) 0px 1px 1px 0px;
+}
+
+
+input {
+    border: 0;
+    padding: 8px;
+    width: 100%;
+}
+
+[placeholder] {
+    color: grey;
+    opacity: 0.7;
+}
+
+.tags-con {
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.tag {
+    background-color: #495450;
+    opacity: 0.3;
+    padding: 10px;
+    margin: 6px;
+    /*margin-right: 10px;*/
+    color: #eee;
+    border-radius: 30px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.banner {
+    background-color: #F1ECE5;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    justify-content: space-around;
+}
+
+.dt {
+    border: 1px solid #52514E;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+/*footer*/
+
+ul , li {
+    list-style-type: none;
+}
+
+.footer {
+    display: flex;
+}
+
+.footer > div {
+    width: 20%;
+}
+
+ul > li {
+    color: #495450;
+    cursor: pointer;
+}

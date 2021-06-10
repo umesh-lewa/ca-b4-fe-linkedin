@@ -57,7 +57,7 @@ const routes: Routes = [{
       path:"settings",
       component:SettingsComponent,
       children:[
-        {path:"profileinfo",component:ProfileinfoComponent},
+        {path:"",component:ProfileinfoComponent},
         {path:"security",component:SecurityComponent},
         {path:"visibility",component:VisibiltyComponent},
         {path:"communication",component:CommunicationComponent},
