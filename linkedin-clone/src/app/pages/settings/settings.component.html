@@ -27,7 +27,7 @@
                     </div>
                 </li>
                 <li class="divider">
-                    <div class="expand" (click)="div4Function()">Communications</div>
+                    <div class="expand" (click)="div4Function()" [routerLink]="['./communication']">Communications</div>
                     <div *ngIf="div4">
                         <a class="subcategory active">Your notifications</a>
                         <a class="subcategory active">Who can reach you</a>

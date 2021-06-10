@@ -23,6 +23,7 @@ import {NavbarComponent} from './components/navbar/navbar.component';
 import { ProfileinfoComponent } from './components/profileinfo/profileinfo.component';
 import { SecurityComponent } from './components/security/security.component';
 import { VisibiltyComponent } from './components/visibilty/visibilty.component';
+import { CommunicationComponent } from './components/communication/communication.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { VisibiltyComponent } from './components/visibilty/visibilty.component';
     NavbarComponent,
     ProfileinfoComponent,
     SecurityComponent,
-    VisibiltyComponent
+    VisibiltyComponent,
+    CommunicationComponent
   ],
   imports: [
     BrowserModule,
