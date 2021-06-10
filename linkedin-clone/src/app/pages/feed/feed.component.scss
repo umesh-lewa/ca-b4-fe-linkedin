@@ -1,0 +1,128 @@
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  align-items: normal;
+  align-content: normal;
+}
+
+.flex-items:nth-child(1) {
+  display: block;
+
+  align-self: auto;
+  order: 0;
+}
+
+.flex-items:nth-child(2) {
+  display: block;
+
+  align-self: auto;
+  order: 0;
+}
+
+.flex-items:nth-child(3) {
+  display: block;
+  width: 12vw;
+height: 92vh;
+
+border: 1px solid #E0DFDC;
+background: #FFFFFF;
+border-radius: 15px;
+  align-self: auto;
+  order: 0;
+}
+
+.flex-items{
+  margin: 10px;
+
+}
+
+
+.flex-container-profile {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  align-items: normal;
+  align-content: normal;
+}
+
+.flex-items-profile:nth-child(1) {
+  display: block;
+
+  align-self: auto;
+  order: 0;
+  background: #FFFFFF;
+border-radius: 15px;
+width: 12vw;
+height: 35vh;
+}
+
+.flex-items-profile:nth-child(2) {
+  display: block;
+  margin-top: 10px;
+  align-self: auto;
+  order: 0;
+  width: 12vw;
+height: 50vh;
+background: #FFFFFF;
+border-radius: 15px;
+}
+
+.flex-items-profile{
+
+border: 1px solid #E0DFDC;
+
+}
+
+// feeds and Post
+
+.flex-container-feeds {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  align-items: normal;
+  align-content: normal;
+}
+//create a post
+.flex-items-feeds:nth-child(1) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  width: 35vw;
+height: 15vh;
+
+
+background: #FFFFFF;
+border-radius: 15px;
+}
+//feed
+.flex-items-feeds:nth-child(2) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  width: 35vw;
+  height: 100vh;
+  background: #FFFFFF;
+border-radius: 15px 15px 0px 0px ;
+margin-top: 15px;
+}
+
+.flex-items-feeds{
+  border: 1px solid #E0DFDC;
+}
+
+.profile-container{
+  //border: 1px solid black ;
+  background: linear-gradient(270deg, #D2E0E2 16.62%, #BFD3D6 16.62%, #FFFFFF 29.65%, #AFBDBF 30.12%);
+  border-radius: 15px 15px 0px 0px;
+  height: 10vh;
+}
