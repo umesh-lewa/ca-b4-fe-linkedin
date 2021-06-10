@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ProfileinfoComponent } from './components/profileinfo/profileinfo.component';
+import { SecurityComponent } from './components/security/security.component';
 import { ConnectionComponent } from './pages/connection/connection.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FeedComponent } from './pages/feed/feed.component';
@@ -49,8 +51,12 @@ const routes: Routes = [{
       component:ProfileComponent
     },{
       path:"settings",
-      component:SettingsComponent
-    }
+      component:SettingsComponent,
+      children:[
+        {path:"profileinfo",component:ProfileinfoComponent},
+        {path:"security",component:SecurityComponent},
+      ]
+    } 
   ]
 }];
 

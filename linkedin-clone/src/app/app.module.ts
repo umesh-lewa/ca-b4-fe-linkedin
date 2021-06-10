@@ -20,6 +20,9 @@ import { HomeComponent } from './pages/home/home.component';
 
 //components
 import {NavbarComponent} from './components/navbar/navbar.component';
+import { ProfileinfoComponent } from './components/profileinfo/profileinfo.component';
+import { SecurityComponent } from './components/security/security.component';
+import { VisibiltyComponent } from './components/visibilty/visibilty.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import {NavbarComponent} from './components/navbar/navbar.component';
     ProfileComponent,
     SettingsComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProfileinfoComponent,
+    SecurityComponent,
+    VisibiltyComponent
   ],
   imports: [
     BrowserModule,
