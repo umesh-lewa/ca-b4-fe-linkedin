@@ -25,6 +25,7 @@ import { SecurityComponent } from './components/security/security.component';
 import { VisibiltyComponent } from './components/visibilty/visibilty.component';
 import { CommunicationComponent } from './components/communication/communication.component';
 import { DataprivacyComponent } from './components/dataprivacy/dataprivacy.component';
+import { AdvertisingDataComponent } from './components/advertising-data/advertising-data.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { DataprivacyComponent } from './components/dataprivacy/dataprivacy.compo
     SecurityComponent,
     VisibiltyComponent,
     CommunicationComponent,
-    DataprivacyComponent
+    DataprivacyComponent,
+    AdvertisingDataComponent
   ],
   imports: [
     BrowserModule,
