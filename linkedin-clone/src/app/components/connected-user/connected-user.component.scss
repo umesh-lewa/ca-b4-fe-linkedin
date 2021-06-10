@@ -1,0 +1,79 @@
+// $list: "http://www.thetrychannel.com/wp-content/uploads/2018/04/placeholder.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIfUM8g93yyRUiQ6-HB6R00QOi27zJyTHXKA&usqp=CAU", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuZWLiiGDmvoXIBKvaQ6PUkmkq2XUuXvfylOfsXnKLsM0vqCJHS0TserIFedDf4KlKy_k&usqp=CAU";
+.user-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .user-img{
+        position: relative;
+        
+        // $imgKey: random(3);
+        // $nth: nth($list, $imgKey);
+        .user-icon{
+            // content: url(http://www.thetrychannel.com/wp-content/uploads/2018/04/placeholder.jpg);
+            border-radius: 50%;
+            width: 75px;
+            height: 75px;
+        }
+    }
+
+    .user-data{
+        padding-left: 1rem;
+        flex-grow: 1;
+        color: #666666;
+        font-weight: 400;
+
+        .user-name{
+            color: #191919;
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        .user-role{
+            font-size: 13px;
+            font-weight: 400;
+        }
+        .connected-time{
+            font-size: 10px;
+            font-weight: 400;
+        }
+    }
+
+    .user-card-footer{
+        button{
+            color: #0A66C2;
+            border: 2px solid #0A66C2;
+            border-radius: 1.6rem;
+            padding: 0.4rem 1.5rem;
+            font-size: 1rem;
+            text-transform: capitalize;
+            
+            &:hover{
+                background-color: #E1F0FD;
+                box-shadow: inset 0 0 0 1px #0A66C2;
+            }
+        }
+
+        .loader {
+            width: 25px;
+            height: 25px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            margin-left: 20px;
+
+            .dot {
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background: #666666;
+                margin: 1px;
+            }
+            &:hover{
+                background-color: #EBEBEB;
+                border-radius: 50%;
+            }
+        }
+    }
+}

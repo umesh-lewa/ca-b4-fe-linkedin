@@ -1,1 +1,59 @@
-<p>settings works!</p>
+
+<div class="grid">
+
+    <div class="menu" (click)="profilevisited()">
+        <div class="category-container sticky-on">
+            <ul class="categories">
+                <li class="divider">
+                    <a class="expand" (click)="div1Function()" [routerLink]="['./']">Account Preferences</a>
+                    <div *ngIf="div1">
+                    <a class="subcategory active" (click)="scrolltoprofile()">Profile Information</a>
+                    <a class="subcategory active" (click)="scrolltosite()">Site Preferences</a>
+                    <a class="subcategory active" (click)="scrolltosync()">Syncing Options</a>
+                    </div>
+                </li>
+               
+                <li class="divider">
+                    <a class="expand" (click)="div2Function()" [routerLink]="['./security']">Sign In & Security</a>
+                    <div *ngIf="div2">
+                        <a class="subcategory active">Account Access</a>
+                    </div>
+                </li>
+                <li class="divider">
+                    <div class="expand" (click)="div3Function()" [routerLink]="['./visibility']">Visibilty</div>
+                    <div *ngIf="div3">
+                        <a class="subcategory active">profile & network</a>
+                        <a class="subcategory active">LinkedIn activity</a>
+                    </div>
+                </li>
+                <li class="divider">
+                    <div class="expand" (click)="div4Function()" [routerLink]="['./communication']">Communications</div>
+                    <div *ngIf="div4">
+                        <a class="subcategory active">Your notifications</a>
+                        <a class="subcategory active">Who can reach you</a>
+                        <a class="subcategory active" (click)="scrolltomsgs()">Messaging experience</a>
+                    </div>
+                </li>
+                <li class="divider" (click)="div5Function()" [routerLink]="['./privacy']">
+                    <div class="expand">DataPrivacy</div>
+                    <div *ngIf="div5">
+                        <a class="subcategory active">Job preferences</a>
+                        <a class="subcategory active" (click)="scrolltoothers()">Other applications</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="expand" [routerLink]="['./advertising']">Advertising data</div>
+                </li>
+            </ul>
+            <div class="menu-footer">
+                <p>Have Questions?</p>
+                <p class="help">Visit Help Centre</p>
+            </div>
+        </div>
+    </div>
+       
+
+
+    <!--second component -->
+    <router-outlet></router-outlet>
+</div>
