@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {HttpClientModule} from '@angular/common/http'
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './pages/landing/landing.component';
@@ -25,6 +27,14 @@ import {NavbarComponent} from './components/navbar/navbar.component';
 import { DateDifferencePipe } from './pipes/date-difference.pipe';
 import { UserFilterComponent } from './components/user-filter/user-filter.component';
 import { NoNetworkComponent } from './pages/no-network/no-network.component';
+import { SearchPillComponent } from './components/search-pill/search-pill.component';
+import { FooterOptionsComponent } from './components/footer-options/footer-options.component';
+import { CopyrightComponent } from './components/copyright/copyright.component';
+import { JobListCardComponent } from './components/job-list-card/job-list-card.component';
+import { JobComponent } from './components/job/job.component';
+import { HrComponent } from './components/hr/hr.component';
+import { RecentSearchComponent } from './components/recent-search/recent-search.component';
+import { JobExplanationComponent } from './components/job-explanation/job-explanation.component';
 
 @NgModule({
   declarations: [
@@ -48,10 +58,19 @@ import { NoNetworkComponent } from './pages/no-network/no-network.component';
     DateDifferencePipe,
     UserFilterComponent,
     NoNetworkComponent,
+    SearchPillComponent,
+    FooterOptionsComponent,
+    CopyrightComponent,
+    JobListCardComponent,
+    JobComponent,
+    HrComponent,
+    RecentSearchComponent,
+    JobExplanationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

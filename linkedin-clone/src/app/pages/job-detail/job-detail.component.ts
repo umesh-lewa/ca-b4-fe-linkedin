@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-job-detail',
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./job-detail.component.scss']
 })
 export class JobDetailComponent implements OnInit {
-
-  constructor() { }
+  id;
+  constructor(private activeRoute:ActivatedRoute) {
+      this.activeRoute.paramMap.subscribe(data=>{
+        this.id=data.get('id');
+      });
+   }
 
   ngOnInit(): void {
   }

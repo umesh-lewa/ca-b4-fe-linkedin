@@ -1,1 +1,76 @@
-<p>jobs works!</p>
+<div class="container">
+    <div class="left">
+        <div class="sticky">
+            <div class="optionsList card">
+                <div class="option">
+                    <p><span class="iconify" data-inline="false" data-icon="akar-icons:ribbon" style="color: #666666; font-size: 30px;" data-flip="vertical" data-rotate="180deg"></span></p>
+                    <p>My Jobs</p>
+                </div>
+                <div class="option">
+                    <p><span class="iconify" data-inline="false" data-icon="si-glyph:bell" style="color: #666666; font-size: 30px;"></span></p>
+                    <p>Job Alert</p>
+                </div>
+                <div class="option">
+                    <p><span class="iconify" data-inline="false" data-icon="gridicons:money" style="color: #666666; font-size: 30px;"></span></p>
+                    <p>Salary</p>
+                </div>
+                <div class="option">
+                    <p><span class="iconify" data-inline="false" data-icon="bi:clipboard-check" style="color: #666666; font-size: 30px;"></span></p>
+                    <p>Skill Assesments</p>
+                </div>
+                <div class="option">
+                    <p><span class="iconify" data-inline="false" data-icon="fluent:document-bullet-list-24-filled" style="color: #666666; font-size: 30px;" data-flip="horizontal" data-rotate="180deg"></span></p>
+                    <p>Interview Prep</p>
+                </div>
+                <div class="option">
+                    <p><span class="iconify" data-inline="false" data-icon="raphael:page" data-flip="horizontal" style="color: #666666; font-size: 30px;" data-rotate="180deg"></span></p>
+                    <p>Resume Builder</p>
+                </div>
+                <div class="option">
+                    <p><span class="iconify" data-inline="false" data-icon="ant-design:setting-filled" style="color: #666666; font-size: 30px;" data-flip="horizontal" data-rotate="180deg"></span></p>
+                    <p>Application Settings</p>
+                </div>
+    
+            </div>
+            <div class="postJob card">
+                <div class="option">
+                    <p><span class="iconify" data-inline="false" data-icon="fa-regular:edit" style="color: #666666; font-size: 30px;"></span></p>
+                    <p>Post a free job</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="suggestedSearchWrapper card">
+            <div class="top">
+                <p>Suggested job searches</p>
+                <button><span class="iconify" data-inline="false" data-icon="clarity:times-line" style="color: #666666; font-size: 30px;"></span></button>
+            </div>
+            <div class="suggestionList">
+                <ng-container *ngFor="let word of jobSearchSuggestions">
+                    <app-search-pill [name]="word"></app-search-pill>
+                </ng-container>
+            </div>
+        </div>
+        <app-job-list-card title="Recomended Jobs" [jobList]="jobList|slice:0:5" description="Based on your profile and search history"></app-job-list-card>
+        <app-job-list-card title="Remote opportunities" [jobList]="jobList|slice:5:10" description="Because you expressed interest in remote work"></app-job-list-card>
+    </div>
+    <div class="right">
+        <div class="sticky">
+            <div class="adWrapper card ">
+                <p>Ways to prepare</p>
+                <div class="ad">
+                    <div>
+                        <img src="../../../assets/images/idea.png" />
+                    </div>
+                    <div>
+                        <p>Best Practices</p>
+                        <p>Get the most out of your job search and stand out to recruiters</p>
+                    </div>
+                </div>
+            </div>
+            <app-footer-options></app-footer-options>
+           <app-copyright></app-copyright>
+        </div>
+    </div>
+</div>
