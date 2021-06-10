@@ -1,5 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdvertisingDataComponent } from './components/advertising-data/advertising-data.component';
+import { CommunicationComponent } from './components/communication/communication.component';
+import { DataprivacyComponent } from './components/dataprivacy/dataprivacy.component';
+import { ProfileinfoComponent } from './components/profileinfo/profileinfo.component';
+import { SecurityComponent } from './components/security/security.component';
+import { VisibiltyComponent } from './components/visibilty/visibilty.component';
 import { pathToFileURL } from 'url';
 import { JobExplanationComponent } from './components/job-explanation/job-explanation.component';
 import { ConnectionComponent } from './pages/connection/connection.component';
@@ -57,7 +63,15 @@ const routes: Routes = [{
       component:ProfileComponent
     },{
       path:"settings",
-      component:SettingsComponent
+      component:SettingsComponent,
+      children:[
+        {path:"",component:ProfileinfoComponent},
+        {path:"security",component:SecurityComponent},
+        {path:"visibility",component:VisibiltyComponent},
+        {path:"communication",component:CommunicationComponent},
+        {path:"privacy",component:DataprivacyComponent},
+        {path:"advertising",component:AdvertisingDataComponent},
+      ]
     },
     {
       path:"no-network-found",

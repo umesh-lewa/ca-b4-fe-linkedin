@@ -1,1 +1,18 @@
-<p>register works!</p>
+<div id="root">
+    <div>
+        <div class="login"><img src="https://www.logo.wine/a/logo/LinkedIn/LinkedIn-Logo.wine.svg" alt="linkedin logo">
+            <form [formGroup]="login">
+                <span class="txt" *ngIf="!login.controls.text.valid && login.controls.text.touched">This field is necessary.</span>
+                <input placeholder="Full name (required if registering)" type="text" autocomplete="new-password" value=""><br>
+                <input placeholder="Last name" type="text" value=""><br>
+                <span class="txt" *ngIf="!login.controls.email.valid && login.controls.email.touched">Please enter a valid e-mail address.</span>
+                <input placeholder="Email" type="email" autocomplete="new-password" value=""><br>
+                <span class="txt" *ngIf="!login.controls.password.valid && login.controls.password.touched">Kindly create an alphanumeric password of good strength.</span>
+                <input placeholder="Password" type="password" value="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{7,12}$"><br>
+                <input placeholder="Confirm Password" type="password" value="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{7,12}$"><br>
+                <button type="submit">Register</button><br>
+            </form>
+                <h4>© 2021 LinkedIn</h4>
+            </div>
+        </div>
+    </div>

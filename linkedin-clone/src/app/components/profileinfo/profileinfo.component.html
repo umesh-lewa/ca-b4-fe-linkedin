@@ -1,0 +1,87 @@
+<ul class="listmain listchild">
+    <li class="subcat" id="profilediv">
+        <h2>Profile Information</h2>
+        <p>Basic Information associated with your profile</p>
+    </li>
+    <li class="subcat divider">
+        <div class="subheading">Name, Location, and Industry</div>
+        <p>Choose how your name and profile field appears to other members.</p>
+        <span class="indicator" (click)="profileFunction()">
+            Change
+        </span>
+
+        <div *ngIf="pro" >
+            <p class="inner">Let us know which language you want to use on LinkedIn. You can change it back at any time.</p>
+               <p class="leftspace">Name* <input type=text class="inputbox"> </p>
+               <p class="leftspace">Location* <input type=text class="inputbox"></p>
+               <p class="leftspace"> Position*  <input type=text class="inputbox"></p>
+        </div>
+    </li>
+
+    <li class="subcat" id="sitediv">
+        <h2>Site Preferences</h2>
+        <p>Manage your LinkedIn experience</p>
+    </li>
+    <li class="subcat divider">
+        <div class="subheading">Language</div>
+        <p>Select the language you use on LinkedIn</p>
+        <span class="indicator" (click)="langFunction()">
+            Change
+        </span>
+         
+        <div *ngIf="lang" >
+            <p class="inner">Let us know which language you want to use on LinkedIn. You can change it back at any time.</p>
+                <select class="inner-options">
+                    <option value="tel">Telugu</option>
+                    <option value="hin">Hindi</option>
+                    <option value="eng">Englilsh</option>
+                </select>
+        </div>
+    </li>
+
+    <li class="subcat divider">
+        <div class="subheading">Content language</div>
+        <p>Select a language for translation</p>
+        <span class="indicator">
+            Change
+        </span>
+    </li>
+
+    <li class="subcat divider">
+        <div class="subheading">Auto Play vedios</div>
+        <p>Choose auto play vedios on LinkedIn</p>
+        <span class="indicator">
+            Change
+        </span>
+    </li>
+
+    <li class="subcat divider">
+        <div class="subheading">Auto Play vedios</div>
+        <p>Choose auto play vedios on LinkedIn</p>
+        <span class="indicator">
+            Change
+        </span>
+    </li>
+
+
+    <li class="subcat">
+        <h2>Syncing options</h2>
+        <p>Use information you have to make networking easier</p>
+    </li>
+    
+    <li class="subcat divider">
+        <div class="subheading">Sync calendar</div>
+        <p>sync calendar to get timely updates about who you’ll be meeting withChange</p>
+        <span class="indicator">
+            Change
+        </span>
+    </li>
+
+    <li class="subcat divider">
+        <div class="subheading" id="sync-optns">Sync contacts</div>
+        <p>Manage or sync contacts to connect with people you know directly from your address book</p>
+        <span class="indicator">
+            Change
+        </span>
+    </li>
+</ul>
