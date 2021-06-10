@@ -1,0 +1,42 @@
+@import '../../constants/colors.scss';
+$cardWidth:96%;
+.card{
+    background-color: #fff;
+    border-radius: 8px;
+}
+.recomendedJobs{
+    width: $cardWidth;
+    margin: 10px auto;
+    .category{
+        padding: 20px 10px 2px 20px;
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+    .category+p{
+        padding: 0px 10px 2px 20px;
+        font-size: 0.9em;
+        color: $dullText;
+    }
+    .jobList{
+        width: 100%;
+        
+    }
+    .seemore{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 20px 0;
+        font-weight: 500;
+        color: $linkedinBlue;
+        p{
+            padding: 2px 10px;
+                border-radius: 8px;
+        }
+        &:hover{
+            p{
+                background-color: $fadedLinkedinBlue;
+            }
+        }
+    }
+}

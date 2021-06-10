@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { MainService } from 'src/app/services/main.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,10 @@ export class NavbarComponent implements OnInit {
   @Output() openSearch=new EventEmitter<boolean>();
   profilePic="https://media-exp3.licdn.com/dms/image/C5103AQHiyCu0ytkiKA/profile-displayphoto-shrink_800_800/0/1582986312253?e=1628726400&v=beta&t=HG0iMm8oIicMJmUtLro1ZdHNrxUdqjTa5HyTCj3SU_8";
   active='home';
-  constructor() { }
+  openSearchBar=false;
+  constructor(private mainServ:MainService) {
+    this.mainServ.titleChangeMessage.subscribe(title=>this.active=title);
+   }
   ngOnInit(): void {
   }
   changeActive(name){
@@ -17,5 +21,6 @@ export class NavbarComponent implements OnInit {
   }
   toggleSearchBox(){
     this.openSearch.emit(true);
+    this.openSearchBar=!this.openSearchBar;
   }
 }
