@@ -1,0 +1,67 @@
+@import '../../constants/colors.scss';
+
+.job{
+    display: flex;
+    padding: 20px 10px;
+    .logoWrapper{
+        width: 15%;
+        img{
+            width: 90%;
+            height: 80px;
+            margin: auto;
+        }
+    }
+    .jobDetailsWrapper{
+        width: 65%;
+        .jobTitle{
+            color: $linkedinBlue;
+            font-size: 1.2em;
+            font-weight: 500;
+            cursor: pointer;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        .activeHiring{
+            display: flex;
+            align-content: center;
+        }
+        .postedOn{
+            color: green;
+            font-size: 1em;
+            font-weight: 500;
+            padding-top: 10px;
+        }
+        .smallText{
+            font-size: 0.8em;
+            padding: 3px 0;
+        }
+        .dullText{
+            color: $dullText;
+        }
+    }
+    .actionsWrapper{
+        width: 20%;
+        display: flex;
+        justify-content: space-evenly;
+        button{
+            background: none;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            padding: 3px;
+            &:hover{
+                background-color: rgb(221, 221, 221);
+            }
+        }
+    }
+}
+.hide{
+    opacity: 0;
+    transition: opacity 300ms;
+}
+.show{
+    opacity: 1;
+}

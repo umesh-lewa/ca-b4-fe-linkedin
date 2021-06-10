@@ -3,25 +3,5 @@
     <main>
         <router-outlet></router-outlet>
     </main>
-    <div class="searchDiv" [ngClass]="{'open':openSearch}">
-        <div class="top">
-            <p>Recent</p>
-            <p>Clear</p>
-        </div>
-        <div class="recentItems">
-            <div class="recentItem">
-                <p><span class="iconify" data-inline="false" data-icon="bx:bx-time-five"></span></p>
-                <p>Rohan arya</p>
-            </div>
-            <div class="recentItem">
-                <p><span class="iconify" data-inline="false" data-icon="bx:bx-time-five"></span></p>
-                <p>Presidio</p>
-            </div>
-            <div class="recentItem">
-                <p><span class="iconify" data-inline="false" data-icon="bx:bx-time-five"></span></p>
-                <p>Google</p>
-            </div>
-        </div>
-    </div>
     <div class="overlay" [ngClass]="{'showOverlay':openSearch}"></div>
 </div>
