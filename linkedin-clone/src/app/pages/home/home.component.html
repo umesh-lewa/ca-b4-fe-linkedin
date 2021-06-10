@@ -1,5 +1,5 @@
 <div class="container">
-    <app-navbar (openSearch)="toggleSearch($event)"></app-navbar>
+    <app-navbar [user]="user" (openSearch)="toggleSearch($event)"></app-navbar>
     <main>
         <router-outlet></router-outlet>
     </main>

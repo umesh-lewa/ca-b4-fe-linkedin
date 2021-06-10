@@ -123,6 +123,7 @@ nav{
                 justify-content: center;
                 cursor: pointer;
                 color: #666666;
+                position: relative;
                 .profilePic{
                         width: 100%;
                         display: flex;
@@ -135,7 +136,7 @@ nav{
                         border-radius: 50%;
                     }
                 }
-                p{
+                >p{
                     width: 100%;
                     text-align: center;
                     font-size: 0.8em;
@@ -151,21 +152,113 @@ nav{
                     border-right: 5px solid transparent;
                     border-top: 5px solid #000;
                     margin: auto 0;
-                  }
-            }
-            .workIcon{
-                border-left: 1px solid black;
-                p{
-                    width: 40%;
-                 }
-            }
-            .active{
-                color: #000;
-                border-bottom: 2px solid #000;
-                .span{
-                    color: #000 !important;
+                }
+                
+                .profileActions{
+                      position: absolute;
+                      width: 260px;
+                      height: 0px;
+                      overflow: hidden;
+                      background-color: #fff;
+                      border-radius: 8px 0px 8px 8px;
+                      top:80px;
+                      right: 0;
+                      transition: height 400ms;
+                      .profileInfo{
+                          width: 93%;
+                          display: flex;
+                          padding: 10px;
+                            .avatar{
+                                width: 30%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                img{
+                                    width: 50px;
+                                    height: 50px;
+                                    border-radius: 50%;
+                                }
+                            }
+                            .infos{
+                                p{
+                                    width: 100%;
+                                    text-align: left;
+                                    white-space: pre-wrap;
+                                    padding: 2px 8px 0px 8px;
+                                }
+                                p:nth-child(1){
+                                    font-size: 1em;
+                                    color: #000;
+                                    font-weight: 500;
+                                }
+                            }
+                      }
+                      .viewProfileBtnHolder{
+                        width: 100%;
+                        padding: 10px 0;
+                        display: flex;
+                        justify-content: center;
+                        button{
+                            width: 80%;
+                            height: 30px;
+                            color: $linkedinBlue;
+                            border: 1px solid $linkedinBlue;
+                            background: none;
+                            margin: auto;
+                            border-radius: 300px;
+                            transition: background-color 300ms;
+                            cursor: pointer;
+                            font-weight: 500;
+                            &:hover{
+                                background-color: $fadedLinkedinBlue;
+                            }
+                        }
+                    }
+                    .profileActionsCategory{
+                        width: 100%;
+                        padding: 8px 0;
+                        p{
+                            text-align: left;
+                            padding: 3px 0px 3px 10px;
+                        }
+                        .profileActionsHeading{
+                            cursor: default;
+                            font-weight: 600;
+                            color: #000;
+                            font-size: 1.2em;
+                        }
+                        .profileActionsHeading~p{
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                    .workIcon{
+                        border-left: 1px solid rgb(224, 224, 224);
+                        p{
+                            width: 40%;
+                         }
+                    }
+                    .active{
+                        color: #000;
+                        border-bottom: 2px solid #000;
+                        .span{
+                            color: #000 !important;
+                        }
+                    }
+                    .signout{
+                        padding: 10px;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .openProfileActions{
+                    height: 430px;
+                    box-shadow: 1px 2px 13px 2px rgba(138,138,138,0.72);
                 }
             }
+            
         }
     }
     
@@ -178,6 +271,7 @@ nav{
 .inactiveIcon{
     color: #666666 ; 
 }
+
 // .activeIcon{
 //     color: #000 ;
 // }
