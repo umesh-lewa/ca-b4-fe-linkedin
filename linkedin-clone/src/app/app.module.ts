@@ -20,6 +20,7 @@ import { SettingsComponent } from './pages/settings/settings.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SuggestionCardComponent } from './components/suggestion-card/suggestion-card.component';
 import { ConnectedUserComponent } from './components/connected-user/connected-user.component';
+import { ReactiveFormsModule} from '@angular/forms';
 
 
 //components
@@ -65,12 +66,14 @@ import { JobExplanationComponent } from './components/job-explanation/job-explan
     JobComponent,
     HrComponent,
     RecentSearchComponent,
-    JobExplanationComponent
+    JobExplanationComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

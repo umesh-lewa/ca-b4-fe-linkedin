@@ -21,13 +21,21 @@ nav{
             align-items: center;
         }
         .searchHolder{
+<<<<<<< Updated upstream
             width: 40%;
+=======
+            width: 30%;
+>>>>>>> Stashed changes
             height: 100%;
             // background-color: green;
             display: flex;
             align-items: center;
+<<<<<<< Updated upstream
             position: relative;
             .normalSearch{
+=======
+            input{
+>>>>>>> Stashed changes
                 width: 250px;
                 height: 20px;
                 padding: 10px;
@@ -41,6 +49,7 @@ nav{
                 border: none;
                 border-radius: 8px;
                 transition: width 500ms, padding-left 500ms;
+<<<<<<< Updated upstream
                 &:focus{
                     width: 300px;
                     padding-left: 60px;
@@ -106,11 +115,21 @@ nav{
             }
             .open{
                 height: 200px;
+=======
+            }
+            input:focus{
+                width: 300px;
+                padding-left: 60px;
+>>>>>>> Stashed changes
             }
         }
         .navIconsWrapper{
             // background-color: green;
+<<<<<<< Updated upstream
             width: 55%;
+=======
+            width: 65%;
+>>>>>>> Stashed changes
             height: 100%;
             display: flex;
             justify-content: flex-end;
