@@ -38,7 +38,7 @@
             }
             
             .card-header{
-                background-image: url(https://media-exp1.licdn.com/dms/image/C5616AQE6gH16fLWH6A/profile-displaybackgroundimage-shrink_200_800/0/1616879004072?e=1628726400&v=beta&t=8LyJJlIpLX7VgdyMT-9aD9YqQd6-KuDvYT-CAdfedrI);
+                background-image: url("../../../assets/images/userheader1.jpg");
                 position: relative;
                 border-top-left-radius: 10px;
                 border-top-right-radius: 10px;
@@ -52,7 +52,7 @@
                         width: 100px;
                         height: 100px;
                         position: absolute;
-                        content: url("http://www.thetrychannel.com/wp-content/uploads/2018/04/placeholder.jpg");
+                        content: url("../../../assets/images/usericon1.jpg");
                         left: 50%;
                         margin-left: -50px;
                         top: 100%;
@@ -131,20 +131,20 @@
             }
             &:nth-of-type(even){
                 .card-header{
-                    background: url(https://ak.picdn.net/shutterstock/videos/24328463/thumb/1.jpg);
+                    background: url(../../../assets/images/userheader2.webp);
                     .header-img-wrapper{
                         .user-icon{
-                            content: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIfUM8g93yyRUiQ6-HB6R00QOi27zJyTHXKA&usqp=CAU) ;
+                            content: url(../../../assets/images/usericon2.png) ;
                         }
                     }
                 }
             }
             &:nth-child( 3n + 1 ){
                 .card-header{
-                    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2nwnW3Ks_o_eZQsmYuOwcGab3EfHti3ttPchUe_hcvCBOP50NC3prIBfxwuFxrmVhI_Y&usqp=CAU);
+                    background: url(../../../assets/images/userheader3.jpg);
                     .header-img-wrapper{
                         .user-icon{
-                            content: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuZWLiiGDmvoXIBKvaQ6PUkmkq2XUuXvfylOfsXnKLsM0vqCJHS0TserIFedDf4KlKy_k&usqp=CAU) ;
+                            content: url(../../../assets/images/usericon3.png) ;
                         }
                     }
                 }
@@ -152,4 +152,4 @@
         }
     }
 }
-//http://www.thetrychannel.com/wp-content/uploads/2018/04/placeholder.jpg https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIfUM8g93yyRUiQ6-HB6R00QOi27zJyTHXKA&usqp=CAU https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuZWLiiGDmvoXIBKvaQ6PUkmkq2XUuXvfylOfsXnKLsM0vqCJHS0TserIFedDf4KlKy_k&usqp=CAU
+//../../../assets/images/usericon1.jpg ../../../assets/images/usericon2.png ../../../assets/images/usericon3.png

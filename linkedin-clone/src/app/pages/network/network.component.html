@@ -1,6 +1,7 @@
 <div class="network-wrapper">
-    <div class="network">
+    <div class="network-list">
         <div class="manage-network">
+            <div class="networks">
             <h2 class="title">Manage my network</h2>
             <ul class="network-type-list">
                 <li *ngFor="let type of networkType; let i=index;">
@@ -22,6 +23,9 @@
                    <span class="iconify" data-inline="false" data-icon="bi:caret-down-fill"></span>
                 </div>
             </button>
+        </div>
+        <app-footer-options></app-footer-options>
+        <app-copyright></app-copyright>
         </div>
         <div class="people-wrapper">
             <ul>

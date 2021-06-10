@@ -23,7 +23,7 @@ export class ContactComponent implements OnInit {
 
 }
 
-const iconlist = ["http://www.thetrychannel.com/wp-content/uploads/2018/04/placeholder.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIfUM8g93yyRUiQ6-HB6R00QOi27zJyTHXKA&usqp=CAU", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuZWLiiGDmvoXIBKvaQ6PUkmkq2XUuXvfylOfsXnKLsM0vqCJHS0TserIFedDf4KlKy_k&usqp=CAU"]
+const iconlist = ["../../../assets/images/usericon1.jpg", "../../../assets/images/usericon2.png", "../../../assets/images/usericon3.png"]
 const profilesData = [
   {
     firstName : "Mahesh", 

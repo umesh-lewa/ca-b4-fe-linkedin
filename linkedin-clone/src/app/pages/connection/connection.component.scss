@@ -1,11 +1,10 @@
 .connection{
     padding: 3rem 0;
     background-color: #F3F2EF;
+    display: flex;
 
     .connection-wrapper{        
-        margin-left: auto;
-        margin-right: auto;
-        width: 55vw;
+        flex-grow: 1;
         background-color: #FFFFFF;
         border-radius: 10px;
         border: 1px solid #E0DFDC;

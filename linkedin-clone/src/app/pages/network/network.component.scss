@@ -1,8 +1,7 @@
 .network-wrapper{
-    padding: 20px 0;
     background-color: #F3F2EF;
     
-    .network{
+    .network-list{
         margin-right: auto;
         margin-left: auto;
         width: 100%;
@@ -11,13 +10,16 @@
         justify-content: space-between;
 
         .manage-network{
-            width: 20vw;
-            background-color: #FFFFFF;
-            border-radius: 10px;
-            cursor: pointer;
-            border: 1px solid #E0DFDC ;
-            height: max-content;
-            padding-bottom: 10px;
+            width: min-content;
+            .networks
+            {
+                width: 18vw;
+                background-color: #FFFFFF;
+                border-radius: 10px;
+                cursor: pointer;
+                border: 1px solid #E0DFDC ;
+                height: max-content;
+                padding-bottom: 10px;
 
             .title{
                 color: #191919;
@@ -81,10 +83,11 @@
                 }
 
             }
+          }
         }
 
         .people-wrapper{
-            margin-left: 5rem;
+            margin-left: 2.5rem;
             width: 70vw;
             background-color: #FFFFFF;
             border: 1px solid #E0DFDC;

@@ -11,6 +11,8 @@ export class UserFilterComponent implements OnInit {
   @Input() contact
 
   filterOption = { "connected" : 'RecentlyAdded', "firstName": "First Name", "lastName" : "Last Name" }
+  filterOption1 = [ "RecentlyAdded" , "First Name", "Last Name" ]
+
   filtterSortLabel;
   showFilterOption =  false;
 
