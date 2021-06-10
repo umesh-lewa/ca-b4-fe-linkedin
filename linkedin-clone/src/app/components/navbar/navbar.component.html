@@ -1,0 +1,42 @@
+<nav>
+    <div class="navContainer">
+        <div class="iconHolder">
+            <span class="iconify" data-inline="false" data-icon="logos:linkedin-icon" style="font-size: 42px;"></span>
+        </div>
+        <div class="searchHolder">
+            <input (focus)="toggleSearchBox()" (focusout)="toggleSearchBox()" placeholder="Search"/>
+        </div>
+        <div class="navIconsWrapper">
+            <div class="anchorIcon" (click)="changeActive('home')" [ngClass]="{'active':active=='home'}">
+                <span class="iconify icon inactiveIcon"  data-inline="false"  data-icon="ant-design:home-filled"></span>
+                <p>Home</p>
+            </div>
+            <div class="anchorIcon" (click)="changeActive('network')" [ngClass]="{'active':active=='network'}">
+                <span class="iconify icon inactiveIcon"  data-inline="false" data-icon="fluent:people-28-filled" ></span>
+                <p>My Network</p>
+            </div>
+            <div class="anchorIcon" (click)="changeActive('jobs')" [ngClass]="{'active':active=='jobs'}">
+                <span class="iconify icon inactiveIcon" [ngStyle]="{'color':active!='jobs'?'#666':'#000'}" data-inline="false" data-icon="gridicons:briefcase" ></span>
+                <p>Jobs</p>
+            </div>
+            <div class="anchorIcon" (click)="changeActive('notifications')" [ngClass]="{'active':active=='notifications'}">
+                <span class="iconify icon inactiveIcon"  [ngStyle]="{'color':active!='notifications'?'#666':'#000'}" data-inline="false" data-icon="si-glyph:bell" ></span>
+                <p>Notifications</p>
+            </div>
+            <div class="anchorIcon " (click)="changeActive('me')" [ngClass]="{'active':active=='me'}">
+                <div class="profilePic">
+                    <div [ngStyle]="{'background-image':'url('+profilePic+')'}"></div>
+                </div>
+                <p>Me  </p><div class="arrow-down"></div>
+            </div>
+            <div class="anchorIcon workIcon">
+                <span class="iconify icon inactiveIcon" data-inline="false" data-icon="bi:grid-3x3-gap-fill" ></span>
+                <p>Work</p><div class="arrow-down"></div>
+            </div>
+            <div class="anchorIcon">
+                <span class="iconify icon inactiveIcon" data-inline="false" data-icon="majesticons:shopping-bag" ></span>
+                <p>Post a job</p>
+            </div>
+        </div>
+    </div>
+</nav>
