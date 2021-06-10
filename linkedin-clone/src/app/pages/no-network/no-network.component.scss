@@ -1,0 +1,22 @@
+.main-container{
+    padding: 3rem 0;
+    background-color: #F3F2EF;
+
+    .wrapper{        
+        margin-left: auto;
+        margin-right: auto;
+        width: 55vw;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        border: 1px solid #E0DFDC;
+        display: flex;
+        align-items: center;
+        padding: 3rem;
+        flex-direction: column;
+        
+        img{
+            width: 300px;
+        }
+    }
+
+}

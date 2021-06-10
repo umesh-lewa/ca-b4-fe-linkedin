@@ -1,1 +1,34 @@
-<p>network works!</p>
+<div class="network-wrapper">
+    <div class="network">
+        <div class="manage-network">
+            <h2 class="title">Manage my network</h2>
+            <ul class="network-type-list">
+                <li *ngFor="let type of networkType; let i=index;">
+                    <button *ngIf="i < 2 || !showLess" class="netwokurl" [routerLink]="type.netwokurl">
+                        <div class="network-type">
+                            <div class="type-name">{{type.name}}</div>
+                            <div class="type-count">{{type.count}}</div>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+            <button class="show" (click)="restrictmyNetwork()">
+                <div class="show-div" *ngIf="!showLess">
+                    <span> Show Less</span> 
+                    <span class="iconify" data-inline="false" data-icon="bi:caret-up-fill"></span>
+                </div>
+                <div *ngIf="showLess" class="show-div">
+                   <span>Show More</span> 
+                   <span class="iconify" data-inline="false" data-icon="bi:caret-down-fill"></span>
+                </div>
+            </button>
+        </div>
+        <div class="people-wrapper">
+            <ul>
+                <li *ngFor="let suggestion of userData">
+                    <suggestion-card [suggestion]="suggestion"></suggestion-card>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
