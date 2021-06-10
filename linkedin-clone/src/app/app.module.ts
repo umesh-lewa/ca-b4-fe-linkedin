@@ -17,6 +17,10 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { HomeComponent } from './pages/home/home.component';
 
+
+//components
+import {NavbarComponent} from './components/navbar/navbar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +36,8 @@ import { HomeComponent } from './pages/home/home.component';
     NotificationComponent,
     ProfileComponent,
     SettingsComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
