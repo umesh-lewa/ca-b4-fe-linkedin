@@ -1,0 +1,202 @@
+@import '../../constants/colors.scss';
+nav{
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    z-index: 12;
+    position: fixed;
+    top: 0;
+    left: 0;
+    .navContainer{
+        width: 75%;
+        height: 70px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        .iconHolder{
+            width: 5%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .searchHolder{
+<<<<<<< Updated upstream
+            width: 40%;
+=======
+            width: 30%;
+>>>>>>> Stashed changes
+            height: 100%;
+            // background-color: green;
+            display: flex;
+            align-items: center;
+<<<<<<< Updated upstream
+            position: relative;
+            .normalSearch{
+=======
+            input{
+>>>>>>> Stashed changes
+                width: 250px;
+                height: 20px;
+                padding: 10px;
+                padding-left: 40px;
+                background-color: #eef3f7;
+                background-image: url(../../../assets/search.png);
+                background-size: 20px;
+                background-repeat: no-repeat;
+                background-position-y: center;
+                background-position-x: 10px;
+                border: none;
+                border-radius: 8px;
+                transition: width 500ms, padding-left 500ms;
+<<<<<<< Updated upstream
+                &:focus{
+                    width: 300px;
+                    padding-left: 60px;
+                }
+            }
+            .jobsSearch{
+                width: 170px;
+                margin-right: 5px;
+                &:focus{
+                    width: 200px;
+                    padding-left: 60px;
+                }
+            }
+            .jobsSearch:nth-child(2){
+                background-image: url('https://banner2.cleanpng.com/20180328/syq/kisspng-location-computer-icons-space-location-5abb46eb8b8683.3145965515222228275715.jpg');
+                background-size: 20px;
+            }
+            button{
+                background:none;
+                border: 1px solid $linkedinBlue;
+                padding: 3px 10px;
+                width: 100px;
+                border-radius: 200px;
+                color: $linkedinBlue;
+                font-size: 1em;
+                font-weight: 500;
+                cursor: pointer;
+                transition: border 50ms,background-color 400ms;
+                &:hover{
+                    background-color: $fadedLinkedinBlue;
+                    border: 2px solid $linkedinBlue;
+                }
+            }
+            .searchDiv{
+                position: absolute;
+                top:72px;
+                left: 0px;
+                border-radius: 8px;
+                width: 480px;
+                background-color: #fff;
+                z-index: 2;
+                height: 0;
+                overflow: hidden;
+                transition: height 500ms;
+                .top{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    p{
+                        padding: 10px 20px;
+                    }
+                    p:nth-child(2){
+                        margin-left: auto;
+                        color: rgb(133, 133, 133);
+                        cursor: pointer;
+                    }
+                }
+                .recentItems{
+                    width: 100%;
+                    cursor: pointer;
+                }
+                
+            }
+            .open{
+                height: 200px;
+=======
+            }
+            input:focus{
+                width: 300px;
+                padding-left: 60px;
+>>>>>>> Stashed changes
+            }
+        }
+        .navIconsWrapper{
+            // background-color: green;
+<<<<<<< Updated upstream
+            width: 55%;
+=======
+            width: 65%;
+>>>>>>> Stashed changes
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            .anchorIcon{
+                width: 90px;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: center;
+                cursor: pointer;
+                color: #666666;
+                .profilePic{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                    div{
+                        width: 30px;
+                        height: 30px;
+                        // background-color: green;
+                        background-size: contain;
+                        border-radius: 50%;
+                    }
+                }
+                p{
+                    width: 100%;
+                    text-align: center;
+                    font-size: 0.8em;
+                    padding: 5px 0;
+                }
+                .profilePic + p{
+                   width: 40%;
+                }
+                .arrow-down {
+                    width: 0; 
+                    height: 0; 
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-top: 5px solid #000;
+                    margin: auto 0;
+                  }
+            }
+            .workIcon{
+                border-left: 1px solid black;
+                p{
+                    width: 40%;
+                 }
+            }
+            .active{
+                color: #000;
+                border-bottom: 2px solid #000;
+                .span{
+                    color: #000 !important;
+                }
+            }
+        }
+    }
+    
+}
+
+.icon{
+    font-size: 30px;
+    width:100%;
+}
+.inactiveIcon{
+    color: #666666 ; 
+}
+// .activeIcon{
+//     color: #000 ;
+// }

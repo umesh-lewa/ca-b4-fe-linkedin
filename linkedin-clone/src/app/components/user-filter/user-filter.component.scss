@@ -1,0 +1,84 @@
+.total{
+    font-size: 1.2rem;
+    padding: 2rem 2rem 1rem;
+}
+
+.filter-wrapper{
+    padding: 0rem 2rem 1rem;
+    
+    .filter{
+    
+        .filter-sort{
+            margin-bottom: 1rem;
+
+              .dropdown {
+                margin-left: 0.5rem;
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+                color: #666666;
+
+                .dropbtn {
+                    font-size: 16px;
+                    border: none;
+                    cursor: pointer;
+                    position: relative;
+                    background: none;
+                    color: inherit;
+                }
+                .iconify{
+                    margin-left: 0.5rem;
+                }
+                  
+                  #dropdown-content {
+                    display: none;
+                    position: absolute;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    z-index: 1;
+                    background-color: #FFF;
+                    border-bottom-right-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    
+                    span {
+                     color: black;
+                     padding: 12px 16px;
+                     text-decoration: none;
+                     display: block;
+                     &:hover {background-color: #f1f1f1}
+                   }
+                  &:hover .dropdown-content {
+                    display: block;
+                  }
+                }             
+            }  
+        }
+        .filter-input{
+            input{
+                width: 60%;
+                padding: 8px;
+                padding-left: 40px;
+                background-color: #eef3f7;
+                background-image: url('../../../assets/search.png');
+                background-size: 20px;
+                background-repeat: no-repeat;
+                background-position-y: center;
+                background-position-x: 10px;
+                border: none;
+                border: 1px solid #646465;
+                border-radius: 8px;
+            }
+        }
+    }
+
+    .inline-filter{
+        display: flex;
+        justify-content: space-between;
+
+        .filter-input{
+            input{
+                width:  15vw;
+            }
+        }
+    }
+}

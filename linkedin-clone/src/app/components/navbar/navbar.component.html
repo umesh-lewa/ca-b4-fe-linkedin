@@ -1,0 +1,61 @@
+<nav>
+    <div class="navContainer">
+        <div class="iconHolder">
+            <span class="iconify" data-inline="false" data-icon="logos:linkedin-icon" style="font-size: 42px;"></span>
+        </div>
+        <div class="searchHolder">
+            <input class="normalSearch" (focus)="toggleSearchBox()" *ngIf="active!='jobs'" (focusout)="toggleSearchBox()" placeholder="Search"/>
+            <input class="normalSearch jobsSearch" (focus)="toggleSearchBox()" (focusout)="toggleSearchBox()" *ngIf="active=='jobs'" placeholder="Search by title,skills,company,keyword" />
+            <input class="normalSearch jobsSearch" *ngIf="active=='jobs'" placeholder="City,state or Zip-code" />
+            <button *ngIf="active=='jobs'">Search</button>
+            <div class="searchDiv" [ngClass]="{'open':openSearchBar}">
+                <div class="top">
+                    <p>Recent</p>
+                    <p>Clear</p>
+                </div>
+                <div class="recentItems" *ngIf="active!='jobs'">
+                   <app-recent-search name="Rohan arya"></app-recent-search>
+                   <app-recent-search name="Presidio"></app-recent-search>
+                   <app-recent-search name="Google"></app-recent-search>
+                </div>
+                <div class="recentItems" *ngIf="active=='jobs'">
+                    <app-recent-search name="Software developer"></app-recent-search>
+                    <app-recent-search name="Full stack engineer"></app-recent-search>
+                    <app-recent-search name="Senior software engineer"></app-recent-search>
+                 </div>
+            </div>
+        </div>
+        <div class="navIconsWrapper">
+            <div class="anchorIcon" routerLink="/home" (click)="changeActive('home')" [ngClass]="{'active':active=='home'}">
+                <span class="iconify icon inactiveIcon"  data-inline="false"  data-icon="ant-design:home-filled"></span>
+                <p>Home</p>
+            </div>
+            <div class="anchorIcon" routerLink="/home/network" (click)="changeActive('network')" [ngClass]="{'active':active=='network'}">
+                <span class="iconify icon inactiveIcon"  data-inline="false" data-icon="fluent:people-28-filled" ></span>
+                <p>My Network</p>
+            </div>
+            <div class="anchorIcon" routerLink="/home/jobs" (click)="changeActive('jobs')" [ngClass]="{'active':active=='jobs'}">
+                <span class="iconify icon inactiveIcon"  data-inline="false" data-icon="gridicons:briefcase" ></span>
+                <p>Jobs</p>
+            </div>
+            <div class="anchorIcon" routerLink="/home/notifications" (click)="changeActive('notifications')" [ngClass]="{'active':active=='notifications'}">
+                <span class="iconify icon inactiveIcon"  data-inline="false" data-icon="si-glyph:bell" ></span>
+                <p>Notifications</p>
+            </div>
+            <div class="anchorIcon" routerLink="/home/profile" (click)="changeActive('me')" [ngClass]="{'active':active=='me'}">
+                <div class="profilePic">
+                    <div [ngStyle]="{'background-image':'url('+profilePic+')'}"></div>
+                </div>
+                <p>Me  </p><div class="arrow-down"></div>
+            </div>
+            <div class="anchorIcon workIcon">
+                <span class="iconify icon inactiveIcon" data-inline="false" data-icon="bi:grid-3x3-gap-fill" ></span>
+                <p>Work</p><div class="arrow-down"></div>
+            </div>
+            <div class="anchorIcon">
+                <span class="iconify icon inactiveIcon" data-inline="false" data-icon="majesticons:shopping-bag" ></span>
+                <p>Post a job</p>
+            </div>
+        </div>
+    </div>
+</nav>

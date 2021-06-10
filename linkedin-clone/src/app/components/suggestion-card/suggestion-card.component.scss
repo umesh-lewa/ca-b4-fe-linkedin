@@ -1,0 +1,155 @@
+.suggestion-title{
+    margin: 1.2rem;
+    margin-bottom: 2rem;
+
+    .title{
+        padding: 10px 0px 10px;
+        .title-left{
+            display: inline-block;
+        }
+        .title-right{
+            float: right;
+            color: #666666;
+            padding: 10px;
+            margin: -10px;
+            border-radius: 5px;
+            cursor: pointer;
+            &:hover{
+                background-color: #EBEBEB;
+            }
+        }
+    }
+
+    .card-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+
+        .card{
+            width: calc((100% - 5.5rem)/4);
+            border: 1px solid #E0DFDC;
+            height: 20rem;
+            position: relative;
+            border-radius: 10px;
+            margin: 10px;
+            
+            &:hover{
+                box-shadow: 1px 2px 18px -1px rgba(0,0,0,0.71);
+            }
+            
+            .card-header{
+                background-image: url(https://media-exp1.licdn.com/dms/image/C5616AQE6gH16fLWH6A/profile-displaybackgroundimage-shrink_200_800/0/1616879004072?e=1628726400&v=beta&t=8LyJJlIpLX7VgdyMT-9aD9YqQd6-KuDvYT-CAdfedrI);
+                position: relative;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                
+                .header-img-wrapper{
+                    position: relative;
+                    height: 5rem;
+                    margin-bottom: 3rem;
+                    .user-icon{
+                        border-radius: 50%;
+                        width: 100px;
+                        height: 100px;
+                        position: absolute;
+                        content: url("http://www.thetrychannel.com/wp-content/uploads/2018/04/placeholder.jpg");
+                        left: 50%;
+                        margin-left: -50px;
+                        top: 100%;
+                        margin-top: -50px;
+                    }
+                }
+            }
+            
+            .card-body{
+                text-align: center;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                word-break: break-word;
+                font-weight: 600;
+                padding-top: 10px;
+                
+                .card-title{
+                    color: #191919;
+                    max-height: 2.4rem;
+                }
+                .card-data{
+                    color: #666666;
+                    max-height: 4rem;
+                    font-weight: 400;
+                    padding-top: 5px;
+                }
+            }
+            
+            .card-footer{
+                position: absolute;
+                bottom: 1rem;
+                width: 100%;
+                
+                .foot-wrapper{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .suggested-from{
+                        color: #666666;
+                        font-size: 0.8rem;
+                        margin: 10px;
+                        text-align: center;
+                    }
+                }
+                
+                button{
+                    color: #0A66C2;
+                    border: 2px solid #0A66C2;
+                    border-radius: 1.6rem;
+                    padding: 0.4rem 1.5rem;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    text-transform: capitalize;
+                    
+                    &:hover{
+                        background-color: #E1F0FD;
+                        box-shadow: inset 0 0 0 1px #0A66C2;
+                    }
+                }
+            }
+            
+            .iconify{
+                font-size: 1.9rem;
+                color: white;
+                position: absolute;
+                top: 0.5rem;
+                right: 0.5rem;
+                border-radius: 50%;
+                background: black;
+                opacity: 0.7;
+                cursor: pointer;
+                
+                &:hover{
+                    opacity: 1;
+                }
+            }
+            &:nth-of-type(even){
+                .card-header{
+                    background: url(https://ak.picdn.net/shutterstock/videos/24328463/thumb/1.jpg);
+                    .header-img-wrapper{
+                        .user-icon{
+                            content: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIfUM8g93yyRUiQ6-HB6R00QOi27zJyTHXKA&usqp=CAU) ;
+                        }
+                    }
+                }
+            }
+            &:nth-child( 3n + 1 ){
+                .card-header{
+                    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2nwnW3Ks_o_eZQsmYuOwcGab3EfHti3ttPchUe_hcvCBOP50NC3prIBfxwuFxrmVhI_Y&usqp=CAU);
+                    .header-img-wrapper{
+                        .user-icon{
+                            content: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuZWLiiGDmvoXIBKvaQ6PUkmkq2XUuXvfylOfsXnKLsM0vqCJHS0TserIFedDf4KlKy_k&usqp=CAU) ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//http://www.thetrychannel.com/wp-content/uploads/2018/04/placeholder.jpg https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIfUM8g93yyRUiQ6-HB6R00QOi27zJyTHXKA&usqp=CAU https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuZWLiiGDmvoXIBKvaQ6PUkmkq2XUuXvfylOfsXnKLsM0vqCJHS0TserIFedDf4KlKy_k&usqp=CAU

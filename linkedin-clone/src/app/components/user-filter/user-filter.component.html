@@ -1,0 +1,22 @@
+<div class="total"> {{title}}</div> 
+<div class="filter-wrapper">
+    <div [ngClass]="{'filter':true, 'inline-filter': contact}">
+        <div class="filter-sort">
+            <label for="sort">Sort by: </label>
+            <div class="dropdown" (click)="changeShowFilterOptions()">
+                <button class="dropbtn">
+                    {{filtterSortLabel}} 
+                </button>
+                <span class="iconify" data-inline="false" data-icon="bi:caret-down-fill"></span>
+                <div id="dropdown-content">
+                    <span (click)="changeFilterSortoption('connected')">Recently added</span>
+                    <span (click)="changeFilterSortoption('firstName')">First Name</span>
+                    <span (click)="changeFilterSortoption('lastName')">Last Name</span>
+                </div>
+              </div>
+        </div>
+        <div class="filter-input">
+            <input type="text" placeholder="Search">
+        </div>
+    </div>
+</div>

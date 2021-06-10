@@ -1,0 +1,42 @@
+<div class="job" (mouseover)="show()" (mouseout)="hide()">
+    <div class="logoWrapper">
+        <img [src]="job.logo" />
+    </div>
+    <div class="jobDetailsWrapper">
+        <p class="jobTitle" (click)="sendId()">{{job.role}}</p>
+        <p class="company smallText dullText">{{job.company}}</p>
+        <p class="companyLocation smallText dullText">{{job.location}}</p>
+        <p class="activeHiring smallText dullText"><span class="iconify" data-inline="false" data-icon="carbon:progress-bar-round" style="color: green;font-size: 20px;"></span>&nbsp; Actively recruiting</p>
+        <p class="postedOn" *ngIf="!job.promoted">{{postedOn}} Hours ago</p>
+        <p class="smallText dullText" *ngIf="job.promoted">Promoted</p>
+    </div>
+    <div class="actionsWrapper">
+        <button class="hide" [ngClass]="{'show':showEye}">
+            <span class="iconify" data-inline="false" data-icon="bi:eye-slash-fill" data-flip="horizontal" style="color: #666666; font-size: 25px;"></span>
+        </button>
+        <button>
+            <span class="iconify" data-inline="false" data-icon="akar-icons:ribbon" style="color: #666666; font-size: 25px;" data-flip="vertical" data-rotate="180deg"></span>
+        </button>
+    </div>
+</div>
+<!-- <div class="job">
+    <div class="logoWrapper">
+        <img src="https://media-exp3.licdn.com/dms/image/C4D0BAQGRhsociEn4gQ/company-logo_200_200/0/1523269243842?e=1631145600&v=beta&t=mWysU26-B0atCFY5oCfW3mPccHlgIRPMisN_N3aMhmI" />
+    </div>
+    <div class="jobDetailsWrapper">
+        <p class="jobTitle">Engineer - React Fullstack</p>
+        <p class="company smallText dullText">American Express</p>
+        <p class="companyLocation smallText dullText">New York, NY</p>
+        <p class="activeHiring smallText dullText"><span class="iconify" data-inline="false" data-icon="carbon:progress-bar-round" style="color: green;font-size: 20px;"></span>&nbsp; Actively recruiting</p>
+        <p class="postedOn">12 hours ago</p>
+        <p class="smallText dullText">Promoted</p>
+    </div>
+    <div class="actionsWrapper">
+        <button>
+            <span class="iconify" data-inline="false" data-icon="bi:eye-slash-fill" data-flip="horizontal" style="color: #666666; font-size: 25px;"></span>
+        </button>
+        <button>
+            <span class="iconify" data-inline="false" data-icon="akar-icons:ribbon" style="color: #666666; font-size: 25px;" data-flip="vertical" data-rotate="180deg"></span>
+        </button>
+    </div>
+</div> -->

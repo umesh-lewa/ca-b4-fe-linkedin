@@ -1,0 +1,23 @@
+.connection{
+    padding: 3rem 0;
+    background-color: #F3F2EF;
+
+    .connection-wrapper{        
+        margin-left: auto;
+        margin-right: auto;
+        width: 55vw;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        border: 1px solid #E0DFDC;
+
+        .filter-results{
+            padding: 1rem 2rem;
+            border-top: 1px solid #EBEBEB;
+
+            ul {
+                list-style: none;
+            }
+        }
+
+    }
+}
