@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -43,6 +43,7 @@ import { RecentSearchComponent } from './components/recent-search/recent-search.
 import { JobExplanationComponent } from './components/job-explanation/job-explanation.component';
 import { SanitizHtmlPipe } from './pipes/sanitiz-html.pipe';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { PillButtonComponent } from './components/pill-button/pill-button.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     RecentSearchComponent,
     JobExplanationComponent,
     NavbarComponent,
-    SanitizHtmlPipe
+    SanitizHtmlPipe,
+    PillButtonComponent
   ],
   imports: [
     BrowserModule,

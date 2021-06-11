@@ -1,0 +1,17 @@
+@import '../../constants/colors.scss';
+button{
+    background:none;
+    border: 1px solid $linkedinBlue;
+    padding: 3px 10px;
+    width: 100px;
+    border-radius: 200px;
+    color: $linkedinBlue;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border 50ms,background-color 400ms;
+    &:hover{
+        background-color: $fadedLinkedinBlue;
+        border: 2px solid $linkedinBlue;
+    }
+}
