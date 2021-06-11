@@ -10,7 +10,7 @@
             <br>
             <hr>
             <br>
-            <div class="container" style="">
+            <div class="container" >
                 <p style="font-size: 90%;">Improve you're notifications</p>
                 <h4><a href="">View Settings</a></h4>
                 <br>
@@ -21,27 +21,22 @@
     <div class="flex-items">
         <div *ngFor="let eachNotification of notificationsList;" class="card">
             <div class="notification-card-body">
-                <div class="notification-icon">
-                    <span class="iconify" data-inline="false" data-icon="gridicons:briefcase"
-                        style="color: #666666; font-size: 30px;"></span>
-                </div>
-                <!--
-                {{eachNotification.iconUrl}}
-                -->
-                <div class="notification-body">
-                    <p><b>{{eachNotification.headingTopic}}</b></p>
+              <div class="flex-container-notification">
+                <div class="flex-items-notification"><span class="iconify" data-inline="false" data-icon="gridicons:briefcase"
+                  style="color: #666666; font-size: 30px;"></span></div>
+                <div class="flex-items-notification">
+                  <p><b>{{eachNotification.headingTopic}}</b></p>
                     <p>
                     <span>{{eachNotification.topic1}}<b> {{eachNotification.topic2}}</b></span>
                     <span style="float: right;">{{eachNotification.hoursAgo}}</span>
                     </p>
-                    
+
                     <p>
                     <button style="margin-left: 5%;"><b>{{eachNotification.buttonContent}}</b></button>
                     <span style="float: right;font-size: 150%;"><a href="">...</a></span>
                     </p>
-                    <div class="container">
-                    </div>
                 </div>
+             </div>
 
                 <br>
             </div>
