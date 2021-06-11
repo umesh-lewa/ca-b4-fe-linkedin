@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { MainService } from 'src/app/services/main.service';
 
 @Component({
@@ -8,8 +9,9 @@ import { MainService } from 'src/app/services/main.service';
 })
 export class NoNetworkComponent implements OnInit {
 
-  constructor(private mainServ:MainService){    
+  constructor(private mainServ:MainService, private titleService: Title){    
     this.mainServ.changeActiveTitle('network') 
+    this.titleService.setTitle("Network");
 }
 
   ngOnInit(): void {

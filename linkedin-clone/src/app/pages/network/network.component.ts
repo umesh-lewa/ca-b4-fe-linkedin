@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { MainService } from 'src/app/services/main.service';
 // import userDataJson from "../../mockdata/network-data.json"; 
 
@@ -12,8 +13,9 @@ export class NetworkComponent implements OnInit {
   showLess = false;
   networkType = networks
 
-  constructor(private mainServ:MainService){    
+  constructor(private mainServ:MainService, private titleServive: Title){    
     this.mainServ.changeActiveTitle('network') 
+    this.titleServive.setTitle("Network");
 }
 
   restrictmyNetwork() { this.showLess = !this.showLess; }
