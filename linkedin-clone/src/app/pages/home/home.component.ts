@@ -1,4 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
+import { User } from 'src/app/constants/datatype.constants';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +9,10 @@ import { Component, OnInit, Output } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   openSearch=false;
-  constructor() { }
+  user:User
+  constructor(private dataServ:DataService) { 
+    this.dataServ.getUser().subscribe(data=>this.user=data);
+  }
 
   ngOnInit(): void {
   }
