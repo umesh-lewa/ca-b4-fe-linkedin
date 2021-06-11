@@ -43,7 +43,7 @@ export class JobExplanationComponent implements OnInit {
   postedOn;
   constructor() { 
     this.job=job;
-    this.postedOn=new Date(job.postedOn);
+    // this.postedOn=new Date(job.postedOn);
   }
 
   ngOnInit(): void {
