@@ -1,6 +1,7 @@
 .total{
     font-size: 1.2rem;
     padding: 2rem 2rem 1rem;
+    text-transform: capitalize;
 }
 
 .filter-wrapper{
@@ -31,6 +32,7 @@
                 }
                   
                   #dropdown-content {
+                    appearance: none;
                     display: none;
                     position: absolute;
                     min-width: 160px;

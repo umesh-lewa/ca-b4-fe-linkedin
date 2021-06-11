@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MainService } from 'src/app/services/main.service';
 
 @Component({
   selector: 'app-no-network',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoNetworkComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mainServ:MainService){    
+    this.mainServ.changeActiveTitle('network') 
+}
 
   ngOnInit(): void {
   }

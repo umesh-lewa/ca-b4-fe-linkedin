@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-settings',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private titleService: Title) 
+  {
+    this.titleService.setTitle('Settings'); 
+  }
 
   ngOnInit(): void {
   }
@@ -95,5 +99,26 @@ export class SettingsComponent implements OnInit {
 
   scrolltomsgs() {
     document.getElementById("msgs").scrollIntoView();
+  }
+
+  
+  scrolltovisprofile(){
+    document.getElementById("vis-profile").scrollIntoView();
+  }
+
+  scrolltovisactivity(){
+    document.getElementById("vis-activity").scrollIntoView();
+  }
+
+  scrolltonotify(){
+    document.getElementById("com-notify").scrollIntoView();
+  }
+
+  scrolltoreach(){
+    document.getElementById("com-reach").scrollIntoView();
+  }
+
+  scrolltopreferences(){
+    document.getElementById("preferences").scrollIntoView();
   }
 }
