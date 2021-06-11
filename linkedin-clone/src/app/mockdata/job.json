@@ -1,0 +1,33 @@
+{
+    "job":{
+        "id":1,
+        "role":"Engineer - React Fullstack",
+        "logo":"https://media-exp3.licdn.com/dms/image/C4D0BAQGRhsociEn4gQ/company-logo_200_200/0/1523269243842?e=1631145600&v=beta&t=mWysU26-B0atCFY5oCfW3mPccHlgIRPMisN_N3aMhmI",
+        "company":"American Express",
+        "location":"New York, NY",
+        "postedOn":"2021-06-10T06:46:22.461Z",
+        "promoted":false,
+        "totalApplicants":28,
+        "SeniorityLevel":"Entry Level",
+        "employmentType":"Full Time",
+        "industry":"Internet",
+        "jobFunctions":["Engineering","Information Technology","Development"],
+        "views":14,
+        "postedBy":{
+            "name":"Ryan Wen",
+            "role":"Chief Of Staff at Outlier",
+            "profilePic":"https://media-exp3.licdn.com/dms/image/C4E03AQHbtCKqC_Ef4g/profile-displayphoto-shrink_100_100/0/1576875226509?e=1628726400&v=beta&t=bZ0WeBpqBmzlSMjoHHd1nt4TZzSVFsqOlY_iDMFn_5I"
+        },
+        "companyDetails":{
+            "noOfEmployees":"100-200",
+            "sector":"Consumer Services",
+            "totalLinkedinMember":174,
+            "totalFollowers":1235,
+            "totalConnection":0,
+            "following":false
+        },
+        "description":"<p>The ideal candidate will be responsible for designing, developing, testing, and debugging responsive mobile applications for the company. This candidate will be able to translate user and business needs into functional frontend design, with proficiency in React and React Native.&nbsp;</p><p>&nbsp;</p><p><strong> Responsibilities </strong></p><ul><li>Designing, developing, and testing UI for mobile applications</li><li>Build reusable code and libraries for future use</li><li>Accurately translate user and business needs into functional frontend code</li></ul><p>&nbsp;</p><p><strong> Qualifications </strong></p><ul><li>Bachelor's degree or equivalent in Computer Science</li><li>2+ years' experience in frontend development</li><li>Familiarity using Scrum/Agile development methodologies</li><li>Experience building applications using React and React Native</li></ul><p>&nbsp;</p><p>Please provide a portfolio of prior work, if available.</p>"
+    }
+
+}
+    
