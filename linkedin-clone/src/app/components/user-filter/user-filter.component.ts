@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import {FormControl} from '@angular/forms';
+import { FilterService } from 'src/app/services/filter.service';
 
 @Component({
   selector: 'user-filter',
@@ -10,27 +12,34 @@ export class UserFilterComponent implements OnInit {
   @Input() title
   @Input() contact
 
+  filterInput = new FormControl('');
+  sortInput = new FormControl()
   filterOption = { "connected" : 'RecentlyAdded', "firstName": "First Name", "lastName" : "Last Name" }
+
   filtterSortLabel;
   showFilterOption =  false;
 
-  constructor() { 
+  constructor(private filterService: FilterService) { 
     this.filtterSortLabel = this.filterOption.connected
   }
 
-  changeFilterSortoption(key){    
+  changeFilterSortoption(event, key){    
     this.filtterSortLabel = this.filterOption[key];
-    this.changeShowFilterOptions();
+    this.changeShowFilterOptions(event);
+    this.filterService.updateSort(key);
   }
 
-  changeShowFilterOptions(){
-    console.log(this.showFilterOption);
+  changeShowFilterOptions(event){
+    event.stopPropagation()
     this.showFilterOption = !this.showFilterOption;
     document.getElementById('dropdown-content').style.display = (this.showFilterOption) ?  'block' : 'none';
-    console.log(this.showFilterOption);
+  }
+
+  filterInputChange(value: string) {    
+    this.filterService.updateInput(value.trim().toLowerCase());
   }
 
   ngOnInit(): void {
+    this.filterService.updateSort("connected");
   }
-
 }

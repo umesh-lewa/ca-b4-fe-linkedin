@@ -3,20 +3,20 @@
     <div [ngClass]="{'filter':true, 'inline-filter': contact}">
         <div class="filter-sort">
             <label for="sort">Sort by: </label>
-            <div class="dropdown" (click)="changeShowFilterOptions()">
+            <div class="dropdown" (click)="changeShowFilterOptions($event)">
                 <button class="dropbtn">
                     {{filtterSortLabel}} 
                 </button>
                 <span class="iconify" data-inline="false" data-icon="bi:caret-down-fill"></span>
                 <div id="dropdown-content">
-                    <span (click)="changeFilterSortoption('connected')">Recently added</span>
-                    <span (click)="changeFilterSortoption('firstName')">First Name</span>
-                    <span (click)="changeFilterSortoption('lastName')">Last Name</span>
+                    <span (click)="changeFilterSortoption($event, 'connected')">Recently added</span>
+                    <span (click)="changeFilterSortoption($event, 'firstName')">First Name</span>
+                    <span (click)="changeFilterSortoption($event, 'lastName')">Last Name</span>
                 </div>
               </div>
         </div>
         <div class="filter-input">
-            <input type="text" placeholder="Search">
+            <input type="text" placeholder="Search" [formControl]="filterInput" (ngModelChange)="filterInputChange($event)">
         </div>
     </div>
 </div>

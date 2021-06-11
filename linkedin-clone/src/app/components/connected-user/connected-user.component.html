@@ -17,7 +17,8 @@
             </div>
         </div>
         <div class="user-card-footer">
-            <button *ngIf="contact">Invite</button>
+            <button *ngIf="contact && !user.connect && !user.nonButton">Invite</button>
+            <button *ngIf="user.connect">Connect</button>
             <button *ngIf="!contact">Message</button>
             <div *ngIf="!contact" class="loader">
                 <span class="dot"></span>
