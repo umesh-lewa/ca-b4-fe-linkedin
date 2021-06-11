@@ -1,7 +1,7 @@
 <div class="connection">
     <div class="connection-wrapper">
         <user-filter [contact]=isContact [title]="title"></user-filter>
-        <div class="filter-results" *ngFor="let user of profile ">
+        <div class="filter-results" *ngFor="let user of profile">
             <connected-user [user]=user [contact]=isContact [icon]=userIcon></connected-user>
         </div>
         <div class="no-data" *ngIf="profile.length < 1">

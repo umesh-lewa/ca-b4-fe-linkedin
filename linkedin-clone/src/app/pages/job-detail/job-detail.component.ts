@@ -25,7 +25,7 @@ export class JobDetailComponent implements OnInit {
    }
    loadData(){
     this.dataServ.getJobList().subscribe(data=>{
-      this.jobList=data;
+      this.jobList=data.jobList;
       // this.jobList.forEach((job,index)=>{
       //   if(job.id==this.id){
       //     this.selectedJob=job;
