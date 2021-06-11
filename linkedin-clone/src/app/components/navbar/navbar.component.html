@@ -42,11 +42,40 @@
                 <span class="iconify icon inactiveIcon"  data-inline="false" data-icon="si-glyph:bell" ></span>
                 <p>Notifications</p>
             </div>
-            <div class="anchorIcon" routerLink="/home/profile" (click)="changeActive('me')" [ngClass]="{'active':active=='me'}">
+            <div class="anchorIcon" (click)="openMe()" [ngClass]="{'active':active=='me'}">
                 <div class="profilePic">
-                    <div [ngStyle]="{'background-image':'url('+profilePic+')'}"></div>
+                    <div [ngStyle]="{'background-image':'url('+user.profilePic+')'}"></div>
                 </div>
                 <p>Me  </p><div class="arrow-down"></div>
+                <div class="profileActions" [ngClass]="{'openProfileActions':openProfileActions}">
+                    <div class="profileInfo">
+                        <div class="avatar">
+                            <img [src]="user.profilePic" alt="">
+                        </div>
+                        <div class="infos">
+                            <p>{{user.username}}</p>
+                            <p>{{user.role}}</p>
+                        </div>
+                    </div>
+                    <div class="viewProfileBtnHolder">
+                        <button routerLink="/home/profile">View Profile</button>
+                    </div>
+                    <app-hr></app-hr>
+                    <div class="profileActionsCategory">
+                        <p class="profileActionsHeading">Account</p>
+                        <p routerLink="/home/settings">Settings & Privacy</p>
+                        <p>Help</p>
+                        <p>Language</p>
+                    </div>
+                    <app-hr></app-hr>
+                    <div class="profileActionsCategory">
+                        <p class="profileActionsHeading">Manage</p>
+                        <p>Posts & Activity</p>
+                        <p>Job Posting Account</p>
+                    </div>
+                    <app-hr></app-hr>
+                    <p class="signout" (click)="signOut()">Sign out</p>
+                </div>
             </div>
             <div class="anchorIcon workIcon">
                 <span class="iconify icon inactiveIcon" data-inline="false" data-icon="bi:grid-3x3-gap-fill" ></span>

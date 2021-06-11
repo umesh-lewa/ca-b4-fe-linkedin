@@ -1,4 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from 'src/app/constants/datatype.constants';
 import { MainService } from 'src/app/services/main.service';
 
 @Component({
@@ -8,19 +10,27 @@ import { MainService } from 'src/app/services/main.service';
 })
 export class NavbarComponent implements OnInit {
   @Output() openSearch=new EventEmitter<boolean>();
-  profilePic="https://media-exp3.licdn.com/dms/image/C5103AQHiyCu0ytkiKA/profile-displayphoto-shrink_800_800/0/1582986312253?e=1628726400&v=beta&t=HG0iMm8oIicMJmUtLro1ZdHNrxUdqjTa5HyTCj3SU_8";
+  @Input() user:User;
   active='home';
   openSearchBar=false;
-  constructor(private mainServ:MainService) {
+  openProfileActions=false;
+  constructor(private mainServ:MainService,private router:Router) {
     this.mainServ.titleChangeMessage.subscribe(title=>this.active=title);
    }
   ngOnInit(): void {
   }
   changeActive(name){
     this.active=name;
+    this.openProfileActions==false;
   }
   toggleSearchBox(){
     this.openSearch.emit(true);
     this.openSearchBar=!this.openSearchBar;
+  }
+  openMe(){
+    this.openProfileActions=!this.openProfileActions;
+  }
+  signOut(){
+    this.router.navigate(["/login"]);
   }
 }
