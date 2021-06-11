@@ -2,6 +2,7 @@ body {
     width: 100%;
     font-family: sans-serif;
     margin:0;
+    height: 100vh;
 }
 
 .nav {
@@ -9,6 +10,7 @@ body {
     padding: 15px;
     align-items: center;
     justify-content: space-between;
+    background-color: white;
 }
 
 .nav div {
@@ -17,10 +19,19 @@ body {
 
 }
 
+.icon-name{
+    margin-top: 7px;
+    margin-left: 160px;
+    margin-right: 5px;
+    color:#206ec2;
+    font-size: 35px;
+    font-weight: 600;
+}
+
 .spano {
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 20%;
     justify-content: center;
 }
 
@@ -33,6 +44,9 @@ body {
     color: #495450;
 }
 
+.point{
+    cursor: pointer;
+}
 .signin {
 
     border: 1px solid #2977c9;
@@ -43,23 +57,80 @@ body {
     border-radius: 30px;
 }
 
+
+// ...................
 .container {
     padding: 20px;
     display: flex;
-    height: 80vh;
     align-items: flex-start;
     margin-bottom: 40px;
+    background-color: white;
 }
 
 .container > div {
-
     width: 50%;
 }
 
+
 .sub {
+    margin-top: 5%;
+    margin-left:23%;
     color: #2977c9;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 42px;
+}
+
+ul {
+    list-style-type: none;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li{
+    list-style-type: none;
+}
+.list-ele{
+    
+       box-shadow: 0px -1px 1px rgb(0 0 0 / 8%),
+        1px 0px 1px rgb(0 0 0 / 8%), 
+        -1px 0px 1px rgb(0 0 0 / 8%), 
+        0px 1px 1px rgb(0 0 0 / 8%);
+        padding: 16px;
+        color: black;
+}
+.place{
+    margin-left: 23%;
+    margin-top: 10%;
+    margin-bottom: 20%;
+}
+.space{
+    margin-left: 180px;
+}
+
+.space2{
+    margin-left: 120px;
+}
+
+.ele2{
+    margin-top: 50px;
+}
+.ele3{
+    margin-top: 50px;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+  }
+
+.container2{
+    padding: 10px 65px;
 }
 
 .ctabs {
@@ -68,105 +139,4 @@ body {
     justify-content: flex-start;
     padding: 8px;
 
-}
-
-.options {
-    padding: 20px;
-}
-
-.options > span {
-    padding: 10px;
-    cursor: pointer;
-    color: #495450;
-}
-
-.options > span:hover {
-
-    background-color: #eee;
-
-}
-
-.sbtn {
-    padding: 18px;
-    background-color: #2977c9;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 30px;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-}
-
-.inputa {
-
-    border: 1px solid #FDFDFD;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-box-shadow:  rgba(0, 0, 0, 0.08) 0px -1px 1px 0px, rgba(0, 0, 0, 0.08) 1px 0px 1px 0px, rgba(0, 0, 0, 0.08) -1px 0px 1px 0px, rgba(0, 0, 0, 0.08) 0px 1px 1px 0px;
-}
-
-
-input {
-    border: 0;
-    padding: 8px;
-    width: 100%;
-}
-
-[placeholder] {
-    color: grey;
-    opacity: 0.7;
-}
-
-.tags-con {
-    display: flex;
-    width: 50%;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-.tag {
-    background-color: #495450;
-    opacity: 0.3;
-    padding: 10px;
-    margin: 6px;
-    /*margin-right: 10px;*/
-    color: #eee;
-    border-radius: 30px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-}
-
-.banner {
-    background-color: #F1ECE5;
-    display: flex;
-    align-items: center;
-    padding: 30px;
-    justify-content: space-around;
-}
-
-.dt {
-    border: 1px solid #52514E;
-    padding: 8px;
-    border-radius: 20px;
-}
-
-/*footer*/
-
-ul , li {
-    list-style-type: none;
-}
-
-.footer {
-    display: flex;
-}
-
-.footer > div {
-    width: 20%;
-}
-
-ul > li {
-    color: #495450;
-    cursor: pointer;
 }

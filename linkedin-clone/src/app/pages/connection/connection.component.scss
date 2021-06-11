@@ -1,11 +1,10 @@
 .connection{
     padding: 3rem 0;
     background-color: #F3F2EF;
+    display: flex;
 
     .connection-wrapper{        
-        margin-left: auto;
-        margin-right: auto;
-        width: 55vw;
+        width: 100vw;
         background-color: #FFFFFF;
         border-radius: 10px;
         border: 1px solid #E0DFDC;
@@ -19,5 +18,15 @@
             }
         }
 
+        .no-data{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+        }
+    }
+    .footer{
+        width: 35vw;
+        margin-left: 1rem;
     }
 }
