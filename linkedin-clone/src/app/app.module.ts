@@ -42,6 +42,7 @@ import { HrComponent } from './components/hr/hr.component';
 import { RecentSearchComponent } from './components/recent-search/recent-search.component';
 import { JobExplanationComponent } from './components/job-explanation/job-explanation.component';
 import { SanitizHtmlPipe } from './pipes/sanitiz-html.pipe';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -87,7 +88,7 @@ import { SanitizHtmlPipe } from './pipes/sanitiz-html.pipe';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy,useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
