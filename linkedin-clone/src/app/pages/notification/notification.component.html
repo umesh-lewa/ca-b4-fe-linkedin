@@ -25,10 +25,14 @@
                     <span class="iconify" data-inline="false" data-icon="gridicons:briefcase"
                         style="color: #666666; font-size: 30px;"></span>
                 </div>
+                <!--
+                {{eachNotification.iconUrl}}
+                -->
                 <div class="notification-body">
+                    <p><b>{{eachNotification.headingTopic}}</b></p>
                     <p>
-                    <span>Rohan Arya <b>Viewed your profile</b></span>
-                    <span style="float: right;"> 7h</span>
+                    <span>{{eachNotification.topic1}}<b> {{eachNotification.topic2}}</b></span>
+                    <span style="float: right;">{{eachNotification.hoursAgo}}</span>
                     </p>
                     
                     <p>

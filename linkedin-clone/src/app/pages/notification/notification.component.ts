@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MainService } from 'src/app/services/main.service';
 
 @Component({
   selector: 'app-notification',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotificationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mainServ:MainService) { 
+    this.mainServ.changeActiveTitle('notifications');
+  }
 
   ngOnInit(): void {
   }
@@ -15,61 +18,69 @@ export class NotificationComponent implements OnInit {
   notificationsList=[
     {
       iconUrl:"gridicons:briefcase",
-      topic1:"Rohan Ary",
-      topic2:"",
+      topic1:"Rohan Arya",
+      topic2:"viewed your profile",
       buttonContent:"See all views",
       buttonUrl:"",
       hoursAgo:"2h",
     },
     {
       iconUrl:"",
+      headingTopic:"Your Job Alert",
       topic1:"See 10 similar jobs to one you recently ",
       topic2:"viewed: Application Developer at ThoughtWorks",
       buttonContent:"View new jobs",
-      buttonUrl:""
+      buttonUrl:"",
+      hoursAgo:"5h",
     },
     {
       iconUrl:"",
+      headingTopic:"Your Job Alert",
       topic1:"See 10 similar jobs to one you recently ",
       topic2:"viewed: Application Developer at ThoughtWorks",
       buttonContent:"View new jobs",
-      buttonUrl:""
+      buttonUrl:"",
+      hoursAgo:"7h",
     },
     {
       iconUrl:"gridicons:briefcase",
-      topic1:"Rohan Ary",
-      topic2:"",
-      buttonContent:"See all views",
-      buttonUrl:""
-    },
-    {
-      iconUrl:"gridicons:briefcase",
-      topic1:"Rohan Ary",
-      topic2:"",
+      topic1:"Adithya Gattu",
+      topic2:"viewed your profile",
       buttonContent:"See all views",
       buttonUrl:"",
-      hoursAgo:"2h",
-    },
-    {
-      iconUrl:"",
-      topic1:"See 10 similar jobs to one you recently ",
-      topic2:"viewed: Application Developer at ThoughtWorks",
-      buttonContent:"View new jobs",
-      buttonUrl:""
-    },
-    {
-      iconUrl:"",
-      topic1:"See 10 similar jobs to one you recently ",
-      topic2:"viewed: Application Developer at ThoughtWorks",
-      buttonContent:"View new jobs",
-      buttonUrl:""
+      hoursAgo:"10h",
     },
     {
       iconUrl:"gridicons:briefcase",
-      topic1:"Rohan Ary",
-      topic2:"",
+      topic1:"Bharanidharan",
+      topic2:"viewed your profile",
       buttonContent:"See all views",
-      buttonUrl:""
+      buttonUrl:"",
+      hoursAgo:"1d",
+    },
+    {
+      iconUrl:"teenyicons:tick-circle-outline",
+      topic1:"Your post was shared successfully",
+      topic2:"",
+      buttonContent:"View your post",
+      buttonUrl:"",
+      hoursAgo:"1d",
+    },
+    {
+      iconUrl:"",
+      topic1:"Tata Consultancy Services is looking for: React JS developer",
+      topic2:"See this and 5 other job recommendations",
+      buttonContent:"View jobs",
+      buttonUrl:"",
+      hoursAgo:"1d",
+    },
+    {
+      iconUrl:"gridicons:briefcase",
+      topic1:"Tata Consultancy Services is looking for: React JS developer",
+      topic2:"See this and 5 other job recommendations",
+      buttonContent:"View jobs",
+      buttonUrl:"",
+      hoursAgo:"2d",
     },
   ]
 }
