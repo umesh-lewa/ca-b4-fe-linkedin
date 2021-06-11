@@ -2,15 +2,22 @@
     <div>
         <div class="login"><img src="https://www.logo.wine/a/logo/LinkedIn/LinkedIn-Logo.wine.svg" alt="linkedin logo">
             <form [formGroup]="login">
-                <span class="txt" *ngIf="!login.controls.text.valid && login.controls.text.touched">This field is necessary.</span>
-                <input placeholder="Full name (required if registering)" type="text" autocomplete="new-password" value=""><br>
-                <input placeholder="Last name" type="text" value=""><br>
-                <span class="txt" *ngIf="!login.controls.email.valid && login.controls.email.touched">Please enter a valid e-mail address.</span>
-                <input placeholder="Email" type="email" autocomplete="new-password" value=""><br>
-                <span class="txt" *ngIf="!login.controls.password.valid && login.controls.password.touched">Kindly create an alphanumeric password of good strength.</span>
-                <input placeholder="Password" type="password" value="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{7,12}$"><br>
-                <input placeholder="Confirm Password" type="password" value="" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{7,12}$"><br>
-                <button type="submit">Register</button><br>
+                <span class="txt" *ngIf="!login.controls.text.valid && login.controls.text.touched">This field is necessary.</span><br>
+                <input placeholder="First name" type="text" value="" formControlName="text" pattern="[A-Za-z0-9._%+-]{2,}$"><br>
+
+                <span class="txt" *ngIf="!login.controls.text1.valid && login.controls.text1.touched">This field is necessary.</span><br>
+                <input placeholder="Last name" type="text1" value="" formControlName="text1" pattern="[A-Za-z0-9._%+-]{2,}$"><br>
+
+                <span class="txt" *ngIf="!login.controls.email.valid && login.controls.email.touched">Please enter a valid e-mail address.</span><br>
+                <input placeholder="Email" type="email" value="" formControlName="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
+
+                <span class="txt" *ngIf="!login.controls.password.valid && login.controls.password.touched">Kindly create an alphanumeric password of good strength.</span><br>
+                <input placeholder="Password" type="password" value="" formControlName="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{7,12}$"><br>
+                
+                <span class="txt" *ngIf="!login.controls.password1.valid && login.controls.password1.touched && login.controls.password1.value != login.controls.password.value">Passwords do not match.</span><br>
+                <input placeholder="Confirm Password" type="password" value="" formControlName="password1" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-])]$"><br>
+                
+                <button type="submit" routerLink="/home">Register</button><br>
             </form>
                 <h4>© 2021 LinkedIn</h4>
             </div>
