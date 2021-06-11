@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { MainService } from 'src/app/services/main.service';
 
 @Component({
@@ -8,8 +9,9 @@ import { MainService } from 'src/app/services/main.service';
 })
 export class NotificationComponent implements OnInit {
 
-  constructor(private mainServ:MainService) { 
+  constructor(private mainServ:MainService,private titleService: Title) { 
     this.mainServ.changeActiveTitle('notifications');
+    this.titleService.setTitle('Notifications');
   }
 
   ngOnInit(): void {
@@ -17,7 +19,7 @@ export class NotificationComponent implements OnInit {
 
   notificationsList=[
     {
-      iconUrl:"gridicons:briefcase",
+      iconUrl:"../../assets/icons/blond-haired-person-medium-light-skin-tone.svg",
       topic1:"Rohan Arya",
       topic2:"viewed your profile",
       buttonContent:"See all views",
@@ -25,7 +27,7 @@ export class NotificationComponent implements OnInit {
       hoursAgo:"2h",
     },
     {
-      iconUrl:"",
+      iconUrl:"../../assets/icons/bxs-briefcase.svg",
       headingTopic:"Your Job Alert",
       topic1:"See 10 similar jobs to one you recently ",
       topic2:"viewed: Application Developer at ThoughtWorks",
@@ -34,7 +36,7 @@ export class NotificationComponent implements OnInit {
       hoursAgo:"5h",
     },
     {
-      iconUrl:"",
+      iconUrl:"../../assets/icons/bxs-briefcase.svg",
       headingTopic:"Your Job Alert",
       topic1:"See 10 similar jobs to one you recently ",
       topic2:"viewed: Application Developer at ThoughtWorks",
@@ -43,7 +45,7 @@ export class NotificationComponent implements OnInit {
       hoursAgo:"7h",
     },
     {
-      iconUrl:"gridicons:briefcase",
+      iconUrl:"../../assets/icons/blond-haired-person-medium-light-skin-tone.svg",
       topic1:"Adithya Gattu",
       topic2:"viewed your profile",
       buttonContent:"See all views",
@@ -51,7 +53,7 @@ export class NotificationComponent implements OnInit {
       hoursAgo:"10h",
     },
     {
-      iconUrl:"gridicons:briefcase",
+      iconUrl:"../../assets/icons/blond-haired-person-medium-light-skin-tone.svg",
       topic1:"Bharanidharan",
       topic2:"viewed your profile",
       buttonContent:"See all views",
@@ -59,7 +61,7 @@ export class NotificationComponent implements OnInit {
       hoursAgo:"1d",
     },
     {
-      iconUrl:"teenyicons:tick-circle-outline",
+      iconUrl:"../../assets/icons/tick-circle-solid.svg",
       topic1:"Your post was shared successfully",
       topic2:"",
       buttonContent:"View your post",
@@ -67,7 +69,7 @@ export class NotificationComponent implements OnInit {
       hoursAgo:"1d",
     },
     {
-      iconUrl:"",
+      iconUrl:"../../assets/icons/folder-briefcase-20-filled.svg",
       topic1:"Tata Consultancy Services is looking for: React JS developer",
       topic2:"See this and 5 other job recommendations",
       buttonContent:"View jobs",
@@ -75,7 +77,7 @@ export class NotificationComponent implements OnInit {
       hoursAgo:"1d",
     },
     {
-      iconUrl:"gridicons:briefcase",
+      iconUrl:"../../assets/icons/folder-briefcase-20-filled.svg",
       topic1:"Tata Consultancy Services is looking for: React JS developer",
       topic2:"See this and 5 other job recommendations",
       buttonContent:"View jobs",
