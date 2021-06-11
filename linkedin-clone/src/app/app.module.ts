@@ -11,7 +11,6 @@ import { RegisterComponent } from './pages/register/register.component';
 import { FeedComponent } from './pages/feed/feed.component';
 import { NetworkComponent } from './pages/network/network.component';
 import { ConnectionComponent } from './pages/connection/connection.component';
-import { ContactComponent } from './pages/contact/contact.component';
 import { JobsComponent } from './pages/jobs/jobs.component';
 import { JobDetailComponent } from './pages/job-detail/job-detail.component';
 import { NotificationComponent } from './pages/notification/notification.component';
@@ -53,7 +52,6 @@ import { SanitizHtmlPipe } from './pipes/sanitiz-html.pipe';
     FeedComponent,
     NetworkComponent,
     ConnectionComponent,
-    ContactComponent,
     JobsComponent,
     JobDetailComponent,
     NotificationComponent,
