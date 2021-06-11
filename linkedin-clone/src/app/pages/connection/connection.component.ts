@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { FilterService } from 'src/app/services/filter.service';
@@ -24,7 +25,9 @@ export class ConnectionComponent implements OnInit {
     private filterService:FilterService, 
     private route: ActivatedRoute, 
     private router: Router, 
-    private mainServ:MainService)
+    private mainServ:MainService,
+    private titleServive: Title
+    )
     {    
     this.mainServ.changeActiveTitle('network');
   }
@@ -34,6 +37,8 @@ export class ConnectionComponent implements OnInit {
     this.filterSubscription = this.filterService.getInput().subscribe(input => this.filterProfile(input))  
     this.sortSubscription = this.filterService.getSort().subscribe(input => this.sortProfile(input))  
     this.setRandomIcon();   
+    let pageTitle = this.connectionType === 'connections' ? 'Connections' : 'Conatcts'
+    this.titleServive.setTitle(pageTitle);
   }
 
   initializeValue() {
