@@ -4,9 +4,12 @@
             <div class="networks">
             <h2 class="title">Manage my network</h2>
             <ul class="network-type-list">
-                <li *ngFor="let type of networkType; let i=index;">
-                    <button *ngIf="i < 2 || !showLess" class="netwokurl" [routerLink]="type.netwokurl">
+                <li *ngFor="let type of networkType; let i=index;" [ngClass]="{ 'hide': i > 1 && showLess}">
+                    <button class="netwokurl" [routerLink]="type.netwokurl">
                         <div class="network-type">
+                            <div class="type-icon">
+                                <span class="iconify" data-inline="false" [attr.data-icon]="type.icon"></span>
+                            </div>
                             <div class="type-name">{{type.name}}</div>
                             <div class="type-count">{{type.count}}</div>
                         </div>

@@ -45,8 +45,12 @@
             border: 2px solid #0A66C2;
             border-radius: 1.6rem;
             padding: 0.4rem 1.5rem;
-            font-size: 1rem;
+            font-size: 0.9rem;
             text-transform: capitalize;
+            width: 8rem;
+            font-weight: 600;
+            background: none;
+            line-height: 1.2;
             
             &:hover{
                 background-color: #E1F0FD;

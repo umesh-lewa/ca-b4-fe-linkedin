@@ -4,7 +4,7 @@
     display: flex;
 
     .connection-wrapper{        
-        flex-grow: 1;
+        width: 100vw;
         background-color: #FFFFFF;
         border-radius: 10px;
         border: 1px solid #E0DFDC;
@@ -18,5 +18,15 @@
             }
         }
 
+        .no-data{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+        }
+    }
+    .footer{
+        width: 35vw;
+        margin-left: 1rem;
     }
 }
