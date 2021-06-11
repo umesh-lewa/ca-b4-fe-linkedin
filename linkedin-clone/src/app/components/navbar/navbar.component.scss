@@ -224,13 +224,6 @@ nav{
                             }
                         }
                     }
-                    .active{
-                        color: #000;
-                        border-bottom: 2px solid #000;
-                        .span{
-                            color: #000 !important;
-                        }
-                    }
                     .signout{
                         padding: 10px;
                         &:hover{
@@ -261,6 +254,13 @@ nav{
     p{
         width: 40% !important;
      }
+}
+.active{
+    color: #000;
+    border-bottom: 2px solid #000;
+    .span{
+        color: #000 !important;
+    }
 }
 // .activeIcon{
 //     color: #000 ;
