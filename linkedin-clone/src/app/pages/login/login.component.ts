@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,8 @@ import { FormBuilder, FormControl, Validators, ReactiveFormsModule } from '@angu
 export class LoginComponent implements OnInit {
     title = 'LinkedIn';
     login:any;
-    constructor(private fb:FormBuilder){
+    constructor(private fb:FormBuilder, private titleService: Title){
+      this.titleService.setTitle('Login'); 
       this.login=this.fb.group({
         email:new FormControl("",Validators.required),
         password:new FormControl("",Validators.required)
