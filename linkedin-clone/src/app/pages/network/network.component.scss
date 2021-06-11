@@ -1,23 +1,25 @@
 .network-wrapper{
-    padding: 20px 0;
     background-color: #F3F2EF;
     
-    .network{
+    .network-list{
         margin-right: auto;
         margin-left: auto;
-        width: 100%;
+        width: 85%;
         padding-top: 2rem;
         display: flex;
         justify-content: space-between;
 
         .manage-network{
-            width: 20vw;
-            background-color: #FFFFFF;
-            border-radius: 10px;
-            cursor: pointer;
-            border: 1px solid #E0DFDC ;
-            height: max-content;
-            padding-bottom: 10px;
+            width: min-content;
+            .networks
+            {
+                width: 18vw;
+                background-color: #FFFFFF;
+                border-radius: 10px;
+                cursor: pointer;
+                border: 1px solid #E0DFDC ;
+                height: max-content;
+                padding-bottom: 10px;
 
             .title{
                 color: #191919;
@@ -31,6 +33,51 @@
             .network-type-list{
                 list-style: none;
                 transition: all 1.3s ease-in;
+                
+                li {
+                    transition: all 0.4s ease-out;
+                    opacity: 1;
+                    height: 3rem;
+                    display: block;
+                    opacity: 0;
+                    animation: add-item-animation 0.5s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
+                }
+                li.hide {
+                    animation: removed-item-animation 0.5s cubic-bezier(0.55, -0.04, 0.91, 0.94) forwards;
+                    transform-origin: 0% 100%;
+                }
+                
+                @keyframes add-item-animation {
+                    from {
+                        opacity: 0;
+                        display: none;
+                        transform: scale(0);
+                        height: 0;
+                    }
+                    
+                    to {
+                        height: 3rem;
+                        display: block;
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+                @keyframes removed-item-animation {
+                    0% {
+                        height: 3rem;
+                        display: block;
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                    
+                    100% {
+                        opacity: 0;
+                        display: none;
+                        transform: scale(0);
+                        height: 0;
+                    }
+                
+                }
 
                 .netwokurl{
                     width: 100%;
@@ -42,11 +89,16 @@
 
                     .network-type{
                         display: flex;
-                        padding: 8px 20px;
+                        padding: 8px 20px 0px;;
                         font-size: 1rem;
                         
                         &:hover{
                             background-color: #EBEBEB;
+                        }
+
+                        .type-icon {
+                            font-size: 1.5rem;
+                            margin-right: 1rem;
                         }
                     
                         .type-name{
@@ -81,10 +133,12 @@
                 }
 
             }
+          }
         }
 
         .people-wrapper{
-            margin-left: 5rem;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
             width: 70vw;
             background-color: #FFFFFF;
             border: 1px solid #E0DFDC;
