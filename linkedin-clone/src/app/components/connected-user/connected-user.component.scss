@@ -1,4 +1,4 @@
-// $list: "http://www.thetrychannel.com/wp-content/uploads/2018/04/placeholder.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIfUM8g93yyRUiQ6-HB6R00QOi27zJyTHXKA&usqp=CAU", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuZWLiiGDmvoXIBKvaQ6PUkmkq2XUuXvfylOfsXnKLsM0vqCJHS0TserIFedDf4KlKy_k&usqp=CAU";
+// $list: "../../../assets/images/usericon1.jpg", "../../../assets/images/usericon2.png", "../../../assets/images/usericon3.png";
 .user-card{
     display: flex;
     justify-content: space-between;
@@ -10,7 +10,7 @@
         // $imgKey: random(3);
         // $nth: nth($list, $imgKey);
         .user-icon{
-            // content: url(http://www.thetrychannel.com/wp-content/uploads/2018/04/placeholder.jpg);
+            // content: url(../../../assets/images/usericon1.jpg);
             border-radius: 50%;
             width: 75px;
             height: 75px;
@@ -45,8 +45,12 @@
             border: 2px solid #0A66C2;
             border-radius: 1.6rem;
             padding: 0.4rem 1.5rem;
-            font-size: 1rem;
+            font-size: 0.9rem;
             text-transform: capitalize;
+            width: 8rem;
+            font-weight: 600;
+            background: none;
+            line-height: 1.2;
             
             &:hover{
                 background-color: #E1F0FD;

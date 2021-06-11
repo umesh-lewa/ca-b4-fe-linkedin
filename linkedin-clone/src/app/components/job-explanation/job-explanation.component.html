@@ -1,1 +1,206 @@
-<p>job-explanation works!</p>
+<div class="container">
+    <div class="mainInfo">
+        <div class="logo">
+            <img [src]="job.logo" />
+        </div>
+        <div class="info">
+            <p class="role link">{{job.role}}</p>
+            <p class="companyLocation smalltext dulltext"><span class="link">{{job.company}}</span> &bull; {{job.location}}</p>
+            <p class="postedOn dulltext verySmallText">posted {{postedOn | dateDifference}} ago &bull; {{job.views}} views</p>
+            <div class="applyActions">
+                
+                <button><span class="iconify" data-inline="false" data-icon="carbon:logo-linkedin" style="color: #ffffff; font-size: 25px;"></span> &nbsp;Easy Apply</button>
+                <button>Save</button>
+            </div>
+            <p class="premiumAd dulltext">See how you compare to {{job.totalApplicants}} applicants</p>
+            <p class="premiumAdLink link">Try Premium Free for 1 Month</p>
+        </div>
+        <div class="actions">
+            <button >
+                <span class="iconify" data-inline="false" data-icon="akar-icons:arrow-forward" style="color: #666666; font-size: 25px;"></span>
+            </button>
+            <button>
+                <span class="iconify" data-inline="false" data-icon="simple-line-icons:options" style="color: #666666; font-size: 25px;"></span>
+            </button>
+        </div>
+    </div>
+    <app-hr></app-hr>
+    <div class="postInfo">
+        <div class="listComp">
+            <p class="title">Job</p>
+            <ul class="verySmallText dulltext">
+                <li>{{job.totalApplicants}} applicants</li>
+                <li>{{job.SeniorityLevel}}</li>
+            </ul>
+        </div>
+        <div class="listComp">
+            <p class="title">Company</p>
+            <ul class="verySmallText dulltext">
+                <li>{{job.companyDetails.noOfEmployees}} employees</li>
+                <li>{{job.industry}}</li>
+            </ul>
+        </div>
+        <div class="connectionsComp">
+            <p class="title">Connections</p>
+            <p class="verySmallText dulltext" *ngIf="job.companyDetails.totalConnection!=0">{{job.companyDetails.totalConnection}} Connections work here</p>
+            <p class="verySmallText dulltext" *ngIf="job.companyDetails.totalConnection==0">You have 0 connections at this company.</p>
+            <p class="link" *ngIf="job.companyDetails.totalConnection==0">Add &gt;</p>
+        </div>
+    </div>
+    <app-hr></app-hr>
+    <div class="postedByWrapper">
+        <p class="dulltext">Posted By</p>
+        <div class="avatar">
+            <img class="link" [src]="job.postedBy.profilePic"/>
+        </div>
+        <div class="accountInfo">
+            <p>{{job.postedBy.name}} </p>
+            <p class="smalltext">{{job.postedBy.role}}</p>
+        </div>
+    </div>
+    <div class="description">
+        <div [innerHTML]="job.description | sanitizeHtml">
+    </div>
+    <div class="jobDetails">
+        <div>
+            <p>Seniority Level</p>
+            <p>{{job.SeniorityLevel}}</p>
+        </div>
+        <div>
+            <p>Employment Type</p>
+            <p>{{job.employmentType}}</p>
+        </div>
+        <div>
+            <p>Industry</p>
+            <p>{{job.industry}}</p>
+        </div>
+        <div>
+            <p>Job Functions</p>
+            <p>{{job.jobFunctions.join(",")}}</p>
+        </div>
+    </div>
+    <div class="aboutCompanyCard">
+        <p>About the company</p>
+        <div>
+            <div class="logo">
+                <img [src]="job.logo"/>
+            </div>
+            <div class="generalInfo">
+                <p>{{job.company}} </p>
+                <p class="smalltext">{{job.companyDetails.totalFollowers}} followers</p>
+            </div>
+            <div class="btnWrapper">
+                <button class="pillButton" *ngIf="!job.companyDetails.following">+ Follow</button>
+                <button class="pillButton" *ngIf="job.companyDetails.following">&#10003; &nbsp; Following</button>
+            </div>
+        </div>
+        <p class="smalltext ">{{job.companyDetails.sector}} &bull; {{job.companyDetails.noOfEmployees}} employees &bull; {{job.companyDetails.totalLinkedinMember}} on LinkedIn</p>
+        <app-hr></app-hr>
+        <div class="seemoreWrapper">
+            <button class="pillButton seemoreBtn">See more</button>
+        </div>
+    </div>
+</div>
+
+<!-- 
+<div class="container">
+    <div class="mainInfo">
+        <div class="logo">
+            <img src="https://media-exp3.licdn.com/dms/image/C4D0BAQHXjXX3ym2ISg/company-logo_200_200/0/1622600378221?e=1631145600&v=beta&t=-zBYJaVKnZmBIG3_UgLexRuBndh18MNbB0RiaFP9Mb8" />
+        </div>
+        <div class="info">
+            <p class="role link">Python Developer</p>
+            <p class="companyLocation smalltext dulltext"><span class="link">Small World</span> &bull; Tokyo,Japan</p>
+            <p class="postedOn dulltext verySmallText">posted 3 weeks ago &bull; 242 views</p>
+            <div class="applyActions">
+                
+                <button><span class="iconify" data-inline="false" data-icon="carbon:logo-linkedin" style="color: #ffffff; font-size: 25px;"></span> &nbsp;Easy Apply</button>
+                <button>Save</button>
+            </div>
+            <p class="premiumAd dulltext">See how you compare to 45 applicants</p>
+            <p class="premiumAdLink link">Try Premium Free for 1 Month</p>
+        </div>
+        <div class="actions">
+            <button >
+                <span class="iconify" data-inline="false" data-icon="akar-icons:arrow-forward" style="color: #666666; font-size: 25px;"></span>
+            </button>
+            <button>
+                <span class="iconify" data-inline="false" data-icon="simple-line-icons:options" style="color: #666666; font-size: 25px;"></span>
+            </button>
+        </div>
+    </div>
+    <app-hr></app-hr>
+    <div class="postInfo">
+        <div class="listComp">
+            <p class="title">Job</p>
+            <ul class="verySmallText dulltext">
+                <li>45 applicants</li>
+                <li>Mid-Senior level</li>
+            </ul>
+        </div>
+        <div class="listComp">
+            <p class="title">Company</p>
+            <ul class="verySmallText dulltext">
+                <li>11-50 employees</li>
+                <li>Human Resources</li>
+            </ul>
+        </div>
+        <div class="connectionsComp">
+            <p class="title">Connections</p>
+            <p class="verySmallText dulltext">You have 0 connections at this company.</p>
+            <p class="link">Add &gt;</p>
+        </div>
+    </div>
+    <app-hr></app-hr>
+    <div class="postedByWrapper">
+        <p class="dulltext">Posted By</p>
+        <div class="avatar">
+            <img class="link" src="https://media-exp3.licdn.com/dms/image/C5103AQHiyCu0ytkiKA/profile-displayphoto-shrink_800_800/0/1582986312253?e=1628726400&v=beta&t=HG0iMm8oIicMJmUtLro1ZdHNrxUdqjTa5HyTCj3SU_8"/>
+        </div>
+        <div class="accountInfo">
+            <p>Rohan Arya</p>
+            <p class="smalltext">Hiring Manager | Operations Manager</p>
+        </div>
+    </div>
+    <div class="description">
+        <p >{{desc}}</p>
+    </div>
+    <div class="jobDetails">
+        <div>
+            <p>Seniority Level</p>
+            <p>Mid-Senior level</p>
+        </div>
+        <div>
+            <p>Employment Type</p>
+            <p>Full-time</p>
+        </div>
+        <div>
+            <p>Industry</p>
+            <p>Information Technology & Services</p>
+        </div>
+        <div>
+            <p>Job Functions</p>
+            <p>Engineering  Information Technology</p>
+        </div>
+    </div>
+    <div class="aboutCompanyCard">
+        <p>About the company</p>
+        <div>
+            <div class="logo">
+                <img src="https://media-exp3.licdn.com/dms/image/C4D0BAQHXjXX3ym2ISg/company-logo_200_200/0/1622600378221?e=1631145600&v=beta&t=-zBYJaVKnZmBIG3_UgLexRuBndh18MNbB0RiaFP9Mb8"/>
+            </div>
+            <div class="generalInfo">
+                <p>SMALL WORLD</p>
+                <p class="smalltext">2,522 followers</p>
+            </div>
+            <div class="btnWrapper">
+                <button class="pillButton">+ Follow</button>
+            </div>
+        </div>
+        <p class="smalltext ">Human Resources &bull; 11-50 employees &bull; 19 on LinkedIn</p>
+        <app-hr></app-hr>
+        <div class="seemoreWrapper">
+            <button class="pillButton seemoreBtn">See more</button>
+        </div>
+    </div>
+</div> -->

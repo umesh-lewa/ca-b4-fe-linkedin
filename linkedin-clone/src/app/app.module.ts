@@ -11,7 +11,6 @@ import { RegisterComponent } from './pages/register/register.component';
 import { FeedComponent } from './pages/feed/feed.component';
 import { NetworkComponent } from './pages/network/network.component';
 import { ConnectionComponent } from './pages/connection/connection.component';
-import { ContactComponent } from './pages/contact/contact.component';
 import { JobsComponent } from './pages/jobs/jobs.component';
 import { JobDetailComponent } from './pages/job-detail/job-detail.component';
 import { NotificationComponent } from './pages/notification/notification.component';
@@ -42,6 +41,7 @@ import { JobComponent } from './components/job/job.component';
 import { HrComponent } from './components/hr/hr.component';
 import { RecentSearchComponent } from './components/recent-search/recent-search.component';
 import { JobExplanationComponent } from './components/job-explanation/job-explanation.component';
+import { SanitizHtmlPipe } from './pipes/sanitiz-html.pipe';
 
 @NgModule({
   declarations: [
@@ -52,7 +52,6 @@ import { JobExplanationComponent } from './components/job-explanation/job-explan
     FeedComponent,
     NetworkComponent,
     ConnectionComponent,
-    ContactComponent,
     JobsComponent,
     JobDetailComponent,
     NotificationComponent,
@@ -79,7 +78,8 @@ import { JobExplanationComponent } from './components/job-explanation/job-explan
     HrComponent,
     RecentSearchComponent,
     JobExplanationComponent,
-    NavbarComponent
+    NavbarComponent,
+    SanitizHtmlPipe
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,64 @@
-<p>{{id}}</p>
+<div class="container">
+    <div class="filterContainer">
+        <div class="hr">
+            <app-hr></app-hr>
+        </div>
+        <div class="filterWrapper">
+            <div class="dropDownFilter ">
+                <button class="active">Jobs &nbsp;<div class="arrow-down"></div> </button>
+            </div> 
+            <div class="dropDownFilter">
+                <button>Date Posted &nbsp;<div class="arrow-down"></div> </button>
+            </div> 
+            <div class="dropDownFilter">
+                <button>Experience Level &nbsp;<div class="arrow-down"></div> </button>
+            </div> 
+            <div class="dropDownFilter">
+                <button>Company &nbsp;<div class="arrow-down"></div> </button>
+            </div> 
+            <div class="dropDownFilter">
+                <button>Job Type &nbsp;<div class="arrow-down"></div> </button>
+            </div>
+            <div class="dropDownFilter">
+                <button>Easy Apply</button>
+            </div>
+            <div class="dropDownFilter">
+                <button>All Filters</button>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="left">
+            <div class="functions">
+                <div class="totalWrapper">
+                    <p>All jobs</p>
+                    <p class="dulltext">{{jobList.length}} results</p>
+                </div>
+                <div class="functionWrapper">
+                    <p class="dulltext">Job alert {{jobAlertStatus}}</p>
+                    <div class="jobalertSwitchWrapper">
+                        <label class="switch" (click)="toggleJobAlert($event)">
+                            <!-- <input type="checkbox"> -->
+                            <span class="slider round" [ngClass]="{'on':jobAlert}"></span>
+                        </label>
+                    </div>
+                    <div class="settings">
+                        <span class="iconify" data-inline="false" data-icon="ant-design:setting-filled" style="cursor: pointer;color: #666666; font-size: 30px;" data-flip="horizontal" data-rotate="180deg"></span>
+                    </div>
+                </div>
+            </div>
+            <app-hr></app-hr>
+            <!-- <app-job [job]="selectedJob"></app-job>
+                <app-hr></app-hr> -->
+            <ng-container *ngFor="let job of jobList">
+                <app-job [job]="job"></app-job>
+                <app-hr></app-hr>
+            </ng-container>
+            <app-footer-options></app-footer-options>
+            <app-copyright></app-copyright>
+        </div>
+        <div class="right">
+            <app-job-explanation></app-job-explanation>
+        </div>
+    </main>
+</div>

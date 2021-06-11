@@ -21,12 +21,13 @@ nav{
             align-items: center;
         }
         .searchHolder{
-            width: 30%;
+            width: 40%;
             height: 100%;
             // background-color: green;
             display: flex;
             align-items: center;
-            input{
+            position: relative;
+            .normalSearch{
                 width: 250px;
                 height: 20px;
                 padding: 10px;
@@ -40,15 +41,76 @@ nav{
                 border: none;
                 border-radius: 8px;
                 transition: width 500ms, padding-left 500ms;
+                &:focus{
+                    width: 300px;
+                    padding-left: 60px;
+                }
             }
-            input:focus{
-                width: 300px;
-                padding-left: 60px;
+            .jobsSearch{
+                width: 170px;
+                margin-right: 5px;
+                &:focus{
+                    width: 200px;
+                    padding-left: 60px;
+                }
+            }
+            .jobsSearch:nth-child(2){
+                background-image: url('https://banner2.cleanpng.com/20180328/syq/kisspng-location-computer-icons-space-location-5abb46eb8b8683.3145965515222228275715.jpg');
+                background-size: 20px;
+            }
+            button{
+                background:none;
+                border: 1px solid $linkedinBlue;
+                padding: 3px 10px;
+                width: 100px;
+                border-radius: 200px;
+                color: $linkedinBlue;
+                font-size: 1em;
+                font-weight: 500;
+                cursor: pointer;
+                transition: border 50ms,background-color 400ms;
+                &:hover{
+                    background-color: $fadedLinkedinBlue;
+                    border: 2px solid $linkedinBlue;
+                }
+            }
+            .searchDiv{
+                position: absolute;
+                top:72px;
+                left: 0px;
+                border-radius: 8px;
+                width: 480px;
+                background-color: #fff;
+                z-index: 2;
+                height: 0;
+                overflow: hidden;
+                transition: height 500ms;
+                .top{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    p{
+                        padding: 10px 20px;
+                    }
+                    p:nth-child(2){
+                        margin-left: auto;
+                        color: rgb(133, 133, 133);
+                        cursor: pointer;
+                    }
+                }
+                .recentItems{
+                    width: 100%;
+                    cursor: pointer;
+                }
+
+            }
+            .open{
+                height: 200px;
             }
         }
         .navIconsWrapper{
             // background-color: green;
-            width: 65%;
+            width: 55%;
             height: 100%;
             display: flex;
             justify-content: flex-end;
@@ -61,6 +123,7 @@ nav{
                 justify-content: center;
                 cursor: pointer;
                 color: #666666;
+                position: relative;
                 .profilePic{
                         width: 100%;
                         display: flex;
@@ -73,7 +136,7 @@ nav{
                         border-radius: 50%;
                     }
                 }
-                p{
+                >p{
                     width: 100%;
                     text-align: center;
                     font-size: 0.8em;
@@ -81,32 +144,109 @@ nav{
                 }
                 .profilePic + p{
                    width: 40%;
+                }                
+                .profileActions{
+                      position: absolute;
+                      width: 260px;
+                      height: 0px;
+                      overflow: hidden;
+                      background-color: #fff;
+                      border-radius: 8px 0px 8px 8px;
+                      top:80px;
+                      right: 0;
+                      transition: height 400ms;
+                      .profileInfo{
+                          width: 93%;
+                          display: flex;
+                          padding: 10px;
+                            .avatar{
+                                width: 30%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                img{
+                                    width: 50px;
+                                    height: 50px;
+                                    border-radius: 50%;
+                                }
+                            }
+                            .infos{
+                                p{
+                                    width: 100%;
+                                    text-align: left;
+                                    white-space: pre-wrap;
+                                    padding: 2px 8px 0px 8px;
+                                }
+                                p:nth-child(1){
+                                    font-size: 1em;
+                                    color: #000;
+                                    font-weight: 500;
+                                }
+                            }
+                      }
+                      .viewProfileBtnHolder{
+                        width: 100%;
+                        padding: 10px 0;
+                        display: flex;
+                        justify-content: center;
+                        button{
+                            width: 80%;
+                            height: 30px;
+                            color: $linkedinBlue;
+                            border: 1px solid $linkedinBlue;
+                            background: none;
+                            margin: auto;
+                            border-radius: 300px;
+                            transition: background-color 300ms;
+                            cursor: pointer;
+                            font-weight: 500;
+                            &:hover{
+                                background-color: $fadedLinkedinBlue;
+                            }
+                        }
+                    }
+                    .profileActionsCategory{
+                        width: 100%;
+                        padding: 8px 0;
+                        p{
+                            text-align: left;
+                            padding: 3px 0px 3px 10px;
+                        }
+                        .profileActionsHeading{
+                            cursor: default;
+                            font-weight: 600;
+                            color: #000;
+                            font-size: 1.2em;
+                        }
+                        .profileActionsHeading~p{
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                    .active{
+                        color: #000;
+                        border-bottom: 2px solid #000;
+                        .span{
+                            color: #000 !important;
+                        }
+                    }
+                    .signout{
+                        padding: 10px;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
                 }
-                .arrow-down {
-                    width: 0; 
-                    height: 0; 
-                    border-left: 5px solid transparent;
-                    border-right: 5px solid transparent;
-                    border-top: 5px solid #000;
-                    margin: auto 0;
-                  }
-            }
-            .workIcon{
-                border-left: 1px solid black;
-                p{
-                    width: 40%;
-                 }
-            }
-            .active{
-                color: #000;
-                border-bottom: 2px solid #000;
-                .span{
-                    color: #000 !important;
+                .openProfileActions{
+                    height: 430px;
+                    box-shadow: 1px 2px 13px 2px rgba(138,138,138,0.72);
                 }
             }
+            
         }
     }
-    
+
 }
 
 .icon{
@@ -114,7 +254,13 @@ nav{
     width:100%;
 }
 .inactiveIcon{
-    color: #666666 ; 
+    color: #666666 ;
+}
+.workIcon{
+    border-left: 1px solid rgb(224, 224, 224);
+    p{
+        width: 40% !important;
+     }
 }
 // .activeIcon{
 //     color: #000 ;

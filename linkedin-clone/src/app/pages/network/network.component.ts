@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { MainService } from 'src/app/services/main.service';
 // import userDataJson from "../../mockdata/network-data.json"; 
 
 @Component({
@@ -11,7 +13,10 @@ export class NetworkComponent implements OnInit {
   showLess = false;
   networkType = networks
 
-  constructor() {}
+  constructor(private mainServ:MainService, private titleServive: Title){    
+    this.mainServ.changeActiveTitle('network') 
+    this.titleServive.setTitle("Network");
+}
 
   restrictmyNetwork() { this.showLess = !this.showLess; }
 
@@ -24,38 +29,45 @@ const networks = [
         name : "Connection", 
         count: 10, 
         icon: "fluent:people-28-filled",
-        "netwokurl": "/home/connection"
+        "netwokurl": "/home/connection/connections"
     }, 
     { 
         name : "Contacts",
-        count: 16, 
-        "netwokurl": "/home/contacts"
+        count: 16,
+        icon: "bx:bxs-contact",
+        "netwokurl": "/home/connection/contacts"
     }, 
     { 
         name : "People | Follow", 
         count: 8,
+        icon: "fluent:person-chat-20-filled",
         "netwokurl": "/home/no-network-found"
     }, 
     { 
         name : "Groups", 
         count: 5,
+        icon : "ic:outline-groups",
         "netwokurl": "/home/no-network-found"
     }, 
     { 
         name : "Events", 
         count: 2,
+        icon: "bi:calendar2-date",
         "netwokurl": "/home/no-network-found"
     }, { 
         name : "Page", 
         count: 12,
+        icon: "fluent:document-one-page-20-regular",
         "netwokurl": "/home/no-network-found"
     }, { 
         name : "Newsletters", 
         count: 0,
+        icon : "mdi:newspaper-variant-outline",
         "netwokurl": "/home/no-network-found"
     }, { 
         name : "Hashtag", 
         count: 15,
+        icon: "heroicons-solid:hashtag",
         "netwokurl": "/home/no-network-found"
 }]
 
