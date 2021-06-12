@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { job } from '../../mockdata/job.json';
+import { Component, Input, OnInit } from '@angular/core';
+// import { job } from '../../mockdata/job.json';
 
 @Component({
   selector: 'app-job-explanation',
@@ -39,14 +39,16 @@ export class JobExplanationComponent implements OnInit {
   // For successful application, please apply and fill this form -
   
   // https://forms.gle/BCVQ6vt1Vts9E3QP9`;
-  job;
+  @Input() job;
   postedOn;
   constructor() { 
-    this.job=job;
-    this.postedOn=new Date(job.postedOn);
+    // this.job=job;
+    // this.postedOn=new Date(job.postedOn);
   }
 
   ngOnInit(): void {
   }
-
+  changeFollowStatus(){
+    this.job.companyDetails.following=!this.job.companyDetails.following;
+  }
 }

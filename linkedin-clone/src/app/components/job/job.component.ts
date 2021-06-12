@@ -13,7 +13,7 @@ export class JobComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit(): void {    
-    this.postedOn=Math.floor((new Date().valueOf()-new Date(this.job.postedOn).valueOf()) / (1000*60*60))
+    // this.postedOn=new Date(this.job.postedOn)
   }
   show(){
     this.showEye=true;

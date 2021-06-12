@@ -265,3 +265,22 @@ nav{
 // .activeIcon{
 //     color: #000 ;
 // }
+@media screen and (min-width:600px) and (max-width:1500px){
+    .anchorIcon{
+        width: 70px !important;
+    }
+}
+@media screen and (max-width:1350px) {
+    .navContainer{
+        flex-wrap: nowrap !important;
+    }
+    .searchHolder{
+       display: none !important;
+    }
+    .navIconsWrapper{
+        width: auto !important;
+    }
+    .navContainer{
+        justify-content: space-between !important;
+    }
+}

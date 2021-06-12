@@ -4,7 +4,7 @@
     "logo":"https://media-exp3.licdn.com/dms/image/C4D0BAQGRhsociEn4gQ/company-logo_200_200/0/1523269243842?e=1631145600&v=beta&t=mWysU26-B0atCFY5oCfW3mPccHlgIRPMisN_N3aMhmI",
     "company":"American Express",
     "location":"New York, NY",
-    "postedOn":"2021-06-10T05:32:10.490Z",
+    "postedOn":"2021-06-11T05:32:10.490Z",
     "promoted":false
 },{
     "id":2,
@@ -12,7 +12,7 @@
     "logo":"https://media-exp3.licdn.com/dms/image/C510BAQHTWmlRNCPPAA/company-logo_100_100/0/1566913884488?e=1631145600&v=beta&t=1mIH4iNwF01zyha_c1XgYcbRYQFPBYZuxBW3p0gEuDo",
     "company":"Mindtree",
     "location":"Redmond, OR",
-    "postedOn":"2021-06-10T06:46:22.461Z",
+    "postedOn":"2021-06-11T06:46:22.461Z",
     "promoted":true
     
 },{
@@ -21,7 +21,7 @@
     "logo":"https://media-exp3.licdn.com/dms/image/C510BAQF6MYX9a_-QXg/company-logo_100_100/0/1585852510932?e=1631145600&v=beta&t=C2mlmuBbsW4CLoi-Q8q9mbBvsvh-2t4xQ51Hv_D_kZs",
     "company":"Hotstar",
     "location":"Gurgaon, Haryana, India",
-    "postedOn":"2021-06-10T06:46:22.461Z",
+    "postedOn":"2021-06-11T06:46:22.461Z",
     "promoted":false
 },{
     "id":4,
@@ -29,7 +29,7 @@
     "logo":"https://media-exp3.licdn.com/dms/image/C4D0BAQEjqi8YNMCCUw/company-logo_100_100/0/1622553093286?e=1631145600&v=beta&t=Cm3wME6GVmG6sI95lO2dzs1glzNbYoZX27BE01lGCsg",
     "company":"IBM",
     "location":"Kochi, Kerala, India",
-    "postedOn":"2021-06-10T01:01:38.482Z",
+    "postedOn":"2021-06-09T01:01:38.482Z",
     "promoted":false
 },{
     "id":5,
@@ -53,7 +53,7 @@
     "logo":"https://media-exp3.licdn.com/dms/image/C510BAQGN1HQl9wF0XA/company-logo_200_200/0/1582015679285?e=1631145600&v=beta&t=jQZB32-IuExPq23Q8PikqAG6PO01ztV7ddw3n4YG7nI",
     "company":"SMALL WORLD",
     "location":"Tokyo, Japan Remote",
-    "postedOn":"2021-06-10T05:32:10.490Z",
+    "postedOn":"2021-06-11T05:32:10.490Z",
     "promoted":false
 },{
     "id":8,
@@ -77,7 +77,7 @@
     "logo":"https://media-exp3.licdn.com/dms/image/C4E0BAQFXJ7tkjMWsNg/company-logo_200_200/0/1575974587542?e=1631145600&v=beta&t=INJrNxETebBfCeNpgF0QygO15UL0JusGIyJvRg9_AxU",
     "company":"PayPay Corporation",
     "location":"London Remote",
-    "postedOn":"2021-06-10T06:18:12.254Z",
+    "postedOn":"2021-06-08T06:18:12.254Z",
     "promoted":false
 }
 ]}

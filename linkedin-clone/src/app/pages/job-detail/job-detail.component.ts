@@ -15,6 +15,8 @@ export class JobDetailComponent implements OnInit {
   jobAlertStatus="off";
   jobList=[];
   selectedJob;
+  showAllFilter=false;
+  searchTerm="";
   constructor(private activeRoute:ActivatedRoute,private mainServ:MainService,private dataServ:DataService,private titleService: Title) {
     this.titleService.setTitle('Search all Jobs | Linkedin');
       this.mainServ.changeActiveTitle('jobs');
@@ -22,16 +24,16 @@ export class JobDetailComponent implements OnInit {
         this.id=data.get('id');
         this.loadData();
       });
+      this.mainServ.searchTerm.subscribe(data=>this.searchTerm=data);
    }
    loadData(){
     this.dataServ.getJobList().subscribe(data=>{
-      this.jobList=data;
-      // this.jobList.forEach((job,index)=>{
-      //   if(job.id==this.id){
-      //     this.selectedJob=job;
-      //     this.jobList.splice(index,1);
-      //   }
-      // });
+      this.jobList=data.joblist;
+      this.jobList.forEach((job,index)=>{
+        if(job.id==this.id){
+          this.selectedJob=job;
+        }
+      });
     });
    }
   ngOnInit(): void {
@@ -41,5 +43,8 @@ export class JobDetailComponent implements OnInit {
     this.jobAlert=!this.jobAlert;
     this.jobAlertStatus=this.jobAlert?"on":"off";
     console.log(this.jobAlertStatus)
+  }
+  toggleAllFilters(){
+    this.showAllFilter=!this.showAllFilter;
   }
 }
