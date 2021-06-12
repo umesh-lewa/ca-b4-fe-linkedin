@@ -5,10 +5,12 @@
         </div>
         <div class="searchHolder">
             <input class="normalSearch" (focus)="toggleSearchBox()" *ngIf="active!='jobs'" (focusout)="toggleSearchBox()" placeholder="Search"/>
-            <input class="normalSearch jobsSearch" (focus)="toggleSearchBox()" (focusout)="toggleSearchBox()" *ngIf="active=='jobs'" placeholder="Search by title,skills,company,keyword" />
+            <div *ngIf="active=='jobs'">
+                <input class="normalSearch jobsSearch" (keyup)="getKeyCode($event)" [(ngModel)]="searchText" (focus)="openSearchBox()" (focusout)="closeSearchBox()"  placeholder="Search by title,skills,company,keyword" />
+            </div>
             <input class="normalSearch jobsSearch" *ngIf="active=='jobs'" placeholder="City,state or Zip-code" />
             <!-- <button *ngIf="active=='jobs'">Search</button> -->
-            <app-pill-button *ngIf="active=='jobs'" name="Search"></app-pill-button>
+            <app-pill-button *ngIf="active=='jobs'" (click)="search()" name="Search"></app-pill-button>
             <div class="searchDiv" [ngClass]="{'open':openSearchBar}">
                 <div class="top">
                     <p>Recent</p>
@@ -20,9 +22,9 @@
                    <app-recent-search name="Google"></app-recent-search>
                 </div>
                 <div class="recentItems" *ngIf="active=='jobs'">
-                    <app-recent-search name="Software developer"></app-recent-search>
-                    <app-recent-search name="Full stack engineer"></app-recent-search>
-                    <app-recent-search name="Senior software engineer"></app-recent-search>
+                    <ng-container *ngFor="let recent of recentSearch">
+                        <app-recent-search [name]="recent" (click)="setSearchTerm(recent)" ></app-recent-search>
+                    </ng-container>
                  </div>
             </div>
         </div>

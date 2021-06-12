@@ -90,8 +90,8 @@
                 <p class="smalltext">{{job.companyDetails.totalFollowers}} followers</p>
             </div>
             <div class="btnWrapper">
-                <button class="pillButton" *ngIf="!job.companyDetails.following">+ Follow</button>
-                <button class="pillButton" *ngIf="job.companyDetails.following">&#10003; &nbsp; Following</button>
+                <button class="pillButton" *ngIf="!job.companyDetails.following" (click)="changeFollowStatus()" >+ Follow</button>
+                <button class="pillButton" *ngIf="job.companyDetails.following" (click)="changeFollowStatus()">&#10003; &nbsp; Following</button>
             </div>
         </div>
         <p class="smalltext ">{{job.companyDetails.sector}} &bull; {{job.companyDetails.noOfEmployees}} employees &bull; {{job.companyDetails.totalLinkedinMember}} on LinkedIn</p>

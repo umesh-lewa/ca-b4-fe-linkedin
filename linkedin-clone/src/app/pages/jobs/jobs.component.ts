@@ -17,7 +17,7 @@ export class JobsComponent implements OnInit {
     this.mainServ.changeActiveTitle('jobs');
     this.dataServ.getJobList().subscribe(data=>{
       console.log(data);
-      this.jobList=data.jobList;
+      this.jobList=data.joblist;
     },err=>{
       console.log(err)
     });
