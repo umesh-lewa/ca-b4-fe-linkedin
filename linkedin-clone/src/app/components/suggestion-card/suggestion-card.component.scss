@@ -1,3 +1,5 @@
+@import '../../constants/colors.scss';
+
 .suggestion-title{
     margin: 1.2rem;
     margin-bottom: 2rem;
@@ -5,11 +7,11 @@
     .title{
         padding: 10px 0px 10px;
         .title-left{
-            display: inline-block;
+            float: left;
         }
         .title-right{
             float: right;
-            color: #666666;
+            color: $dullHeadingColor;
             padding: 10px;
             margin: -10px;
             border-radius: 5px;
@@ -24,6 +26,8 @@
         display: flex;
         flex-wrap: wrap;
         margin-left: -10px;
+        clear: both;
+        padding-top: 1rem;
 
         .card{
             width: calc((100% - 5.5rem)/4);
@@ -74,7 +78,7 @@
                     max-height: 2.4rem;
                 }
                 .card-data{
-                    color: #666666;
+                    color: $dullHeadingColor;
                     max-height: 4rem;
                     font-weight: 400;
                     padding-top: 5px;
@@ -91,7 +95,7 @@
                     flex-direction: column;
                     align-items: center;
                     .suggested-from{
-                        color: #666666;
+                        color: $dullText;
                         font-size: 0.8rem;
                         margin: 10px;
                         text-align: center;
@@ -99,8 +103,8 @@
                 }
                 
                 button{
-                    color: #0A66C2;
-                    border: 2px solid #0A66C2;
+                    color: $linkedinBlue;
+                    border: 2px solid $linkedinBlue;
                     border-radius: 1.6rem;
                     padding: 0.4rem 1.5rem;
                     font-size: 1rem;
@@ -110,7 +114,7 @@
                     
                     &:hover{
                         background-color: #E1F0FD;
-                        box-shadow: inset 0 0 0 1px #0A66C2;
+                        box-shadow: inset 0 0 0 1px $linkedinBlue;
                     }
                 }
             }
@@ -153,4 +157,35 @@
         }
     }
 }
-//../../../assets/images/usericon1.jpg ../../../assets/images/usericon2.png ../../../assets/images/usericon3.png
+
+@media screen and (min-width : 320px) and (max-width : 560px), (min-width : 561px) and (max-width : 960px) { 
+    .suggestion-title{
+        .title{
+            .title-left{
+                float: none;
+            }
+            .title-right{
+                float: none;
+                width: max-content;
+                margin-top: 0;
+            }
+        }
+}
+@media screen and (min-width : 320px) and (max-width : 900px) {
+    .suggestion-title .card-wrapper{
+            width: 100%;
+            .card{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width : 901px) and (max-width : 761px), (min-width : 761px) and (max-width : 1150px){
+    .suggestion-title .card-wrapper{
+        width: 100%;
+        .card{
+            width: calc((100% - 3rem)/2);
+        }
+    }
+}

@@ -45,6 +45,9 @@ import { JobExplanationComponent } from './components/job-explanation/job-explan
 import { SanitizHtmlPipe } from './pipes/sanitiz-html.pipe';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { PillButtonComponent } from './components/pill-button/pill-button.component';
+import { LoaderComponent } from './components/loader/loader.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { SortPipe } from './pipes/sort.pipe';
 import { SearchJobPipe } from './pipes/search-job.pipe';
 
 @NgModule({
@@ -85,6 +88,9 @@ import { SearchJobPipe } from './pipes/search-job.pipe';
     NavbarComponent,
     SanitizHtmlPipe,
     PillButtonComponent,
+    LoaderComponent,
+    FilterPipe,
+    SortPipe,
     SearchJobPipe
   ],
   imports: [

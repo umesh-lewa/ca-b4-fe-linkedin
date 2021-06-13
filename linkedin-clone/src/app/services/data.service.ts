@@ -22,4 +22,21 @@ export class DataService {
   getUser():Observable<any>{
     return of(this.user);
   }
+
+  getConnectionList():Observable<any>{
+    return this.http.get('https://api.npoint.io/f58038f4ec47de35ec4d');
+  }
+
+  getContactData():Observable<any>{
+    return this.http.get('https://api.npoint.io/712113577160d6247b19');
+  }
+
+  getSuggestionData():Observable<any>{
+    return this.http.get('https://api.npoint.io/62871de2edab0af7279b');
+  }
+  
+  getData(connectionType:string):Observable<any>{
+    let url =  connectionType ==='connections' ? "https://api.npoint.io/f58038f4ec47de35ec4d" : "https://api.npoint.io/712113577160d6247b19"
+    return this.http.get(url)
+  }
 }
