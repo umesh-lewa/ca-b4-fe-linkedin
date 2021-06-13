@@ -20,6 +20,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { SuggestionCardComponent } from './components/suggestion-card/suggestion-card.component';
 import { ConnectedUserComponent } from './components/connected-user/connected-user.component';
 import { ReactiveFormsModule} from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 
 
 //components
@@ -44,6 +45,10 @@ import { JobExplanationComponent } from './components/job-explanation/job-explan
 import { SanitizHtmlPipe } from './pipes/sanitiz-html.pipe';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { PillButtonComponent } from './components/pill-button/pill-button.component';
+import { LoaderComponent } from './components/loader/loader.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { SortPipe } from './pipes/sort.pipe';
+import { SearchJobPipe } from './pipes/search-job.pipe';
 
 @NgModule({
   declarations: [
@@ -82,13 +87,18 @@ import { PillButtonComponent } from './components/pill-button/pill-button.compon
     JobExplanationComponent,
     NavbarComponent,
     SanitizHtmlPipe,
-    PillButtonComponent
+    PillButtonComponent,
+    LoaderComponent,
+    FilterPipe,
+    SortPipe,
+    SearchJobPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [{provide: LocationStrategy,useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-// $list: "../../../assets/images/usericon1.jpg", "../../../assets/images/usericon2.png", "../../../assets/images/usericon3.png";
+@import '../../constants/colors.scss';
 .user-card{
     display: flex;
     justify-content: space-between;
@@ -17,32 +17,37 @@
         }
     }
 
-    .user-data{
-        padding-left: 1rem;
+    .user-data-wrapper{
+        display: flex;
         flex-grow: 1;
-        color: #666666;
-        font-weight: 400;
-
-        .user-name{
-            color: #191919;
-            font-weight: 500;
-            font-size: 20px;
-        }
-
-        .user-role{
-            font-size: 13px;
+        
+        .user-data{
+            padding-left: 1rem;
+            flex-grow: 1;
+            color: $dullHeadingColor;
             font-weight: 400;
-        }
-        .connected-time{
-            font-size: 10px;
-            font-weight: 400;
+            
+            .user-name{
+                color: #191919;
+                font-weight: 500;
+                font-size: 20px;
+            }
+            
+            .user-role{
+                font-size: 13px;
+                font-weight: 400;
+            }
+            .connected-time{
+                font-size: 10px;
+                font-weight: 400;
+            }
         }
     }
 
     .user-card-footer{
         button{
-            color: #0A66C2;
-            border: 2px solid #0A66C2;
+            color: $linkedinBlue;
+            border: 2px solid $linkedinBlue;
             border-radius: 1.6rem;
             padding: 0.4rem 1.5rem;
             font-size: 0.9rem;
@@ -54,7 +59,7 @@
             
             &:hover{
                 background-color: #E1F0FD;
-                box-shadow: inset 0 0 0 1px #0A66C2;
+                box-shadow: inset 0 0 0 1px $linkedinBlue;
             }
         }
 
@@ -71,12 +76,25 @@
                 width: 5px;
                 height: 5px;
                 border-radius: 50%;
-                background: #666666;
+                background: $dullHeadingColor;
                 margin: 1px;
             }
             &:hover{
                 background-color: #EBEBEB;
                 border-radius: 50%;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width : 320px) and (max-width : 768px) {
+    .user-card{
+        .user-data-wrapper{
+            flex-direction: column;
+            .user-card-footer{
+                margin-top: 1rem;
+                margin-left: 1rem;
             }
         }
     }
