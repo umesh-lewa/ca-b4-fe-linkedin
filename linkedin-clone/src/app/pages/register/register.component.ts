@@ -12,13 +12,13 @@ export class RegisterComponent implements OnInit {
     title = 'LinkedIn';
     login:any;
     constructor(private fb:FormBuilder, private titleService: Title){
-      this.titleService.setTitle('Register'); 
+      this.titleService.setTitle('Register | LinkedIn'); 
       this.login=this.fb.group({
         email:new FormControl("",Validators.required),
         password:new FormControl("",Validators.required),
-        text:new FormControl("",Validators.required),
-        password1:new FormControl("",Validators.required),
-        text1:new FormControl("",Validators.required)
+        //text:new FormControl("",Validators.required),
+        //password1:new FormControl("",Validators.required),
+        //text1:new FormControl("",Validators.required)
       })
     }
 
@@ -31,9 +31,9 @@ export class RegisterComponent implements OnInit {
       this.login=this.fb.group({
         email:new FormControl("",Validators.required),
         password:new FormControl("",Validators.required),
-        text:new FormControl("",Validators.required),
-        password1:new FormControl("",Validators.required),
-        text1:new FormControl("",Validators.required)
+        //text:new FormControl("",Validators.required),
+        //password1:new FormControl("",Validators.required),
+        //text1:new FormControl("",Validators.required)
       }) 
   }
   }
