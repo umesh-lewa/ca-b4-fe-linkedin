@@ -6,7 +6,7 @@
         <div class="info">
             <p class="role link">{{job.role}}</p>
             <p class="companyLocation smalltext dulltext"><span class="link">{{job.company}}</span> &bull; {{job.location}}</p>
-            <p class="postedOn dulltext verySmallText">posted {{postedOn | dateDifference}} ago &bull; {{job.views}} views</p>
+            <p class="postedOn dulltext verySmallText">posted {{job.postedOn | dateDifference}} ago &bull; {{job.views}} views</p>
             <div class="applyActions">
                 
                 <button><span class="iconify" data-inline="false" data-icon="carbon:logo-linkedin" style="color: #ffffff; font-size: 25px;"></span> &nbsp;Easy Apply</button>
@@ -90,8 +90,8 @@
                 <p class="smalltext">{{job.companyDetails.totalFollowers}} followers</p>
             </div>
             <div class="btnWrapper">
-                <button class="pillButton" *ngIf="!job.companyDetails.following">+ Follow</button>
-                <button class="pillButton" *ngIf="job.companyDetails.following">&#10003; &nbsp; Following</button>
+                <button class="pillButton" *ngIf="!job.companyDetails.following" (click)="changeFollowStatus()" >+ Follow</button>
+                <button class="pillButton" *ngIf="job.companyDetails.following" (click)="changeFollowStatus()">&#10003; &nbsp; Following</button>
             </div>
         </div>
         <p class="smalltext ">{{job.companyDetails.sector}} &bull; {{job.companyDetails.noOfEmployees}} employees &bull; {{job.companyDetails.totalLinkedinMember}} on LinkedIn</p>

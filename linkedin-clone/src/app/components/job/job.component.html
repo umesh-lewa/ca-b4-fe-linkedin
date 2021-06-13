@@ -7,7 +7,7 @@
         <p class="company smallText dullText">{{job.company}}</p>
         <p class="companyLocation smallText dullText">{{job.location}}</p>
         <p class="activeHiring smallText dullText"><span class="iconify" data-inline="false" data-icon="carbon:progress-bar-round" style="color: green;font-size: 20px;"></span>&nbsp; Actively recruiting</p>
-        <p class="postedOn" *ngIf="!job.promoted">{{postedOn}} Hours ago</p>
+        <p class="postedOn" *ngIf="!job.promoted">{{job.postedOn | dateDifference}} ago</p>
         <p class="smallText dullText" *ngIf="job.promoted">Promoted</p>
     </div>
     <div class="actionsWrapper">

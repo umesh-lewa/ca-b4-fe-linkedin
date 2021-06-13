@@ -11,9 +11,11 @@ import { MainService } from 'src/app/services/main.service';
 export class NavbarComponent implements OnInit {
   @Output() openSearch=new EventEmitter<boolean>();
   @Input() user:User;
+  searchText="";
   active='home';
   openSearchBar=false;
   openProfileActions=false;
+  recentSearch=["data engineer","Full stack engineer","Senior software engineer"]
   constructor(private mainServ:MainService,private router:Router) {
     this.mainServ.titleChangeMessage.subscribe(title=>this.active=title);
    }
@@ -23,14 +25,36 @@ export class NavbarComponent implements OnInit {
     this.active=name;
     this.openProfileActions==false;
   }
-  toggleSearchBox(){
+  
+  openSearchBox(){
     this.openSearch.emit(true);
-    this.openSearchBar=!this.openSearchBar;
+    this.openSearchBar=true;
+  }
+  closeSearchBox(){
+    this.openSearch.emit(false);
+    this.openSearchBar=false;
   }
   openMe(){
     this.openProfileActions=!this.openProfileActions;
   }
   signOut(){
     this.router.navigate(["/login"]);
+  }
+  getKeyCode(event){
+    if(event.keyCode==13){
+      this.search();
+      this.closeSearchBox();
+      event.target.blur();
+    }
+  }
+  search(){
+    this.mainServ.search(this.searchText.trim());
+    if(this.searchText.trim()!="" && this.recentSearch.indexOf(this.searchText)==-1){
+      this.recentSearch.pop();
+      this.recentSearch.unshift(this.searchText);
+    }
+  }
+  setSearchTerm(searchTerm){
+    this.searchText=searchTerm;
   }
 }
