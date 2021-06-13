@@ -1,0 +1,305 @@
+@import '../../constants/colors.scss';
+.dulltext{
+    color:$dullText;
+}
+.container{
+
+}
+.filterContainer{
+    position: fixed;
+    top:70px;
+    left: 0;
+    width: 100vw;
+    height: 70px;
+    background-color: #fff;
+    box-shadow: 0px 10px 10px -1px rgba(131,131,131,0.75);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.hr{
+    width: 100%;
+}
+.filterWrapper{
+    width: 75%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+.dropDownFilter{
+    min-width: 100px;
+    display: flex;
+    margin-right: 10px;
+    button{
+        display: flex;
+        padding: 5px 15px;
+        border-radius: 100px;
+        background:none;
+        border: 1px solid rgb(184, 184, 184);
+        color: $dullText;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 1em;
+        transition: background-color 300ms;
+        &:hover{
+            background-color: rgba(145, 145, 145, 0.329);
+        }
+    }
+    .active{
+        color: #fff;
+        background-color: #037642;
+        border: none;
+        div{
+            border-top: 5px solid #fff;
+        }
+    }
+}
+main{
+    width: 100%;
+    height: calc(100vh - 143px);
+    margin-top: 72px;
+    position: sticky;
+    top:140px;
+    display: flex;
+}
+.left{
+    width: 40%;
+    height: 100%;
+    background-color: #fff;
+    border-right: 1px solid rgb(228, 228, 228);
+    overflow-y: auto;
+}
+.functions{
+    display: flex;
+    justify-content: space-between;
+    border-left: 2px solid $linkedinBlue;
+    .totalWrapper{
+        padding: 10px;
+        p:nth-child(1){
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        p:nth-child(2){
+            font-size: 0.8em;
+        }
+    }
+    .functionWrapper{
+        display: flex;
+        padding: 10px;
+        width: 35%;
+        justify-content: space-between;
+        >*{
+            align-self: center;
+        }
+    }
+}
+.right{
+    width: 59.9%;
+    height: 100%;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+
+//toggle switch
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 24px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  .on{
+
+      background-color: #037642;
+      box-shadow: 0 0 1px #037642;
+      &::before{
+        -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        transform: translateX(20px);
+      }
+  }
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .allFilter{
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      width: 500px;
+      height: calc(100vh - 142px);
+      background-color: #fff;
+      box-shadow: -11px 1px 14px -6px rgba(0,0,0,0.75);
+      transform: translateX(550px);
+      transition: 500ms;
+      .closeBtnWrapper{
+          width: 100%;
+         box-sizing: border-box;
+         padding-top: 20px;
+          padding-right: 20px;
+          text-align: right;
+            button{
+                background: none;
+                border: none;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                cursor: pointer;
+                padding: 3px;
+                &:hover{
+                    background-color: rgb(221, 221, 221);
+                }
+            }
+      }
+      .content{
+          width: 100%;
+          height: calc(100% - 130px);
+          overflow-y: auto;
+      }
+      .actions{
+          box-sizing: border-box;
+          padding: 10px;
+          display: flex;
+          align-content: center;
+          justify-content: flex-end;
+          button{
+              border: none;
+              background: none;
+              color: rgb(110, 110, 110);
+              font-size: 1.1em;
+              padding: 5px 10px;
+              border-radius: 8px;
+              font-weight: 500;
+              cursor: pointer;
+              margin-right: 15px;
+              &:hover{
+                background-color: rgb(221, 221, 221);
+            }
+          }
+      }
+  }
+  .showAllFilters{
+      transform: translateX(0);
+  }
+  //checkbox
+  .filterGroup{
+      display: flex;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      padding: 10px;
+      padding-left: 20px;
+      p{
+          width: 100%;
+          font-size: 1.1em;
+          font-weight: 600;
+          padding: 10px 0;
+      }
+      .options{
+          display: flex;
+          flex-wrap: wrap;
+      }
+  }
+  /* The container */
+.checkboxContainer {
+    width: 42%;
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 0.9em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .checkboxContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .checkboxContainer:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .checkboxContainer input:checked ~ .checkmark {
+    background-color: green;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkboxContainer input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkboxContainer .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }

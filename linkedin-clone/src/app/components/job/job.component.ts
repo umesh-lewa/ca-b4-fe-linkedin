@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-job',
@@ -7,13 +8,12 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class JobComponent implements OnInit {
   @Input() job:any;
-  @Output() viewJobId=new EventEmitter<number>();
   postedOn:any;
   showEye=false;
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {    
-    this.postedOn=Math.floor((new Date().valueOf()-new Date(this.job.postedOn).valueOf()) / (1000*60*60))
+    // this.postedOn=new Date(this.job.postedOn)
   }
   show(){
     this.showEye=true;
@@ -22,6 +22,6 @@ export class JobComponent implements OnInit {
     this.showEye=false;
   }
   sendId(){
-    this.viewJobId.emit(this.job.id);
+    this.router.navigate(['/home/search/',this.job.id]);
   }
 }

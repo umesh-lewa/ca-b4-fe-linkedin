@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +20,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { SuggestionCardComponent } from './components/suggestion-card/suggestion-card.component';
 import { ConnectedUserComponent } from './components/connected-user/connected-user.component';
 import { ReactiveFormsModule} from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 
 
 //components
@@ -41,6 +42,13 @@ import { JobComponent } from './components/job/job.component';
 import { HrComponent } from './components/hr/hr.component';
 import { RecentSearchComponent } from './components/recent-search/recent-search.component';
 import { JobExplanationComponent } from './components/job-explanation/job-explanation.component';
+import { SanitizHtmlPipe } from './pipes/sanitiz-html.pipe';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { PillButtonComponent } from './components/pill-button/pill-button.component';
+import { LoaderComponent } from './components/loader/loader.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { SortPipe } from './pipes/sort.pipe';
+import { SearchJobPipe } from './pipes/search-job.pipe';
 
 @NgModule({
   declarations: [
@@ -77,15 +85,22 @@ import { JobExplanationComponent } from './components/job-explanation/job-explan
     HrComponent,
     RecentSearchComponent,
     JobExplanationComponent,
-    NavbarComponent
+    NavbarComponent,
+    SanitizHtmlPipe,
+    PillButtonComponent,
+    LoaderComponent,
+    FilterPipe,
+    SortPipe,
+    SearchJobPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy,useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

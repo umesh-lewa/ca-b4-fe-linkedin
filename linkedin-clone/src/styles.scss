@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import './app/constants/colors.scss';
+
 *{
     padding: 0;
     margin: 0;
@@ -12,4 +14,12 @@ body{
 
 button,button:active,button:focus,input,input:active,input:focus{
     outline: 0;
+}
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $dullText;
+    margin: auto 0;
 }

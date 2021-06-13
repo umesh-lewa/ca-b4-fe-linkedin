@@ -5,7 +5,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DateDifferencePipe implements PipeTransform {
 
-  transform(date: Date, ...args: unknown[]): unknown {
+  transform(dateString: any, ...args: unknown[]): unknown {
+    let date;
+    if(typeof(dateString)==='string'){
+       date=new Date(dateString);
+    }else{
+      date=dateString;
+    }
     var seconds = Math.floor((new Date().getTime() - date.getTime()) / 1000);
     var interval = seconds / 31536000;
     

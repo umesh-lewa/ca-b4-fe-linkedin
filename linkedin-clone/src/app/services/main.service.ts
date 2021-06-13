@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,5 +11,11 @@ export class MainService {
   constructor() { }
   changeActiveTitle(title){
     this.titleSubject.next(title);
+  }
+
+  private searchSubject=new Subject<string>();
+  searchTerm=this.searchSubject.asObservable();
+  search(searchText){
+    this.searchSubject.next(searchText);
   }
 }

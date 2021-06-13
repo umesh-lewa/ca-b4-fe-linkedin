@@ -6,8 +6,8 @@ body {
 }
 
 .nav {
+    height: 14vh;
     display: flex;
-    padding: 15px;
     align-items: center;
     justify-content: space-between;
     background-color: white;
@@ -60,10 +60,11 @@ body {
 
 // ...................
 .container {
+    height: 80vh;
     padding: 20px;
     display: flex;
     align-items: flex-start;
-    margin-bottom: 40px;
+    //margin-bottom: 80px;
     background-color: white;
 }
 
@@ -140,3 +141,5 @@ img {
     padding: 8px;
 
 }
+
+//.....................................
