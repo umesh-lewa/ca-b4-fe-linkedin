@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import {HttpClient} from '@angular/common/http' 
+import {HttpClient} from '@angular/common/http'
 import { jobList } from '../mockdata/joblist.json';
 import { User } from '../constants/datatype.constants';
 @Injectable({
@@ -20,5 +20,18 @@ export class DataService {
   }
   getUser():Observable<any>{
     return of(this.user);
+  }
+
+
+  getFeeds() {
+    return this.http.get(
+      `https://api.npoint.io/277b148a661b4167dfca`
+    );
+  }
+
+  getNews(){
+    return this.http.get(
+      `https://api.npoint.io/72a06cbbaef52d54a8e7`
+    )
   }
 }
