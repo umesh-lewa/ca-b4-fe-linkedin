@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import {HttpClient} from '@angular/common/http' 
+import {HttpClient} from '@angular/common/http'
 import { jobList } from '../mockdata/joblist.json';
 import { User } from '../constants/datatype.constants';
 @Injectable({
@@ -23,6 +23,19 @@ export class DataService {
     return of(this.user);
   }
 
+
+  getFeeds() {
+    return this.http.get(
+      `https://api.npoint.io/277b148a661b4167dfca`
+    );
+  }
+
+  getNews(){
+    return this.http.get(
+      `https://api.npoint.io/72a06cbbaef52d54a8e7`
+    )
+  }
+
   getConnectionList():Observable<any>{
     return this.http.get('https://api.npoint.io/f58038f4ec47de35ec4d');
   }
@@ -34,7 +47,7 @@ export class DataService {
   getSuggestionData():Observable<any>{
     return this.http.get('https://api.npoint.io/62871de2edab0af7279b');
   }
-  
+
   getData(connectionType:string):Observable<any>{
     let url =  connectionType ==='connections' ? "https://api.npoint.io/f58038f4ec47de35ec4d" : "https://api.npoint.io/712113577160d6247b19"
     return this.http.get(url)
