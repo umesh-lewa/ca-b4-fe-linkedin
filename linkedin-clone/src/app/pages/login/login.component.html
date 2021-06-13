@@ -1,16 +1,21 @@
     <div id="root">
         <div>
-            <div class="login"><img src="https://www.logo.wine/a/logo/LinkedIn/LinkedIn-Logo.wine.svg" alt="linkedin logo">
-                    <form [formGroup]="login">
+            <div class="login">
+                <div class="img"><img src="https://www.logo.wine/a/logo/LinkedIn/LinkedIn-Logo.wine.svg" alt="linkedin logo">
+                </div>
+                <form [formGroup]="login">
+                        <h1>Sign In</h1>
+                        <h2>Stay updated on your professional world.</h2>
                         <span class="txt" *ngIf="!login.controls.email.valid && login.controls.email.touched">Please enter a valid e-mail address.</span>
                         <br>
-                        <input placeholder="E-mail" type="email" value="" formControlName="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
+                        <input placeholder="E-mail or Phone" type="email" value="" formControlName="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
                         <span class="txt" *ngIf="!login.controls.password.valid && login.controls.password.touched">Kindly create an alphanumeric password of good strength.</span>
                         <br>
                         <input placeholder="Password" type="password" value="" formControlName="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{7,12}$"><br>
-                    <button type="submit" routerLink="/home">Sign In</button>
+                        <h3><a href>Forgot Password?</a></h3>
+                        <button type="submit" routerLink="/home">Sign In</button>
                 </form>
-                    <p>Not a member? <span class="login__register" routerLink="/register"><a href>Register Now</a></span></p>
+                    <p>New to LinkedIn? <span class="login__register" routerLink="/register"><a href>Join Now</a></span></p>
                     <h4>© 2021 LinkedIn</h4>
                 </div>
             </div>
