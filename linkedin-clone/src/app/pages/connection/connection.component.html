@@ -1,13 +1,16 @@
 <div class="connection">
     <div class="connection-wrapper">
-        <user-filter [contact]=isContact [title]="title"></user-filter>
-        <div class="filter-results" *ngFor="let user of profile">
-            <connected-user [user]=user [contact]=isContact [icon]=userIcon></connected-user>
-        </div>
-        <div class="no-data" *ngIf="profile.length < 1">
-            <img src="https://static-exp1.licdn.com/sc/h/5t1znlongxxnu07iswxsaot9j">
-            No Data found 
-        </div>
+        <app-loader *ngIf="isLoading"></app-loader>
+        <ng-container *ngIf="!isLoading">
+            <user-filter [contact]=isContact [title]="title"></user-filter>
+            <div class="filter-results" *ngFor="let user of profile | filter :  filterInput | sort : sortInput">
+                <connected-user [user]=user [contact]=isContact [icon]=userIcon></connected-user>
+            </div>
+            <div class="no-data" *ngIf="profile.length < 1">
+                <img src="https://static-exp1.licdn.com/sc/h/5t1znlongxxnu07iswxsaot9j">
+                No Data found 
+            </div>
+        </ng-container>
     </div>
     <div class="footer">
         <app-footer-options></app-footer-options>

@@ -1,38 +1,40 @@
-<ul class="listmain listchild">
-    <li class="subcat" id="profilediv">
-        <h2>Account access</h2>
-        <p>Settings to help you keep your account secure</p>
-    </li>
-    <li class="subcat divider">
-        <div class="subheading">Email addresses</div>
-        <p>Add or remove email addresses on your account</p>
-        <span class="indicator" (click)="profileFunction()">
-            Change
-        </span>
-        <div *ngIf="pro">
-            <p class="inner">Enter Email Address </p>
-            <p class="leftspace">Email* <input type=text class="inputbox"> </p>
-        </div>
-    </li>
-    <li class="subcat divider">
-        <div class="subheading">Change password</div>
-        <p>Choose a unique password to protect your account</p>
-        <span class="indicator">
-            Change
-        </span>
-    </li>
-    <li class="subcat divider">
-        <div class="subheading">Devices that remember your password</div>
-        <p>Review and control the devices that remember your password</p>
-        <span class="indicator">
-            Change
-        </span>
-    </li>
-    <li class="subcat divider">
-        <div class="subheading">Two-step verification</div>
-        <p>Activate this feature for enhanced account security</p>
-        <span class="indicator">
-            Change
-        </span>
-    </li>
-</ul>
+<div class="overlay">
+    <ul class="listmain listchild">
+        <li class="subcat" id="profilediv">
+            <h2>Account access</h2>
+            <p>Settings to help you keep your account secure</p>
+        </li>
+        <li class="subcat divider">
+            <div class="subheading">Email addresses</div>
+            <p>Add or remove email addresses on your account</p>
+            <span class="indicator" (click)="profileFunction()">
+                Change
+            </span>
+            <div *ngIf="pro">
+                <p class="inner">Enter Email Address </p>
+                <p class="leftspace">Email* <input type=text class="inputbox"> </p>
+            </div>
+        </li>
+        <li class="subcat divider">
+            <div class="subheading">Change password</div>
+            <p>Choose a unique password to protect your account</p>
+            <span class="indicator">
+                Change
+            </span>
+        </li>
+        <li class="subcat divider">
+            <div class="subheading">Devices that remember your password</div>
+            <p>Review and control the devices that remember your password</p>
+            <span class="indicator">
+                Change
+            </span>
+        </li>
+        <li class="subcat divider">
+            <div class="subheading">Two-step verification</div>
+            <p>Activate this feature for enhanced account security</p>
+            <span class="indicator">
+                Change
+            </span>
+        </li>
+    </ul>
+</div>
