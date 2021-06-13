@@ -20,6 +20,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { SuggestionCardComponent } from './components/suggestion-card/suggestion-card.component';
 import { ConnectedUserComponent } from './components/connected-user/connected-user.component';
 import { ReactiveFormsModule} from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 
 
 //components
@@ -47,6 +48,7 @@ import { PillButtonComponent } from './components/pill-button/pill-button.compon
 import { LoaderComponent } from './components/loader/loader.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { SortPipe } from './pipes/sort.pipe';
+import { SearchJobPipe } from './pipes/search-job.pipe';
 
 @NgModule({
   declarations: [
@@ -88,13 +90,15 @@ import { SortPipe } from './pipes/sort.pipe';
     PillButtonComponent,
     LoaderComponent,
     FilterPipe,
-    SortPipe
+    SortPipe,
+    SearchJobPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [{provide: LocationStrategy,useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]

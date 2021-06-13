@@ -17,6 +17,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
   toggleSearch(event){
-    this.openSearch=!this.openSearch;
+    this.openSearch=event;
   }
 }

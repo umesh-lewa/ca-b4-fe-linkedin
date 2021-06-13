@@ -23,7 +23,7 @@
                 <button>Easy Apply</button>
             </div>
             <div class="dropDownFilter">
-                <button>All Filters</button>
+                <button (click)="toggleAllFilters()">All Filters</button>
             </div>
         </div>
     </div>
@@ -50,7 +50,7 @@
             <app-hr></app-hr>
             <!-- <app-job [job]="selectedJob"></app-job>
                 <app-hr></app-hr> -->
-            <ng-container *ngFor="let job of jobList">
+            <ng-container *ngFor="let job of jobList | searchJob:searchTerm">
                 <app-job [job]="job"></app-job>
                 <app-hr></app-hr>
             </ng-container>
@@ -58,7 +58,174 @@
             <app-copyright></app-copyright>
         </div>
         <div class="right">
-            <app-job-explanation></app-job-explanation>
+            <app-job-explanation [job]="selectedJob"></app-job-explanation>
         </div>
     </main>
+    <div class="allFilter" [ngClass]="{'showAllFilters':showAllFilter}">
+        <div class="closeBtnWrapper">
+            <button (click)="toggleAllFilters()"><span class="iconify" data-inline="false" data-icon="clarity:times-line" style="color: #666666; font-size: 30px;"></span></button>
+        </div>
+        <div class="content">
+            <div class="filterGroup">
+                <p>Experience Level</p>
+                <div class="options">
+                    <label class="checkboxContainer">Internship
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Entry Level
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Mid-senior Level
+                        <input type="checkbox" >
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Associate
+                        <input type="checkbox" >
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Director
+                        <input type="checkbox" >
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Executive
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <app-hr></app-hr>
+            <div class="filterGroup">
+                <p>Job Type</p>
+                <div class="options">
+                    <label class="checkboxContainer">Full-time
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Part-time
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Contract
+                        <input type="checkbox" >
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Temporary
+                        <input type="checkbox" >
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Volunteer
+                        <input type="checkbox" >
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Internship
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Others
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <app-hr></app-hr>
+            <div class="filterGroup">
+                <p>Title</p>
+                <div class="options">
+                    <label class="checkboxContainer">Software Engineer
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Javascript Developer
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Back End Developer
+                        <input type="checkbox" >
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Product Designer
+                        <input type="checkbox" >
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Cloud Engineer
+                        <input type="checkbox" >
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Frontend Developer
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Java Software Engineer
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Android Developer
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Quality Assurance Engineer
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Developer
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <app-hr></app-hr>
+            <div class="filterGroup">
+                <p>Job Function</p>
+                <div class="options">
+                    <label class="checkboxContainer">Information Technology
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Engineering
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Sales
+                        <input type="checkbox" >
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Business Development
+                        <input type="checkbox" >
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Art/Creative
+                        <input type="checkbox" >
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Design
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Writing/Editing
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Customer Service
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Marketing
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="checkboxContainer">Others
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <app-hr></app-hr>
+        <div class="actions">
+            <button>Reset</button>
+            <app-pill-button name="Apply"></app-pill-button>
+        </div>
+    </div>
 </div>
