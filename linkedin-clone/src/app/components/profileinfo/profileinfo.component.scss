@@ -122,3 +122,71 @@ select{
 .leftspace{
     margin-left: 30%;
 }
+
+//..................................
+
+@media (max-width:1000px){
+  
+    .overlay { 
+        position: fixed; 
+        overflow-y: scroll;
+        margin-top: 10%;
+        margin-left: 22%;
+        top: 0; right: 0; bottom: 0; left: 0; 
+    }
+    
+    
+    
+    .listmain {
+        width: 95%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+        margin-bottom: 24px;
+        margin-right: -1px;
+        margin-bottom: 96px;
+        margin-left: 24px;
+    }
+    
+    .listchild {
+        background: #fff;
+        padding: 0 24px;
+        margin-top: 32px;
+        border-radius: .8rem;
+        border: 1px solid rgba(0,0,0,0.15);
+    }
+    
+    .listmain >li {
+        position: relative;
+        padding: 8px 0 12px;
+        border-bottom: 1px solid #e6e9ec;
+    }
+    
+    .listchild>li {
+        padding: 16px 0 16px 0;
+    }
+    
+    
+}
+
+@media (max-width:600px){
+  
+    .overlay { 
+        position: fixed; 
+        overflow-y: scroll;
+        margin-top: 10%;
+        margin-left: 36%;
+        top: 0; right: 0; bottom: 0; left: 0; 
+    }
+
+    .listmain {
+        width: 90%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+        margin-bottom: 24px;
+        margin-right: -1px;
+        margin-bottom: 96px;
+        margin-left: 24px;
+    }
+}

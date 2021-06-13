@@ -42,7 +42,7 @@ ol, ul {
 .expand{
     font-size: 1.0rem;
     line-height: 1.75;
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: none;
     position: relative;
     display: block;
@@ -82,7 +82,7 @@ a {
 a.subcategory{
     font-size: 0.9rem;
     line-height: 1.42857;
-    font-weight: 500;
+    font-weight: 400;
     color: $dullHeadingColor;
     text-decoration: none;
     position: relative;
@@ -133,3 +133,22 @@ a.subcategory:before {
 //--------------------------------------------
 
 
+@media (max-width:1000px){
+  
+.overlay { 
+    margin-left: 2%;
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+}
+
+.menu{
+    box-sizing: border-box;
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 24px;
+    margin-right: -1px;
+    z-index: 999;
+}
+    
+}
