@@ -10,8 +10,8 @@ import { MainService } from 'src/app/services/main.service';
 export class NotificationComponent implements OnInit {
 
   constructor(private mainServ:MainService,private titleService: Title) { 
-    this.mainServ.changeActiveTitle('Notifications | LinkedIn');
-    this.titleService.setTitle('Notifications');
+    this.mainServ.changeActiveTitle('notifications');
+    this.titleService.setTitle('Notifications | LinkedIn');
   }
 
   ngOnInit(): void {
