@@ -5,6 +5,7 @@
   justify-content: normal;
   align-items: normal;
   align-content: normal;
+  margin-top: 20px;
 }
 
 .flex-items:nth-child(1) {
@@ -131,6 +132,8 @@
   right: 25%;
   border: 2px solid #ffffff;
   border-radius: 50%;
+  height: 100px;
+  width: 100px;
 }
 
 .profile-content {

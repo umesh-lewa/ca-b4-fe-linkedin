@@ -1,0 +1,39 @@
+<div [ngClass]= "{'message-wrapper' : true, 'expanded' : isExpanded}">
+    <div class="message-head">
+        <div class="head-left">
+            <span class="user-icon">
+                <img src="../../../assets/images/usericon1.jpg" alt="user">
+                <span class="iconify" data-inline="false" data-icon="carbon:dot-mark"></span>
+            </span>
+            <span class="head-title">Messaging </span>
+        </div>
+        <div class="head-right">
+            <span class="iconify" data-inline="false" data-icon="akar-icons:edit"></span>
+            <span class="iconify" data-inline="false" data-icon="bx:bx-dots-horizontal-rounded"></span>
+            <p class="expand" (click)="changeExpand()"  *ngIf="isExpanded" >
+                <span *ngIf="isExpanded" class="iconify" data-inline="false" data-icon="bx:bxs-chevron-down"></span>
+            </p>
+            <p class="expand" (click)="changeExpand()" *ngIf="!isExpanded">
+                <span  class="iconify" data-inline="false" data-icon="bx:bxs-chevron-up"></span>
+            </p>
+        </div>
+    </div>
+    <div class="message-body" *ngIf="isExpanded">
+        <div class="message-search">
+            <span class="search">
+                <img src="../../../assets/search.png" alt="search">
+            </span>
+            <input type="text" placeholder="Search" >
+            <span class="filter">
+                <span class="iconify" data-inline="false" data-icon="mi:filter"></span>
+            </span>
+        </div>
+        <div class="message-list">
+            <ng-container *ngFor="let message of messages">
+                <app-message-card [message]="message"></app-message-card>
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+<!-- [formControl]="filterInput" (ngModelChange)="filterInputChange($event)" -->
