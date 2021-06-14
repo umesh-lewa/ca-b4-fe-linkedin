@@ -123,7 +123,7 @@
               <div class="flex-items-post-name">{{item.user.name}}
                 <span class="color-light">liked a post</span>
               </div>
-              <div class="flex-items-post-name">{{item.created_at}}</div>
+              <div class="flex-items-post-name">{{item.created_at|dateDifference}} ago</div>
            </div>
            <div class="post-img">
              <img src="{{ item.urls.small }}" >
@@ -140,8 +140,15 @@
 
           </div>
           <div class="flex-container-reaction">
-            <div class="flex-items-reaction" >
-              <span class="iconify" data-inline="false" data-icon="simple-line-icons:like" style="color: #868686; font-size: 14px;"></span><span class="small-text">like</span>
+            <div class="flex-items-reaction" (click)="likedbyUser(item.id)">
+              <div *ngIf="!item.liked_by_user">
+                <span class="iconify" data-inline="false" data-icon="simple-line-icons:like" style="color: #868686; font-size: 14px;"></span><span class="small-text">like</span>
+              </div>
+              <div *ngIf="item.liked_by_user">
+                <span class="iconify" data-inline="false" data-icon="whh:like" style="color: #0C67C2; font-size: 14px;"></span><span class="small-text" style="color: #0C67C2;">like</span>
+              </div>
+
+
             </div>
             <div class="flex-items-reaction"><span class="iconify" data-inline="false" data-icon="fa-regular:comment-dots" style="color: #868686; font-size: 14px;"></span><span class="small-text" >comment</span></div>
             <div class="flex-items-reaction"><span class="iconify" data-inline="false" data-icon="el:share-alt" style="color: #868686; font-size: 14px;"></span><span class="small-text">share</span></div>
@@ -164,8 +171,8 @@
   </div>
 
 </div>
-<div class="flex-items">
-  <div class="flex-container-news">
+<div class="flex-items" style="position: sticky; top: 80px;">
+  <div class="flex-container-news" >
     <div class="flex-items-news"><span>LinkedIn News</span></div>
     <div class="flex-items-news"><span><span class="iconify" data-inline="false" data-icon="entypo:info-with-circle" style="color: #5c5c5c; font-size: 20px;"></span></span></div>
  </div>
