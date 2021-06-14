@@ -11,7 +11,7 @@ export class NoNetworkComponent implements OnInit {
 
   constructor(private mainServ:MainService, private titleService: Title){    
     this.mainServ.changeActiveTitle('network') 
-    this.titleService.setTitle("Network");
+    this.titleService.setTitle("Network | Linkedin");
 }
 
   ngOnInit(): void {

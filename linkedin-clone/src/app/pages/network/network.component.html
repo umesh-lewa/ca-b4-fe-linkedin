@@ -31,7 +31,8 @@
         <app-copyright></app-copyright>
         </div>
         <div class="people-wrapper">
-            <ul>
+            <app-loader *ngIf="isLoading"></app-loader>
+            <ul *ngIf="!isLoading">
                 <li *ngFor="let suggestion of userData">
                     <suggestion-card [suggestion]="suggestion"></suggestion-card>
                 </li>

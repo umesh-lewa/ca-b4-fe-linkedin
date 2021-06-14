@@ -1,3 +1,5 @@
+@import "../../constants/colors.scss";
+
 body {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
 }
@@ -7,6 +9,7 @@ body {
 body {
     display: block;
     margin: 8px;
+    overflow: hidden;
 }
 
 .login {
@@ -22,18 +25,19 @@ div {
     display: block;
 }
 
-.login>form>input {
+.login form input {
     width: 350px;
     height: 50px;
     font-size: 20px;
     padding-left: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
-    border: .5px solid;
+    border: .5px solid $dullText;
 }
 
 input[type="text" i] {
     padding: 1px 2px;
+
 }
 
 input {
@@ -83,24 +87,31 @@ button {
     border-image: initial;
 }
 
-.login>form>button {
+.login form button {
     width: 350px;
     height: 50px;
     margin-top: 10px;
     margin-left: 7px;
     font-size: large;
     color: #fff;
-    background-color: #0a66c2;
+    background-color: $linkedinBlue;
     border-radius: 50px;
     border: .5px solid;
     outline: none!important;
 }
 
-.login>img {
+.img{
+    position: relative;
+    width: 200px;
+    height: 120px;
+    left: -130px;
+}
+
+img {
     object-fit: contain;
-    height: 250px;
-    margin-top: -80px;
-    margin-bottom: 20px;
+    width: 150px;
+    height: 150px;
+    position: absolute;
 }
 
 input[type="text" i] {
@@ -124,17 +135,46 @@ p {
     margin-inline-end: 0px;
 }
 
-.login>h4 {
-    font-size: 18px;
+.login h4 {
+    font-size: 12px;
     font-weight: 500;
     margin-top: 40px;
+    color: gray;
 }
 
-.login>p {
+.login p {
     margin-top: 20px;
 }
 
 .txt{
     font-size: x-small;
     color: darkred;
+}
+
+h1{
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue","Fira Sans",Ubuntu,Oxygen,"Oxygen Sans",Cantarell,"Droid Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Emoji","Segoe UI Symbol","Lucida Grande",Helvetica,Arial,sans-serif;
+    font-size: x-large;
+    line-height: 1.25;
+    font-weight: 600;
+    color: rgba(0,0,0,0.9);
+    padding: 0 0 4px 0;
+}
+
+h2{
+    font-size: small;
+    font-weight: 400;
+}
+
+h3{
+    font-size: medium;
+    font-weight: 500;
+    padding: 0 0 4px 0;
+}
+
+
+form {
+    padding: 2rem;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: -2px 3px 20px -3px rgba(0,0,0,0.75);
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { DataService } from 'src/app/services/data.service';
 import { MainService } from 'src/app/services/main.service';
 // import userDataJson from "../../mockdata/network-data.json"; 
 
@@ -9,13 +10,18 @@ import { MainService } from 'src/app/services/main.service';
   styleUrls: ['./network.component.scss']
 })
 export class NetworkComponent implements OnInit {
-  userData = data
+  userData = []
   showLess = false;
+  isLoading = true;
   networkType = networks
 
-  constructor(private mainServ:MainService, private titleServive: Title){    
-    this.mainServ.changeActiveTitle('network') 
-    this.titleServive.setTitle("Network");
+  constructor(private mainServ:MainService, private titleServive: Title, private dataService: DataService){    
+    this.mainServ.changeActiveTitle('network');
+    this.dataService.getSuggestionData().subscribe(data => {
+        this.userData = data
+        this.isLoading = false;
+    })
+    this.titleServive.setTitle("Network | LinkedIn");
 }
 
   restrictmyNetwork() { this.showLess = !this.showLess; }
@@ -72,112 +78,3 @@ const networks = [
 }]
 
 
-
-const data = [
-  {
-      "topic" : " Industry leaders in India you may know ",
-      "profiles" : [
-          {
-              "name" : "Deepak Kumar",
-              "role" : "Software Engineer",
-              "meta": "Based on your profile",
-              "type": "connect",
-          },
-          {
-              "name" : "Manoj L",
-              "role" : "Techical Lead",
-              "meta": "Anna Univeristy",
-              "type": "connect"
-          },
-          {
-              "name" : "Sanjay Kumar",
-              "role" : "Writer",
-              "meta": "Anna Univeristy",
-              "type": "connect"
-          },
-          {
-              "name" : "Aravind Raj",
-              "role" : "Senior Software Engineer",
-              "meta": "Anna Univeristy",
-              "type": "connect"
-          },
-          {
-              "name" : "Narmadha",
-              "role" : "Python Developer",
-              "meta": "Based on your profile",
-              "type": "connect"
-          },
-          {
-              "name" : "Gautham Raj",
-              "role" : "Tester",
-              "meta": "Based on your profile",
-              "type": "connect"
-          },
-          {
-              "name" : "Lavanya T",
-              "role" : "Software Engineer",
-              "meta": "Anna Univeristy",
-              "type": "connect"
-          },
-          {
-              "name" : "Mahesh Kumar",
-              "role" : "Software Engineer",
-              "meta": "Based on your profile",
-              "type": "connect"
-          }
-      ]
-  },
-  {
-      "topic" : "People you may know from Anna Univeristy",
-      "profiles" : [
-        {
-            "name" : "Deepak Kumar",
-            "role" : "Software Engineer",
-            "meta": "Anna Univeristy",
-            "type": "connect"
-        },
-        {
-            "name" : "Manoj L",
-            "role" : "Techical Lead",
-            "meta": "Anna Univeristy",
-            "type": "connect"
-        },
-        {
-            "name" : "Sanjay Kumar",
-            "role" : "Writer",
-            "meta": "Anna Univeristy",
-            "type": "connect"
-        },
-        {
-            "name" : "Aravind Raj",
-            "role" : "Senior Software Engineer",
-            "meta": "Anna Univeristy",
-            "type": "connect"
-        },
-        {
-            "name" : "Narmadha",
-            "role" : "Python Developer",
-            "meta": "Anna Univeristy",
-            "type": "connect"
-        },
-        {
-            "name" : "Gautham Raj",
-            "role" : "Tester",
-            "meta": "Anna Univeristy",
-            "type": "connect"
-        },
-        {
-            "name" : "Lavanya T",
-            "role" : "Software Engineer",
-            "meta": "Anna Univeristy",
-            "type": "connect"
-        },
-        {
-            "name" : "Mahesh Kumar",
-            "role" : "Software Engineer",
-            "meta": "Anna Univeristy",
-            "type": "connect"
-        }
-    ]
-  }
-]

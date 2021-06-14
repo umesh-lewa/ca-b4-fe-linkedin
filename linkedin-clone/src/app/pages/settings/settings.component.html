@@ -1,4 +1,4 @@
-<div class="grid">
+<div class="overlay">
     <div class="menu" (click)="profilevisited()">
         <div class="category-container sticky-on">
             <ul class="categories">
@@ -31,8 +31,8 @@
                         <a class="subcategory active" (click)="scrolltomsgs()">Messaging experience</a>
                     </div>
                 </li>
-                <li class="divider" (click)="div5Function()" [routerLink]="['./privacy']">
-                    <div class="expand">DataPrivacy</div>
+                <li class="divider">
+                    <div class="expand" (click)="div5Function()" [routerLink]="['./privacy']">DataPrivacy</div>
                     <div *ngIf="div5">
                         <a class="subcategory active" (click)="scrolltopreferences()">Job preferences</a>
                         <a class="subcategory active" (click)="scrolltoothers()">Other applications</a>

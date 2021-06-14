@@ -36,7 +36,7 @@
         </div>
 
       </div>
-      <div class="flex-items-profile">
+      <div class="flex-items-profile sticky">
         <div class="profile-recent text-recent">
           <div class="heading">Recent</div>
           <div><span class="iconify" data-inline="false" data-icon="fluent:people-audience-24-filled"
@@ -52,11 +52,7 @@
         </div>
         <div class="profile-recent text-recent">
           <div class="heading color-blue">Groups <span>+</span></div>
-          <!-- <div> <span class="span-text">Developers</span> </div>
-          <div><span class="span-text">startups</span></div>
-          <div> <span class="span-text">recruitment</span> </div>
-          <div><span class="span-text">india</span></div>
-          <div><span class="span-text">Data Scientist</span></div> -->
+
         </div>
         <div class="profile-recent">
           <div class="heading color-blue">Events</div>
@@ -121,29 +117,65 @@
         </div>
       </div>
       <div class="flex-items-feeds">
-        <div class="flex-container-post-feeds">
-          <div class="flex-items-post-feeds">
+        <div class="flex-container-post-feeds" *ngIf="feeds" >
+          <div class="flex-items-post-feeds" *ngFor="let item of feeds">
             <div class="flex-container-post-name">
-              <div class="flex-items-post-name">xx
-                <span class="color-light">xx</span>
+              <div class="flex-items-post-name">{{item.user.name}}
+                <span class="color-light">liked a post</span>
               </div>
-              <div class="flex-items-post-name">xx</div>
+              <div class="flex-items-post-name">{{item.created_at}}</div>
            </div>
            <div class="post-img">
-             <!-- <img src="https://github.com/rohan-arya-w/image-repository-for-codepen/blob/main/codepen/3909941.png?raw=true" alt="" srcset=""> -->
-             xx
+             <img src="{{ item.urls.small }}" >
            </div>
            <div class="flex-container-post-name">
-            <div class="flex-items-post-name">xx
-              <span class="color-light">xx</span>
+            <div class="flex-items-post-name reaction">
+              <span><img src="https://www.userflow.nl/images/Linkedin-Like-Icon-Thumbup250.png" alt="" srcset="" width="20px" ></span>
+              <span><img src="https://www.userflow.nl/images/Linkedin-Celebrate-Icon-ClappingHands250.png" alt="" alt="" srcset="" width="20px" ></span>
+              <span><img src="https://www.userflow.nl/images/Linkedin-Support-Icon-HeartinHand250.png" alt="" alt="" srcset="" width="20px" ></span>
             </div>
-            <div class="flex-items-post-name">xx</div>
+            <div class="flex-items-post-name"><span>{{item.likes}}</span> <span class="color-light">comments</span></div>
+
+
+
+          </div>
+          <div class="flex-container-reaction">
+            <div class="flex-items-reaction" >
+              <span class="iconify" data-inline="false" data-icon="simple-line-icons:like" style="color: #868686; font-size: 14px;"></span><span class="small-text">like</span>
+            </div>
+            <div class="flex-items-reaction"><span class="iconify" data-inline="false" data-icon="fa-regular:comment-dots" style="color: #868686; font-size: 14px;"></span><span class="small-text" >comment</span></div>
+            <div class="flex-items-reaction"><span class="iconify" data-inline="false" data-icon="el:share-alt" style="color: #868686; font-size: 14px;"></span><span class="small-text">share</span></div>
+            <div class="flex-items-reaction"><span class="iconify" data-inline="false" data-icon="carbon:send-alt-filled" style="color: #868686; font-size: 14px;"></span><span class="small-text">send</span></div>
          </div>
+          <div class="flex-container-post">
+            <div class="flex-items-post comment-profile">
+              <img
+                src="https://github.com/rohan-arya-w/image-repository-for-codepen/blob/main/LinkedIn/AvatarImage.png?raw=true"
+                width="70vw">
+            </div>
+            <div class="flex-items-post input-comment">
+              <input type="text" placeholder="Post a comment">
+            </div>
           </div>
 
        </div>
       </div>
     </div>
   </div>
-  <div class="flex-items">xx</div>
+
+</div>
+<div class="flex-items">
+  <div class="flex-container-news">
+    <div class="flex-items-news"><span>LinkedIn News</span></div>
+    <div class="flex-items-news"><span><span class="iconify" data-inline="false" data-icon="entypo:info-with-circle" style="color: #5c5c5c; font-size: 20px;"></span></span></div>
+ </div>
+ <div class="flex-container-news-content" *ngIf="news">
+  <div class="flex-items-news-content" *ngFor="let headline of news">
+    <span style="font-size: 12px;">{{headline.author}}</span><br>
+
+    <p style="font-size: 12px; color: #797979;"><span class="iconify" data-inline="false" data-icon="carbon:dot-mark" style="font-size: 10px;"></span>{{headline.title}}</p>
+  </div>
+
+</div>
+</div>
 </div>
