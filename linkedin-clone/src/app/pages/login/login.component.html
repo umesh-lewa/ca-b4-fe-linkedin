@@ -16,7 +16,8 @@
                         <p class="error">{{err}}</p>
                         <button type="submit" (click)="doLogin()">Sign In</button>
                 </form>
-                    <p>New to LinkedIn? <span class="login__register" routerLink="/register"><a href>Join Now</a></span></p>
+                    <!-- <p>New to LinkedIn? <span class="login__register" routerLink="/register"><a href>Join Now</a></span></p> -->
+                    <p>New to LinkedIn? <span class="login__register"><a [routerLink]="['/register']">Join Now</a></span></p>
                     <h4>© 2021 LinkedIn</h4>
                 </div>
             </div>
