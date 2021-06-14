@@ -52,4 +52,6 @@ export class DataService {
     let url =  connectionType ==='connections' ? "https://api.npoint.io/f58038f4ec47de35ec4d" : "https://api.npoint.io/712113577160d6247b19"
     return this.http.get(url)
   }
+
+
 }
