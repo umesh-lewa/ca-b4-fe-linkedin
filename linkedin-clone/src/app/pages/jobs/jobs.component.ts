@@ -12,7 +12,7 @@ export class JobsComponent implements OnInit {
   jobSearchSuggestions=[];
   jobList=[];
   constructor(private dataServ:DataService,private mainServ:MainService,private titleService:Title) {
-    this.titleService.setTitle('Jobs | Linkedin');
+    this.titleService.setTitle('Jobs | LinkedIn');
     this.dataServ.jobSearchSuggestion.subscribe(data=>this.jobSearchSuggestions=data);
     this.mainServ.changeActiveTitle('jobs');
     this.dataServ.getJobList().subscribe(data=>{

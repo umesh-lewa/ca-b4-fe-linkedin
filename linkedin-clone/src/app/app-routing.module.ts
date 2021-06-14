@@ -21,6 +21,7 @@ import { NotificationComponent } from './pages/notification/notification.compone
 import { ProfileComponent } from './pages/profile/profile.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { SettingsComponent } from './pages/settings/settings.component';
+import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [{
   path:"",
@@ -34,6 +35,7 @@ const routes: Routes = [{
 },{
   path:"home",
   component:HomeComponent,
+  canActivate:[LoginGuard],
   children:[
     {
       path:"",

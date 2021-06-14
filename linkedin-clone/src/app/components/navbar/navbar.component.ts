@@ -38,6 +38,7 @@ export class NavbarComponent implements OnInit {
     this.openProfileActions=!this.openProfileActions;
   }
   signOut(){
+    localStorage.removeItem("loggedin")
     this.router.navigate(["/login"]);
   }
   getKeyCode(event){
