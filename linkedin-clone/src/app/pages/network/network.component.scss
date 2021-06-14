@@ -6,7 +6,7 @@
     .network-list{
         margin-right: auto;
         margin-left: auto;
-        width: 100%;
+        width: 85%;
         padding-top: 2rem;
         display: flex;
         justify-content: space-between;
@@ -15,7 +15,7 @@
             width: min-content;
             .networks
             {
-                width: 18vw;
+                width: 16vw;
                 background-color: #FFFFFF;
                 border-radius: 10px;
                 cursor: pointer;
@@ -159,6 +159,7 @@
 
 @media screen and (min-width : 320px) and (max-width :  900px) {
     .network-wrapper .network-list {
+        width: 100%;
         align-items: flex-start;
         flex-direction: column;
         .manage-network{
