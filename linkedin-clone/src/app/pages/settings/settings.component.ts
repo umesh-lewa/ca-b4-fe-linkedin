@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { MainService } from 'src/app/services/main.service';
 
 @Component({
   selector: 'app-settings',
@@ -8,9 +9,10 @@ import { Title } from '@angular/platform-browser';
 })
 export class SettingsComponent implements OnInit {
 
-  constructor(private titleService: Title) 
+  constructor(private titleService: Title,private mainService:MainService)
   {
-    this.titleService.setTitle('Settings'); 
+    this.mainService.changeActiveTitle('none');
+    this.titleService.setTitle('Settings | LinkedIn');
   }
 
   ngOnInit(): void {
@@ -25,50 +27,50 @@ export class SettingsComponent implements OnInit {
   pro:boolean=false;
   profilecomp:boolean=true;
 
-  // div1Function(){
-  //     this.div1=true;
-  //     this.div2=false;
-  //     this.div3=false;
-  //     this.div4=false;
-  //     this.div5=false;
-  // }
-
-  // div2Function(){
-  //     this.div2=true;
-  //     this.div1=false;
-  //     this.div3=false;
-  //     this.div4=false;
-  //     this.div5=false;
-      
-  // }
-
-  // div3Function(){
-  //     this.div3=true;
-  //     this.div2=false;
-  //     this.div1=false
-  //     this.div4=false;
-  //     this.div5=false;
-      
-  // }
-
-  // div4Function(){
-  //   this.div1=false;
-  //   this.div2=false;
-  //   this.div3=false;
-  //   this.div4=true;
-  //   this.div5=false;
-  // }
-
-  // div5Function(){
-  //   this.div1=false;
-  //   this.div2=false;
-  //   this.div3=false;
-  //   this.div4=false;
-  //   this.div5=true;
-  // }
-
-
   div1Function(){
+      this.div1=true;
+      this.div2=false;
+      this.div3=false;
+      this.div4=false;
+      this.div5=false;
+  }
+
+  div2Function(){
+      this.div2=true;
+      this.div1=false;
+      this.div3=false;
+      this.div4=false;
+      this.div5=false;
+      
+  }
+
+  div3Function(){
+      this.div3=true;
+      this.div2=false;
+      this.div1=false
+      this.div4=false;
+      this.div5=false;
+      
+  }
+
+  div4Function(){
+    this.div1=false;
+    this.div2=false;
+    this.div3=false;
+    this.div4=true;
+    this.div5=false;
+  }
+
+  div5Function(){
+    this.div1=false;
+    this.div2=false;
+    this.div3=false;
+    this.div4=false;
+    this.div5=true;
+  }
+
+
+  div1F(){
     if(this.div1){
       this.div1=false;
     }
@@ -77,7 +79,7 @@ export class SettingsComponent implements OnInit {
     }
 }
 
-div2Function(){ 
+div2F(){ 
   if(this.div2){
     this.div2=false;
   }
@@ -86,7 +88,7 @@ div2Function(){
   }
 }
 
-div3Function(){
+div3F(){
   if(this.div3){
     this.div3=false;
   }
@@ -95,7 +97,7 @@ div3Function(){
   }
 }
 
-div4Function(){
+div4F(){
   if(this.div4){
     this.div4=false;
   }
@@ -104,7 +106,7 @@ div4Function(){
   }
 }
 
-div5Function(){
+div5F(){
   if(this.div5){
     this.div5=false;
   }
