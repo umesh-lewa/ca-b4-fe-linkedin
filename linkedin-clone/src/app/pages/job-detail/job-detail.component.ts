@@ -18,7 +18,7 @@ export class JobDetailComponent implements OnInit {
   showAllFilter=false;
   searchTerm="";
   constructor(private activeRoute:ActivatedRoute,private mainServ:MainService,private dataServ:DataService,private titleService: Title) {
-    this.titleService.setTitle('Search all Jobs | Linkedin');
+    this.titleService.setTitle('Search all Jobs | LinkedIn');
       this.mainServ.changeActiveTitle('jobs');
       this.activeRoute.paramMap.subscribe(data=>{
         this.id=data.get('id');
