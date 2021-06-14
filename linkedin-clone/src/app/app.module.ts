@@ -49,6 +49,7 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import { SearchJobPipe } from './pipes/search-job.pipe';
+import { InterestComponent } from './components/interest/interest.component';
 
 @NgModule({
   declarations: [
@@ -91,7 +92,8 @@ import { SearchJobPipe } from './pipes/search-job.pipe';
     LoaderComponent,
     FilterPipe,
     SortPipe,
-    SearchJobPipe
+    SearchJobPipe,
+    InterestComponent
   ],
   imports: [
     BrowserModule,
