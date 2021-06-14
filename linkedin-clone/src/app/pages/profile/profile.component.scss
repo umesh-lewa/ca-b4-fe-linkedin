@@ -1,0 +1,267 @@
+@import '../../constants/colors.scss';
+$cardWidth:100%;
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.iconify{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    &:hover{
+        background-color: rgb(221, 221, 221);
+    }
+}
+.left{
+    width: 70%;
+    >div{
+        margin-bottom: 20px;
+    }
+    // background-color: aqua;
+}
+.profileCard{
+    width: $cardWidth;
+    height: 490px;
+    .pics{
+        position: relative;
+        width: 100%;
+        height: 280px;
+        .coverPic{
+            width: 100%;
+            height: 200px;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 8px 8px 0 0 ;
+            }
+        }
+        .profilePic{
+            position: absolute;
+             background-color: #fff;
+             width: 180px;
+             height: 180px;
+             left: 20px;
+             bottom: 0;
+             border-radius: 50%;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             img{
+                 width: 97%;
+                 height: 97%;
+                 border-radius: 50%;
+             }
+        }
+        .editDiv{
+            width: 95%;
+            height: 80px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+}
+.userInfo{
+    width: 100%;
+    display: flex;
+    .nameInfo{
+        width: 69%;
+        box-sizing: border-box;
+        padding: 15px 0 0 30px;
+        .title{
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+        p:last-child{
+            margin-top: 10px;
+        }
+    }
+    .workInfo{
+        width: 30%;
+        .work{
+            width: 100%;
+            display: flex;
+            div:nth-child(1){
+                width: 60px;
+                img{
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            div:nth-child(2){
+                width: 70%;
+            }
+        }
+    }
+}
+.actionsBtns{
+    width: 100%;
+    padding: 15px 0 30px 25px;
+    display: flex;
+    *{
+        margin-right: 10px;
+    }
+    button{
+        background:$linkedinBlue;
+        border: 1px solid $linkedinBlue;
+        padding: 5px 10px;
+        min-width: 100px;
+        border-radius: 200px;
+        color: #fff;
+        font-size: 1em;
+        font-weight: 500;
+        cursor: pointer;
+        transition: border 50ms,background-color 400ms;
+        &:hover{
+            background-color: #4585c4e5;
+        }
+    }
+}
+.dashboard{
+    width: 100%;
+    height: 470px;
+    background-color: #dce6f1;
+    .insightList{
+        width: calc(100% - 50px);
+        height: 100px;
+        margin: auto;
+        display: flex;
+        .insight{
+            width: 33.33%;
+            border-right: 1px solid $dullButtonHover;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        .insight:last-child{
+            border: none;
+        }
+    }
+    .dBoardOptions{
+        width: calc(100% - 50px);
+        height: 220px;
+        margin: auto;
+        margin-top: 20px;
+        .option{
+            display: flex;
+            padding: 15px 0 10px 20px;
+            div:nth-child(1){
+                width: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+.titleContainer{
+    width: 95%;
+    padding: 25px 0 20px 25px;
+}
+.activities{
+    width: 100%;
+    height: 370px;
+    .activityList{
+        width: 95%;
+        padding: 0px 0 20px 25px;
+        display: flex;
+        flex-wrap: wrap;
+        .activity{
+            width: 50%;
+            margin-bottom: 20px;
+            display: flex;
+            div{
+                display: flex;
+                flex-wrap: wrap;
+                padding-left: 10px;
+                p{
+                    width: 100%;
+                }
+            }
+            div:nth-child(1){
+                width: 70px;
+                justify-content: flex-end;
+                padding: 5px 0 0 0;
+                img{
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}
+.seemore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px 0;
+    font-weight: 500;
+    color: $linkedinBlue;
+    p{
+        padding: 2px 10px;
+            border-radius: 8px;
+            &:hover{
+                    background-color: $fadedLinkedinBlue;
+            }
+    }
+}
+.experienceCard{
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+    .title{
+        width: 100%;
+        padding: 20px 20px 10px 20px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+    }
+    .expList{
+        width: 95%;
+        padding: 0px 20px;
+        .experience{
+            display: flex;
+            padding: 15px 0 10px 0;
+            position: relative;
+            
+            .editBtn{
+                position: absolute;
+                top: 5px;
+                right: 20px;
+                opacity: 0;
+                transition: 400ms;
+            }
+            &:hover{
+                .editBtn{
+                    opacity: 1;
+                }
+            }
+            .logo{
+                width: 80px;
+                img{
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+}
+.right{
+    width: 28%;
+    height: 100vh;
+    // background-color: antiquewhite;
+    .ad{
+        width: 100%;
+        height: 300px;
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        margin-bottom: 20px;
+    }
+}

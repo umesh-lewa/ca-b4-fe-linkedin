@@ -49,7 +49,12 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import { SearchJobPipe } from './pipes/search-job.pipe';
+import { MessageComponent } from './components/message/message.component';
+import { MessageCardComponent } from './components/message-card/message-card.component';
 
+import { InterestComponent } from './components/interest/interest.component';
+import { PeopleComponent } from './components/people/people.component';
+import { PeopleListComponent } from './components/people-list/people-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -91,7 +96,12 @@ import { SearchJobPipe } from './pipes/search-job.pipe';
     LoaderComponent,
     FilterPipe,
     SortPipe,
-    SearchJobPipe
+    SearchJobPipe,
+    MessageComponent,
+    MessageCardComponent,
+    InterestComponent,
+    PeopleComponent,
+    PeopleListComponent
   ],
   imports: [
     BrowserModule,

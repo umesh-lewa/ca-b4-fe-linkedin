@@ -12,7 +12,7 @@ export class FeedComponent implements OnInit {
 
   constructor(private mainServ:MainService ,private titleService:Title,private dataService:DataService) {
     this.mainServ.changeActiveTitle('home');
-    this.titleService.setTitle('Feeds | Linkedin');
+    this.titleService.setTitle('Feeds | LinkedIn');
   }
 
   feeds;

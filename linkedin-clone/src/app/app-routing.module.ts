@@ -22,6 +22,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { LoginGuard } from './guards/login.guard';
+//import { InterestComponent } from './components/interest/interest.component';
 
 const routes: Routes = [{
   path:"",
@@ -32,7 +33,10 @@ const routes: Routes = [{
 },{
   path:"register",
   component:RegisterComponent
-},{
+}
+,
+
+{
   path:"home",
   component:HomeComponent,
   canActivate:[LoginGuard],
