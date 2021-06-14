@@ -31,7 +31,7 @@
                     <div class="flex-items-notification">
                         <div class="notification-body-container">
                             <p><b>{{eachNotification.headingTopic}}</b></p>
-                            <p>
+                            <p style="padding-bottom: 10px;">
                                 <span>{{eachNotification.topic1}}<b> {{eachNotification.topic2}}</b></span>
                                 <!--
                                 <span style="float: right;">{{eachNotification.hoursAgo}}</span>
@@ -39,7 +39,10 @@
                             </p>
 
                             <p>
+                                <app-pill-button [name]="eachNotification.buttonContent" ></app-pill-button>
+                                <!--
                                 <button><b>{{eachNotification.buttonContent}}</b></button>
+                                -->
                                 <!--
                                 <span style="float: right;font-size: 150%;"><a href="">...</a></span>
                                 -->
@@ -61,7 +64,7 @@
     </div>
     <div class="flex-items">
         <br>
-        <p><a href="">About </a> &nbsp;&nbsp;<a href="">Accessibility</a> &nbsp;&nbsp;<a href="">Help Center</a></p>
+        <p><a routerLink="/home/notifications">About </a> &nbsp;&nbsp;<a href="">Accessibility</a> &nbsp;&nbsp;<a href="">Help Center</a></p>
         <br>
         <p><a href="">Privacy and Terms</a>&nbsp;&nbsp;<a href="">Ad Choices</a></p>
         <br>
