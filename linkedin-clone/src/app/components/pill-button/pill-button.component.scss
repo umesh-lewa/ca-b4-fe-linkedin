@@ -1,4 +1,7 @@
 @import '../../constants/colors.scss';
+div{
+    height: 40px;
+}
 button{
     background:none;
     border: 1px solid $linkedinBlue;
@@ -13,5 +16,13 @@ button{
     &:hover{
         background-color: $fadedLinkedinBlue;
         border: 2px solid $linkedinBlue;
+    }
+}
+.dull{
+    border: 1px solid $dullText;
+    color: $dullText;
+    &:hover{
+        background-color: $dullButtonHover;
+        border: 2px solid $dullText;
     }
 }

@@ -1,0 +1,12 @@
+<div class="peopleList card">
+    <div class="heading">
+        <p class="mediumText font-weight-bold">{{title}}</p>
+    </div>
+    <ng-container *ngFor="let people of list">
+        <app-people [people]="people"></app-people>
+        <app-hr></app-hr>
+    </ng-container>
+    <div class="seemore">
+        <p>Show more &nbsp; &#x2228;</p>
+    </div>
+</div>
