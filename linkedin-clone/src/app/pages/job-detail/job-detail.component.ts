@@ -42,7 +42,7 @@ export class JobDetailComponent implements OnInit {
     event.stopPropagation()
     this.jobAlert=!this.jobAlert;
     this.jobAlertStatus=this.jobAlert?"on":"off";
-    console.log(this.jobAlertStatus)
+    // console.log(this.jobAlertStatus)
   }
   toggleAllFilters(){
     this.showAllFilter=!this.showAllFilter;

@@ -50,7 +50,8 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import { SearchJobPipe } from './pipes/search-job.pipe';
 import { InterestComponent } from './components/interest/interest.component';
-
+import { PeopleComponent } from './components/people/people.component';
+import { PeopleListComponent } from './components/people-list/people-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -93,7 +94,9 @@ import { InterestComponent } from './components/interest/interest.component';
     FilterPipe,
     SortPipe,
     SearchJobPipe,
-    InterestComponent
+    InterestComponent,
+    PeopleComponent,
+    PeopleListComponent
   ],
   imports: [
     BrowserModule,
