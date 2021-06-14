@@ -72,8 +72,10 @@ img {
   font-size: 80%;
   justify-content: center;
   text-align: center;
+  background-color: transparent;
   .card {
     border-radius: 15px;
+    background-color: #ffffff;
   }
   .card:hover {
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
