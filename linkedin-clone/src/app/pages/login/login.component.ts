@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
     password="User@123"
     err=""
     constructor(private fb:FormBuilder, private titleService: Title, private router: Router){
-      this.titleService.setTitle('Login'); 
+      this.titleService.setTitle('Login | LinkedIn'); 
       this.login=this.fb.group({
         email:new FormControl("",Validators.required),
         password:new FormControl("",Validators.required)
