@@ -1,0 +1,150 @@
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  //border: 1px solid black;
+}
+
+.flex-items {
+  display: block;
+  border: 1px solid #E0DFDC;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+
+.flex-container-interest-profile {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.flex-items-interest-profile:nth-child(1) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.flex-items-interest-profile:nth-child(2) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.flex-items-interest-profile:nth-child(3) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+
+.flex-container-col {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-bottom: 1px solid #E0DFDC;
+
+}
+
+.flex-items-col:nth-child(1) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+.flex-items-col:nth-child(2) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+
+
+
+
+.container-interest-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  height: 60px;
+  width: 373px;
+}
+//icon
+.interest-links:nth-child(1) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  width: 100px;
+
+}
+
+.interest-links:nth-child(2) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  font-size: 12px;
+}
+
+.interest-links img{
+  height: 40px;
+  width: 100px;
+  object-fit: contain;
+
+}
+
+.interest-links a {
+  text-decoration: none;
+}
+
+.interest-links a p:hover{
+  text-decoration: underline;
+}
+
+.interest-links a p:nth-child(1){
+  color: #000000;
+}
+
+
+.interest-links a p:nth-child(2){
+  color: #757575;
+}
+
+.heading-component{
+  color: rgb(58, 57, 57);
+  padding: 10px;
+}
+
+
