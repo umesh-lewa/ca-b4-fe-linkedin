@@ -1,0 +1,99 @@
+@import '../../constants/colors.scss';
+
+.expanded{
+    height: 70vh;
+}
+
+.message-wrapper{
+    position: fixed;
+    bottom: 0;
+    right: 5px;
+    background-color: #fff;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    border: 1px solid #E0DFDC;
+    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.08), 0 4px 4px rgba(0,0,0,0.3);
+    width: 300px;
+
+    .message-head{
+        display: flex;
+        color: $dullHeadingColor;
+        padding: 0.5rem 1rem 0rem;
+        align-items: center;
+        border: 1px solid #EBEBEB;
+
+        .head-left{
+            display: flex;
+            align-items: center;
+            margin-right: 3.5rem;
+        
+            .user-icon{
+                position: relative;
+                img {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                }
+                .iconify{
+                    position: absolute;
+                    bottom: 0.1rem;
+                    right: -0.2rem;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    color: #086E3F;
+                }
+            }
+            .head-title{
+                margin-left: 0.5rem;
+                color: #000;
+                font-size: 0.9rem;
+            }
+        }
+
+        .head-right{
+            .expand{
+                display: inline-block;
+            }
+            .iconify{
+                padding: 0.3rem;
+
+                border-radius: 50%;
+                font-size: 1.2rem;
+                &:hover{
+                    cursor: pointer;
+                    background-color: #EBEBEB;;
+                }
+            }
+        }
+    }
+
+    .message-search{
+        margin: 0.5rem 1rem;
+        background-color: #eef3f7;
+        padding: 7px 10px;
+        align-items: center;
+        display: flex;
+        border-radius: 5px;
+
+        .search img, .filter .iconify{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            color: $dullHeadingColor;
+        }
+        input{
+            background-color: #eef3f7;
+            width: 12rem;
+            padding: 0px 0.5rem;
+            border: none;
+            border: none;
+            border-radius: 8px;
+        }
+    }
+
+    .message-list{
+        margin: 0.5rem 0rem 0.5rem 0rem;
+        height: 60vh;
+        overflow: auto;
+    }
+} 

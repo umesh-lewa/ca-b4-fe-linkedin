@@ -49,6 +49,8 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import { SearchJobPipe } from './pipes/search-job.pipe';
+import { MessageComponent } from './components/message/message.component';
+import { MessageCardComponent } from './components/message-card/message-card.component';
 
 @NgModule({
   declarations: [
@@ -91,7 +93,9 @@ import { SearchJobPipe } from './pipes/search-job.pipe';
     LoaderComponent,
     FilterPipe,
     SortPipe,
-    SearchJobPipe
+    SearchJobPipe,
+    MessageComponent,
+    MessageCardComponent
   ],
   imports: [
     BrowserModule,
