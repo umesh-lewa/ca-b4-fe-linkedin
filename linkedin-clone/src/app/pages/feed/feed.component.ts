@@ -29,4 +29,12 @@ export class FeedComponent implements OnInit {
     })
   }
 
+  likedbyUser(id){
+    this.feeds.forEach(element => {
+      if(element.id==id){
+        element.liked_by_user = !element.liked_by_user
+      }
+    });
+  }
+
 }
