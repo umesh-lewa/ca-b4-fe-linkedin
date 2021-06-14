@@ -1,4 +1,4 @@
-<div [ngClass]= "{'message-wrapper' : true, 'expanded' : isExpanded}">
+<div [ngClass]= "{'message-wrapper' : true, 'expanded' : isExpanded}" (click)="changeExpand($event)">
     <div class="message-head">
         <div class="head-left">
             <span class="user-icon">
@@ -10,10 +10,10 @@
         <div class="head-right">
             <span class="iconify" data-inline="false" data-icon="akar-icons:edit"></span>
             <span class="iconify" data-inline="false" data-icon="bx:bx-dots-horizontal-rounded"></span>
-            <p class="expand" (click)="changeExpand()"  *ngIf="isExpanded" >
+            <p class="expand" (click)="changeExpand($event)"  *ngIf="isExpanded" >
                 <span *ngIf="isExpanded" class="iconify" data-inline="false" data-icon="bx:bxs-chevron-down"></span>
             </p>
-            <p class="expand" (click)="changeExpand()" *ngIf="!isExpanded">
+            <p class="expand" (click)="changeExpand($event)" *ngIf="!isExpanded">
                 <span  class="iconify" data-inline="false" data-icon="bx:bxs-chevron-up"></span>
             </p>
         </div>
