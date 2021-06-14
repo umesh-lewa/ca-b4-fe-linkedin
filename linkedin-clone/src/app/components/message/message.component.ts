@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessageComponent implements OnInit {
 
-  isExpanded : boolean = true;
+  isExpanded : boolean = false;
   messages = messageList;
   
   constructor() { }
