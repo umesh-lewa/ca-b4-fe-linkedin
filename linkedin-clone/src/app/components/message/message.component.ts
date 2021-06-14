@@ -15,7 +15,8 @@ export class MessageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  changeExpand() {
+  changeExpand(event) {
+    event.stopPropagation();
     this.isExpanded = !this.isExpanded    
   }
 
