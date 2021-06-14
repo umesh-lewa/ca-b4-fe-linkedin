@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,10 @@ import { Title } from '@angular/platform-browser';
 export class LoginComponent implements OnInit {
     title = 'LinkedIn';
     login:any;
-    constructor(private fb:FormBuilder, private titleService: Title){
+    email="aditya@gmail.com";
+    password="User@123"
+    err=""
+    constructor(private fb:FormBuilder, private titleService: Title, private router: Router){
       this.titleService.setTitle('Login'); 
       this.login=this.fb.group({
         email:new FormControl("",Validators.required),
@@ -27,8 +31,21 @@ export class LoginComponent implements OnInit {
         email:new FormControl("",Validators.required),
         password:new FormControl("",Validators.required)
       })
+    }
   }
-  }
+      doLogin(){
+        this.err=""
+        if (this.login.valid){
+          if(this.email==this.login.value.email && this.password==this.login.value.password)
+          {
+            localStorage.setItem("loggedin","true");
+            this.router.navigate(["/home"])
+          }
+          else{
+            this.err="Invalid credentials!"
+          }
+        }
+      }
 
   ngOnInit(): void {
   }
