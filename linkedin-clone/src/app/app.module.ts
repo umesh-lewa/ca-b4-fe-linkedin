@@ -52,6 +52,9 @@ import { SearchJobPipe } from './pipes/search-job.pipe';
 import { MessageComponent } from './components/message/message.component';
 import { MessageCardComponent } from './components/message-card/message-card.component';
 
+import { InterestComponent } from './components/interest/interest.component';
+import { PeopleComponent } from './components/people/people.component';
+import { PeopleListComponent } from './components/people-list/people-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -95,7 +98,10 @@ import { MessageCardComponent } from './components/message-card/message-card.com
     SortPipe,
     SearchJobPipe,
     MessageComponent,
-    MessageCardComponent
+    MessageCardComponent,
+    InterestComponent,
+    PeopleComponent,
+    PeopleListComponent
   ],
   imports: [
     BrowserModule,

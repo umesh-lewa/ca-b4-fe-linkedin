@@ -23,3 +23,40 @@ button,button:active,button:focus,input,input:active,input:focus{
     border-top: 5px solid $dullText;
     margin: auto 0;
 }
+.verySmallText{
+    font-size: 0.8em;
+}
+.smallText{
+    font-size: 0.9em;
+}
+.mediumText{
+    font-size: 1em;
+}
+.largeText{
+    font-size: 1.1em;
+}
+.dullText{
+    color: $dullText;
+}
+.headingSize{
+    font-size: 1.5em;
+}
+.link{
+    cursor: pointer;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.font-weight-bold{
+    font-weight: 600;
+}
+.font-weight-light{
+    font-weight: 400;
+}
+.linkedinBlue{
+    color: $linkedinBlue;
+}
+.card{
+    background-color: #fff;
+    border-radius: 8px;
+}

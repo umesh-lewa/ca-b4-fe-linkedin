@@ -19,6 +19,9 @@ export class DataService {
     return this.http.get('https://api.npoint.io/9fa6b497c907411d1ae2');
     // return of(jobList);
   }
+  getPeoples():Observable<any>{
+    return this.http.get('https://api.npoint.io/e4bffac5672eb120b141');
+  }
   getUser():Observable<any>{
     return of(this.user);
   }

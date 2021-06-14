@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PillButtonComponent implements OnInit {
   @Input() name;
+  @Input() type;
   constructor() { }
 
   ngOnInit(): void {

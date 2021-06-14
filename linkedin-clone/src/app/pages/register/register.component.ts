@@ -24,7 +24,6 @@ export class RegisterComponent implements OnInit {
 
   
     save(){
-      console.log(this.login.valid);
       if(this.login.valid)
       {
       this.login=[...this.login,...this.login.value];
