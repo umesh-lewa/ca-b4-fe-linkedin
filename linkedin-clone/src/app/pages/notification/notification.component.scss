@@ -51,6 +51,7 @@ img {
   justify-content: space-between;
   align-items: normal;
   align-content: normal;
+  padding-top: 20px;
 }
 
 .flex-items:nth-child(1) {
@@ -71,8 +72,10 @@ img {
   font-size: 80%;
   justify-content: center;
   text-align: center;
+  background-color: transparent;
   .card {
     border-radius: 15px;
+    background-color: #ffffff;
   }
   .card:hover {
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
@@ -98,7 +101,11 @@ img {
   /*
   height: 35vh;
   */
+  /*
   font-size: 80%;
+  */
+  font-size: 0.8em;
+  font-weight: 500;
   button {
     transition-duration: 0.4s;
     background-color: white;
@@ -174,6 +181,7 @@ img {
   flex-basis: auto;
   align-self: auto;
   order: 0;
+  width: 10%;
 }
 
 .flex-items-notification:nth-child(2) {
@@ -183,6 +191,7 @@ img {
   flex-basis: auto;
   align-self: auto;
   order: 0;
+  width: 70%;
 }
 
 .flex-items-notification:nth-child(3) {
@@ -193,6 +202,7 @@ img {
   flex-basis: auto;
   align-self: auto;
   order: 0;
+  width: 5%;
 }
 
 .flex-items-notification {
