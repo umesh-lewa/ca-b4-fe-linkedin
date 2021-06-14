@@ -1,7 +1,7 @@
 <div class="overlay">
     <div class="menu" (click)="profilevisited()">
         <div class="category-container sticky-on">
-            <ul class="categories">
+            <ul class="categories" style="width:270px;">
                 <li class="divider">
                     <a class="expand" (click)="div1Function()" [routerLink]="['./']">Account Preferences</a>
                     <div *ngIf="div1">
@@ -11,13 +11,13 @@
                     </div>
                 </li>
                 <li class="divider">
-                    <a class="expand" (click)="div2Function()" [routerLink]="['./security']">Sign In & Security</a>
+                    <a class="expand"  (click)="div2Function()" [routerLink]="['./security']">Sign In & Security</a>
                     <div *ngIf="div2">
                         <a class="subcategory active">Account Access</a>
                     </div>
                 </li>
                 <li class="divider">
-                    <div class="expand" (click)="div3Function()" [routerLink]="['./visibility']">Visibilty</div>
+                    <div class="expand"  (click)="div3Function()"  [routerLink]="['./visibility']">Visibilty</div>
                     <div *ngIf="div3">
                         <a class="subcategory active" (click)="scrolltovisprofile()">profile & network</a>
                         <a class="subcategory active" (click)="scrolltovisactivity()">LinkedIn activity</a>
@@ -32,7 +32,7 @@
                     </div>
                 </li>
                 <li class="divider">
-                    <div class="expand" (click)="div5Function()" [routerLink]="['./privacy']">DataPrivacy</div>
+                    <div class="expand"  (click)="div5Function()" [routerLink]="['./privacy']">DataPrivacy</div>
                     <div *ngIf="div5">
                         <a class="subcategory active" (click)="scrolltopreferences()">Job preferences</a>
                         <a class="subcategory active" (click)="scrolltoothers()">Other applications</a>
