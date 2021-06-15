@@ -16,7 +16,8 @@ export class DataService {
   }
   getJobList():Observable<any>{
     // return this.http.get('https://api.npoint.io/f48390a7852cfd640963');
-    return this.http.get('https://api.npoint.io/9fa6b497c907411d1ae2');
+    //https://www.npoint.io/docs/32169c2233df5b0d0028
+    return this.http.get('https://api.npoint.io/32169c2233df5b0d0028');
     // return of(jobList);
   }
   getPeoples():Observable<any>{
