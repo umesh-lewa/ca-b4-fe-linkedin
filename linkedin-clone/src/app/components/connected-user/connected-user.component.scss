@@ -45,6 +45,8 @@
     }
 
     .user-card-footer{
+        display: flex;
+        align-self: center;
         button{
             color: $linkedinBlue;
             border: 2px solid $linkedinBlue;
@@ -93,6 +95,8 @@
         .user-data-wrapper{
             flex-direction: column;
             .user-card-footer{
+                align-self: flex-start;
+                flex-direction: column;
                 margin-top: 1rem;
                 margin-left: 1rem;
             }
