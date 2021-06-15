@@ -1,5 +1,5 @@
-<div [ngClass]= "{'message-wrapper' : true, 'expanded' : isExpanded}" (click)="changeExpand($event)">
-    <div class="message-head">
+<div [ngClass]= "{'message-wrapper' : true, 'expanded' : isExpanded}" >
+    <div class="message-head" (click)="changeExpand($event)">
         <div class="head-left">
             <span class="user-icon">
                 <img src="https://media-exp3.licdn.com/dms/image/C5103AQHiyCu0ytkiKA/profile-displayphoto-shrink_800_800/0/1582986312253?e=1628726400&v=beta&t=HG0iMm8oIicMJmUtLro1ZdHNrxUdqjTa5HyTCj3SU_8" alt="user">

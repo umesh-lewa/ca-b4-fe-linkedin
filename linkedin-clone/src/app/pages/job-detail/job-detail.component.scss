@@ -168,6 +168,7 @@ main{
       box-shadow: -11px 1px 14px -6px rgba(0,0,0,0.75);
       transform: translateX(550px);
       transition: 500ms;
+      z-index: 5;
       .closeBtnWrapper{
           width: 100%;
          box-sizing: border-box;
