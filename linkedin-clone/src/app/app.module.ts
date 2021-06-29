@@ -110,7 +110,8 @@ import { PeopleListComponent } from './components/people-list/people-list.compon
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [{provide: LocationStrategy,useClass:HashLocationStrategy}],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+// {provide: LocationStrategy,useClass:HashLocationStrategy}
