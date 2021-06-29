@@ -29,7 +29,8 @@ export class DataService {
     // return of(jobList);
   }
   getPeoples():Observable<any>{
-    return this.http.get('https://ojeomynj08.execute-api.us-east-1.amazonaws.com/dev/get-roles',{
+    // return this.http.get('https://ojeomynj08.execute-api.us-east-1.amazonaws.com/dev/get-roles',{
+    return this.http.get('https://ojeomynj08.execute-api.us-east-1.amazonaws.com/dev/get-peoples',{
       headers:new HttpHeaders({
         Authorization: this.getIdToken()
       })
