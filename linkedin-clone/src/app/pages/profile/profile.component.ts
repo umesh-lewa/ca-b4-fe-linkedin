@@ -16,8 +16,9 @@ export class ProfileComponent implements OnInit {
     this.dataService.getUser().subscribe(data=>this.titleServ.setTitle(`${data.username} | LinkedIn`))
     
     this.dataService.getPeoples().subscribe(data=>{
-      this.peopleList=data.peoples.slice(0,5);
-      this.peopleSuggestion=data.peoples.slice(5,10);
+      console.log(data)
+      this.peopleList=data.slice(0,5);
+      this.peopleSuggestion=data.slice(5,10);
     });
   }
   ngOnInit(): void {

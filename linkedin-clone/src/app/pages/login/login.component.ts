@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { MainService } from 'src/app/services/main.service';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,8 @@ export class LoginComponent implements OnInit {
     email="aditya@gmail.com";
     password="User@123"
     err=""
-    constructor(private fb:FormBuilder, private titleService: Title, private router: Router){
+    constructor(private fb:FormBuilder, private titleService: Title, private router: Router,private mainServ:MainService){
+      this.mainServ.redirectToCognito('login');
       this.titleService.setTitle('Login | LinkedIn'); 
       this.login=this.fb.group({
         email:new FormControl("",Validators.required),
