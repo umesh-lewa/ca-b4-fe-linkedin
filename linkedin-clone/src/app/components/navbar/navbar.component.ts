@@ -39,7 +39,7 @@ export class NavbarComponent implements OnInit {
   }
   signOut(){
     localStorage.removeItem("id_token")
-    this.router.navigate(["/login"]);
+    this.router.navigate(["/"]);
   }
   getKeyCode(event){
     if(event.keyCode==13){
