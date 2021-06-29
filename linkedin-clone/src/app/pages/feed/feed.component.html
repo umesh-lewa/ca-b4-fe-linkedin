@@ -39,16 +39,19 @@
       <div class="flex-items-profile sticky">
         <div class="profile-recent text-recent">
           <div class="heading">Recent</div>
-          <div><span class="iconify" data-inline="false" data-icon="fluent:people-audience-24-filled"
-              style="font-size: 15px; color:#666666; "></span> <span class="span-text">Developers</span> </div>
-          <div><span class="iconify" data-inline="false" data-icon="heroicons-solid:hashtag"
-              style="font-size: 15px; color:#666666; "></span> <span class="span-text">startups</span></div>
-          <div><span class="iconify" data-inline="false" data-icon="heroicons-solid:hashtag"
-              style="font-size: 15px; color:#666666; "></span> <span class="span-text">recruitment</span> </div>
-          <div><span class="iconify" data-inline="false" data-icon="heroicons-solid:hashtag"
-              style="font-size: 15px; color:#666666; "></span><span class="span-text">india</span></div>
-          <div><span class="iconify" data-inline="false" data-icon="fluent:people-audience-24-filled"
-              style="font-size: 15px; color:#666666;"></span><span class="span-text">Data Scientist</span></div>
+          <div class="hover-heading">
+            <div><span class="iconify" data-inline="false" data-icon="fluent:people-audience-24-filled"
+                style="font-size: 15px; color:#666666; "></span> <span class="span-text">Developers</span> </div>
+            <div><span class="iconify" data-inline="false" data-icon="heroicons-solid:hashtag"
+                style="font-size: 15px; color:#666666; "></span> <span class="span-text">startups</span></div>
+            <div><span class="iconify" data-inline="false" data-icon="heroicons-solid:hashtag"
+                style="font-size: 15px; color:#666666; "></span> <span class="span-text">recruitment</span> </div>
+            <div><span class="iconify" data-inline="false" data-icon="heroicons-solid:hashtag"
+                style="font-size: 15px; color:#666666; "></span><span class="span-text">india</span></div>
+            <div><span class="iconify" data-inline="false" data-icon="fluent:people-audience-24-filled"
+                style="font-size: 15px; color:#666666;"></span><span class="span-text">Data Scientist</span></div>
+
+          </div>
         </div>
         <div class="profile-recent text-recent">
           <div class="heading color-blue">Groups <span>+</span></div>
@@ -120,13 +123,39 @@
         <div class="flex-container-post-feeds" *ngIf="feeds" >
           <div class="flex-items-post-feeds" *ngFor="let item of feeds">
             <div class="flex-container-post-name">
-              <div class="flex-items-post-name">{{item.user.name}}
+              <div class="flex-items-post-name">{{item.user.last_name}}
                 <span class="color-light">liked a post</span>
               </div>
-              <div class="flex-items-post-name">{{item.created_at|dateDifference}} ago</div>
+
+              <div class="flex-items-post-name">
+                <span class="iconify" data-inline="false" data-icon="octicon:kebab-horizontal-16" style="color: #afafaf; font-size: 16px;"></span>
+              </div>
            </div>
+           <div class="flex-container-user">
+            <div class="flex-items-user round-user">
+              <img src="{{item.user.profile_image.large}}" alt="">
+            </div>
+            <div class="flex-items-user">
+              <div class="user-name">
+                <p>{{item.user.first_name}}</p>
+              </div>
+              <div class="user-bio">
+                <p>"{{item.user.bio}}"</p>
+              </div>
+              <div>
+                <div class="flex-container-user-updated">
+                  <div class="flex-items-user-updated">
+                    <span class="iconify" data-inline="false" data-icon="fluent:earth-20-filled" style="color: #c6c6c6; font-size: 20px;"></span>
+                  </div>
+                  <div class="flex-items-user-updated">
+                    <span id="day-diff">{{item.updated_at |dateDifference}} ago</span>
+                  </div>
+               </div>
+              </div>
+            </div>
+         </div>
            <div class="post-img">
-             <img src="{{ item.urls.small }}" >
+             <img src="{{ item.urls.regular }}" >
            </div>
            <div class="flex-container-post-name">
             <div class="flex-items-post-name reaction">
